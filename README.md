@@ -1,4 +1,6 @@
-# Mikro
+# Mikro 
+
+<img src="mikro-app/src/assets/ui/mikro_log.png" width="350" title="hover text">
 
 ## Our Problem Statement
 Today, the majority of migrant workers don't have easy access to resources for expanding their investment knowledge, which restricts their capacity to grow their wealth. They are faced with the constant challenge to find an essential platform where they can convieniently grow their investment knowledge.

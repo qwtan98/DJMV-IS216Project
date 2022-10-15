@@ -1,5 +1,11 @@
 # mikro-app
 
+## Our Problem Statement
+Today, the majority of migrant workers don't have easy access to resources for expanding their investment knowledge, which restricts their capacity to grow their wealth. They are faced with the constant challenge to find an essential platform where they can convieniently grow their investment knowledge.
+
+## About the Project
+Mikro is a one-stop knowledge investment platform to increase financial inclsuion and literacy among migrant workers in Singapore, by creating an accessible one-stop financial solution to help kickstart or improve their knowledge on investing. 
+
 ## Project setup
 ```
 npm install

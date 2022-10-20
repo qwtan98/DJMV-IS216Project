@@ -8,7 +8,8 @@ Mikro is a one-stop knowledge investment platform to increase financial inclusio
 
 ## List of APIs Used (TBC)
 
-
+Routing: Vue Router
+Icons: Material Design Icons (mdi-font)
 ## Project setup
 ```
 npm install

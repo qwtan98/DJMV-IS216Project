@@ -1,29 +1,31 @@
 <template>
+  <div id="app">
   <img alt="Vue logo" src="./assets/ui/mikro_logo.png">
-  <HomePage msg="Welcome to Your Vue.js App"/>
-  <HomePage/>
-  <LoginPage/>
+  
+  <router-view></router-view>
+  <!-- <LoginPage/>
   <RegisterPage/>
   <AchievementsPage/>
-  <LessonsPage/>
+  <LessonsPage/> -->
+  
+</div>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
-import LoginPage from './components/LoginPage.vue'
-import RegisterPage from './components/RegisterPage.vue'
-import AchievementsPage from './components/RegisterPage.vue'
-import LessonsPage from './components/LessonsPage.vue'
+// import HomePage from './views/HomePage.vue';
+// import NavigationBar from './components/NavigationBar.vue';
+// import LoginPage from './views/LoginPage.vue'
+// import RegisterPage from './views/RegisterPage.vue'
+// import AchievementsPage from './views/AchievementsPage.vue'
+// import LessonsPage from './views/LessonsPage.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HomePage,
-    LoginPage,
-    RegisterPage,
-    AchievementsPage,
-    LessonsPage
-  }
+    // HomePage,
+    // NavigationBar
+}
 }
 </script>
 

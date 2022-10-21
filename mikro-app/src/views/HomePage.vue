@@ -1,5 +1,7 @@
 <template>
     <div class="hello">
+      <!-- <router-view></router-view> -->
+      <NavigationBar/>
       <h1>This is the Home Page.</h1>
       <h2>{{ msg }}</h2>
       
@@ -33,9 +35,25 @@
   </template>
   
   <script>
+  import NavigationBar from "../components/NavigationBar";
   export default 
   {
       name: 'HomePage',
+
+      components: 
+      {
+        NavigationBar
+      },
+
+      data()
+      {
+          return{
+  
+              quotes: ['Migrate to a better future today', 'Grow your wealth today']
+          }
+      },
+
+  
       props: 
       {
         msg: String

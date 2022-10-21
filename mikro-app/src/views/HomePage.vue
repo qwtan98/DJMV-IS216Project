@@ -1,7 +1,6 @@
 <template>
-    <div class="hello">
+    <div id="home">
       <!-- <router-view></router-view> -->
-      <NavigationBar/>
       <h1>This is the Home Page.</h1>
       <h2>{{ msg }}</h2>
       
@@ -35,14 +34,14 @@
   </template>
   
   <script>
-  import NavigationBar from "../components/NavigationBar";
+  //import NavigationBar from "../components/NavigationBar";
   export default 
   {
       name: 'HomePage',
 
       components: 
       {
-        NavigationBar
+        //NavigationBar
       },
 
       data()

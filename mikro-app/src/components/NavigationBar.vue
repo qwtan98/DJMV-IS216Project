@@ -1,6 +1,5 @@
 <template>
     <div id="nav-bar">
-
     <!-- <v-btn text fab dark small icon>
         <router-link to="/"><v-icon>mdi-home</v-icon></router-link>
     </v-btn> -->
@@ -47,8 +46,18 @@
                         </li>  -->
                     </ul> 
                     <div class = "col-md-4">
-                        <button class="btn btn-outline-success" type="submit">Sign in</button>
+                        <router-link to="Login">
+                            <button class="btn btn-dark">
+                                Log in
+                            </button>
+                        </router-link>
+                        <router-link to="Lessons" class="ms-1">
+                            <button class="btn btn-outline-dark">
+                                Register
+                            </button>
+                        </router-link>
                     </div>
+
                     <!-- <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>

@@ -47,12 +47,12 @@
                     </ul> 
                     <div class = "col-md-4">
                         <router-link to="Login">
-                            <button class="btn btn-dark">
+                            <button class="btn btn-primary">
                                 Log in
                             </button>
                         </router-link>
                         <router-link to="Lessons" class="ms-1">
-                            <button class="btn btn-outline-dark">
+                            <button class="btn btn-outline-primary">
                                 Register
                             </button>
                         </router-link>

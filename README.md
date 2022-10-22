@@ -14,6 +14,7 @@ Dependencies
 Icons
 <li>Material Design Icons (mdi-font)</li>
 <li>Fortawesome</li>
+
 ## Project setup
 ```
 npm install

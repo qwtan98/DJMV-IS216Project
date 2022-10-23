@@ -78,12 +78,13 @@
 <style>
 #log-in-card {
     margin: 50px 0px 50px 0px;
-    padding: 20px 30px 80px 30px;
+    padding: 40px 30px 60px 30px;
 
     outline: none;
     border: none;
 
     width:540px;
+    background-color: azure;
 }
 
 #card-outline {
@@ -110,11 +111,15 @@
 .btn-outline-primary, .btn-outline-primary:hover {
     border-color: #2f4863 !important;
     color:#2f4863 !important;
-    background-color: white;
+    background-color: azure;
 }
 </style>
 
 <style scoped>
+.login-register {
+    background-color: #2f4863;
+}
+
 .form-group {
     position: relative;
 }
@@ -124,7 +129,7 @@
     background: transparent;
     border: none;
     outline: none;
-    color: whitesmoke;
+    color: azure;
 
     min-height: 50px;
     font-size: 25px;

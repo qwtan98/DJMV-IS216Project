@@ -1,11 +1,10 @@
 <template>
     <div class="login-register">
-        
-        <!-- <NavigationBar></NavigationBar> -->
-
         <div class="container align-items-center justify-content-center">
             <div class="row">
-                <div id="sign-up-card" class="card col-md-6 mx-auto rounded-0" style="width:540px">
+                <div id="log-in-card" class="card col-md-6 mx-auto rounded-0">
+                    <span id="card-outline" style="height:4px"></span>
+
                     <img class="card-img-top mx-auto" src="../assets/ui/mikro_logo_trim.png" alt="mikro logo" style="max-width:250px; padding:50px"> 
                     
                     <div class="card-body">
@@ -50,6 +49,8 @@
                             </router-link>
                         </div>
                     </div>
+
+                    <span id="card-outline" class="mt-5" style="height:4px"></span>
                 </div>
             </div>
         </div>
@@ -75,10 +76,26 @@
 </script>
 
 <style>
-#sign-up-card {
+#log-in-card {
     margin: 50px 0px 50px 0px;
-    padding: 20px 30px 80px 30px;
+    padding: 40px 30px 60px 30px;
+
+    outline: none;
+    border: none;
+
+    width:540px;
+    background-color: azure;
 }
+
+#card-outline {
+    width: 100%;
+    background-color:#344c64;
+
+
+    display: flex;
+    justify-content: center;
+}
+
 .form-control:focus {
   border-color: none;
   box-shadow: none;
@@ -94,11 +111,15 @@
 .btn-outline-primary, .btn-outline-primary:hover {
     border-color: #2f4863 !important;
     color:#2f4863 !important;
-    background-color: white;
+    background-color: azure;
 }
 </style>
 
 <style scoped>
+.login-register {
+    background-color: #2f4863;
+}
+
 .form-group {
     position: relative;
 }
@@ -108,7 +129,7 @@
     background: transparent;
     border: none;
     outline: none;
-    color: whitesmoke;
+    color: azure;
 
     min-height: 50px;
     font-size: 25px;
@@ -126,7 +147,7 @@
 }
 .form-group input:valid ~ #input-field-label,
 .form-group input:focus ~ #input-field-label {
-    color: #2f4863;
+    color: #344c64;
     transform: translate(-20px, -37px) scale(0.8);
 }
 

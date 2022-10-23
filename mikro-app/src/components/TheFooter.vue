@@ -1,5 +1,5 @@
 <template>
-    <v-footer class="fixed-bottom">
+    <v-footer class="fixed-bottom text-center">
       Mikro
       <v-spacer></v-spacer>
       &copy; {{ new Date().getFullYear() }}

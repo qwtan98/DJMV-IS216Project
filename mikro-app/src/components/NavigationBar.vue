@@ -13,11 +13,11 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-0">
                         <router-link to="Lessons" class="navbar-brand col-md-4">
-                            Lessons
+                            <font-awesome-icon icon="fa-solid fa-book" />
                         </router-link>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -87,6 +87,7 @@
 </style>
 
 <script>
+
     export default 
     {
         data()

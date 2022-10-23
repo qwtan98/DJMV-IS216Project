@@ -12,31 +12,33 @@
                         <form>
                             <div id="login_inputfields" class="form-group mt-2">
                                 <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="loginInputUID" required="required">
-                                <!-- <label for="loginInputUID" class="lead">User ID</label> -->
-                                <span>User ID</span>
-                                <i></i>
+                                <span id="input-field-label">User ID</span>
+                                <span id="input-field-underline"></span>
                             </div>
 
-                            <div id="login_inputfields" class="form-group mt-4">
-                                <!-- <label for="loginInputPW" class="lead">Password</label> -->
+                            <div id="login_inputfields" class="form-group mt-5">
                                 <input type="password" class="form-control rounded-0" id="loginInputPW" required="required">
-                                <span>Password</span>
-                                <i></i>
+                                <span id="input-field-label">Password</span>
+                                <span id="input-field-underline"></span>
                             </div>
                         </form>
 
                         <div>
                             <router-link to="/">
-                                <button class="btn btn-primary w-100 mt-5" style="font-size:25px; height: 65px;">
-                                    Log in
-                                    <img id="" src="../assets/ui/enter-icon.png" alt="" style="width:30px">
+                                <button id="login-btn" class="btn btn-primary w-100 mt-5">
+                                    <div id="login-btn-container">
+                                        <span>Log in</span>
+                                        <img id="login-btn-img" src="../assets/ui/enter-icon.png" alt="">
+                                        <div id="login-btn-overlay"></div>
+                                    </div>
+                                
                                 </button>
                             </router-link>
                         </div>
 
                         <div>
                             <router-link to="/">
-                                <button class="btn btn-outline-primary w-100 mt-3" style="font-size:25px; height: 65px;">
+                                <button class="btn btn-outline-primary w-100 mt-3" style="font-size:20px; height: 65px;">
                                     Register
                                 </button>
                             </router-link>
@@ -106,12 +108,15 @@
     background: transparent;
     border: none;
     outline: none;
+    color: whitesmoke;
+
     min-height: 50px;
-    color: white;
+    font-size: 25px;
+    letter-spacing: 0.1ch;
     z-index: 20;
 }
 
-.form-group span {
+.form-group #input-field-label {
     position: absolute;
     left: 0;
     top: 0;
@@ -119,13 +124,13 @@
     transition: 0.3s;
     pointer-events: none;
 }
-.form-group input:valid ~ span,
-.form-group input:focus ~ span {
+.form-group input:valid ~ #input-field-label,
+.form-group input:focus ~ #input-field-label {
     color: #2f4863;
     transform: translate(-20px, -37px) scale(0.8);
 }
 
-.form-group i {
+.form-group #input-field-underline {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -138,22 +143,48 @@
     z-index: 1;
 }
 
-.form-group input:focus ~ i,
-.form-group input:valid ~ i {
+.form-group input:focus ~ #input-field-underline,
+.form-group input:valid ~ #input-field-underline {
     height: 50px;
 }
 
+#login-btn-container {
+    position: relative;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-/* .form-group label {
-    top: 0;
-    left: 0;
-    transform: translate(15px, 40px);
-    transform-origin: left;
-    transition: transform .25s;
+    left: 18px;
+    font-size:25px; 
+    height: 50px;
+
+    transition: 0.3s;
 }
-.form-group:focus-within label {
-    transform: translate(0px, -5px) scale(.85);
-    color: black;
-} */
+
+#login-btn-container:hover {
+    transform: translateX(-15px);
+}
+
+#login-btn-container #login-btn-img {
+
+    height: 20px;
+
+    transform: translateX(10px);
+}
+
+#login-btn-container #login-btn-overlay {
+    
+    height: 20px;
+    width: 20px;
+
+    transform: translateX(-10px);
+
+    transition: 0.3s;
+    background-color: #2f4863;
+}
+
+#login-btn-container:hover #login-btn-overlay {
+    transform: translateX(10px);
+}
 </style>

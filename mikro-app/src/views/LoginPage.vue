@@ -29,7 +29,7 @@
                         </div>
 
                         <div>
-                            <router-link to="/">
+                            <router-link to="Register">
                                 <button class="btn btn-outline-dark w-100 mt-2" style="font-size:larger">
                                     Register
                                 </button>

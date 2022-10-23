@@ -51,7 +51,7 @@
                                 Log in
                             </button>
                         </router-link>
-                        <router-link to="Lessons" class="ms-1">
+                        <router-link to="Register" class="ms-1">
                             <button class="btn btn-outline-dark">
                                 Register
                             </button>

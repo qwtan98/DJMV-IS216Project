@@ -1,39 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/ui/mikro_logo.png">
-  <HomePage msg="Welcome to Your Vue.js App"/>
-  <HomePage/>
-  <LoginPage/>
+  <div id="app">
+    <NavigationBar/>
+    <router-view></router-view>
+    <TheFooter/>
+  <!-- <LoginPage/>
   <RegisterPage/>
   <AchievementsPage/>
-  <LessonsPage/>
+  <LessonsPage/> -->
+  </div>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
-import LoginPage from './components/LoginPage.vue'
-import RegisterPage from './components/RegisterPage.vue'
-import AchievementsPage from './components/RegisterPage.vue'
-import LessonsPage from './components/LessonsPage.vue'
+// import HomePage from './views/HomePage.vue';
+import NavigationBar from './components/NavigationBar.vue';
+import TheFooter from './components/TheFooter.vue';
+
 
 export default {
   name: 'App',
   components: {
-    HomePage,
-    LoginPage,
-    RegisterPage,
-    AchievementsPage,
-    LessonsPage
-  }
+    NavigationBar,
+    TheFooter
+}
 }
 </script>
 
 <style>
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

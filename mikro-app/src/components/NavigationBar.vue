@@ -1,5 +1,5 @@
 <template>
-    <div id="nav-bar">
+    <div class="sticky-top" id="nav-bar">
     <!-- <v-btn text fab dark small icon>
         <router-link to="/"><v-icon>mdi-home</v-icon></router-link>
     </v-btn> -->
@@ -17,11 +17,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-0">
                         <router-link to="Lessons" class="navbar-brand col-md-4">
-                            <font-awesome-icon icon="fa-solid fa-book" />
+                            <font-awesome-icon class="icon" icon="fa-solid fa-graduation-cap"/> Academy
                         </router-link>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Lessons
+                                <font-awesome-icon class="icon" icon="fa-solid fa-book"/> Articles
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -32,11 +32,11 @@
                         </li> 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Lessons
+                                <font-awesome-icon class="icon" icon="fa-solid fa-trophy" />Achievements
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Lesson Progress</a></li>
+                                <li><a class="dropdown-item" href="#">Badges</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
@@ -44,6 +44,9 @@
                         <!-- <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                         </li>  -->
+                        <li>
+                            <font-awesome-icon class="icon" icon="fa-solid fa-globe" />
+                        </li>
                     </ul> 
                     <div class = "col-md-4">
                         <router-link to="Login">
@@ -76,6 +79,11 @@
     margin: 0;
 }
 
+
+
+.icon:hover {
+    transform: translateY(-4px);
+}
 #mikro-navbar {
     padding: 50px;
 }
@@ -86,8 +94,8 @@
 
 </style>
 
-<script>
 
+<script>
     export default 
     {
         data()

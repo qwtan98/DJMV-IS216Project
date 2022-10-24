@@ -1,16 +1,16 @@
 <template>
     <div class="hello">
-        <h1>This is the Achievements Page</h1>
+        <h1>This is the FAQ Page.</h1>
     </div>
   </template>
-  
+
 <script>
     export default 
     {
-        name: 'AchievementsPage',
+        name: 'FaqPage',
         props: 
         {
-
+    
         }
     }
 </script>

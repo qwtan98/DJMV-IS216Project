@@ -31,8 +31,8 @@
   
 
 
-      <div style="display: flex ; flex-direction: column; justify-content: space-between; flex-grow: 1; max-height: calc(100% - 60px);">
-       <div class="options">
+      <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; max-height: calc(100% - 60px);">
+        <div class="options">
             <router-link to="Login">
                 <button class="btn btn-primary" style="font-size: 12px">
                     Log in
@@ -481,7 +481,9 @@
     }
     .sidebar li a:hover {
       background: var(--menu-items-hover-color);
+      transform: translateX(15%) scale(1.15);
     }
+    
     .sidebar li a .links_name {
       color: var(--menu-items-text-color);
       font-size: 15px;
@@ -495,9 +497,26 @@
       opacity: 1;
       pointer-events: auto;
     }
-    .sidebar li a:hover .links_name,
-    .sidebar li a:hover i {
+
+    /* <!-- Animation --> */
+    .sidebar li a:hover .bx-grid-alt,
+    .sidebar li a:hover .bx-pie-chart-alt-2,
+    .sidebar li a:hover .bx-cog {
+      transition: all 0.5s ease-in-out;
+      transform: translateX(30px) rotate(180deg);
+      color: var(--bg-color);
+    }
+    .sidebar li a:hover .bx-heart,
+    .sidebar li a:hover .bx-user,
+    .sidebar li a:hover .bx-chat {
       transition: all 0.5s ease;
+      transform: translateX(30px) scale(1.25);
+      color: var(--bg-color);
+    }
+    .sidebar li a:hover i,
+    .sidebar li a:hover .links_name {
+      transition: all 0.5s ease;
+      transform: translateX(30px);
       color: var(--bg-color);
     }
     .sidebar li i {

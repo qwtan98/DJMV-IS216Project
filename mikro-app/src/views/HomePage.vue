@@ -1,9 +1,8 @@
 <template>
     <div id="home">
-      <!-- <router-view></router-view> -->
       <h1>This is the Home Page.</h1>
-      <h2>{{ msg }}</h2>
-      
+      <h2>{{ quotes[0] }}</h2>
+      <h3>User insights and dashboard goes here</h3>      
     </div>
   </template>
   

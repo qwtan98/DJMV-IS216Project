@@ -7,14 +7,15 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
-import { faBook } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faGlobe, faTrophy, faGraduationCap, faCaretLeft } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faBook)
+library.add(faBook, faGlobe, faTrophy, faGraduationCap, faCaretLeft)
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
 .use(router)
 .mount('#app')
+
 
 import "bootstrap/dist/js/bootstrap.js";

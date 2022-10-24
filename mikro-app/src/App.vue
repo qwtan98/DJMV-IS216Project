@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavigationBar/>
+    <NavigationBar @search-input-emit="search"/>
     <router-view></router-view>
     <TheFooter/>
   <!-- <LoginPage/>
@@ -18,10 +18,17 @@ import TheFooter from './components/TheFooter.vue';
 
 export default {
   name: 'App',
+
   components: {
     NavigationBar,
     TheFooter
-}
+  },
+  methods: {
+    search()
+    {
+      
+    }
+  }
 }
 </script>
 

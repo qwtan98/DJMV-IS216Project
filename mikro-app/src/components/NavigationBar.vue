@@ -68,6 +68,66 @@
                 </div>
             </div>
         </nav>
+            
+                    <div class="wrapper d-flex align-items-stretch">
+                        <nav id="sidebar">
+                            <div class="custom-menu">
+                                <button type="button" id="sidebarCollapse" class="btn btn-primary" v-on:click="sideBarStatus">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                        </button>
+                    </div>
+                            <div class="p-4">
+                            <router-link to="/" class="navbar-brand col-md-4">
+                                <img alt="Mikro logo" src="../assets/ui/mikro_logo_trim.png" style="height:25px;"/>
+                            </router-link>
+                        <ul class="list-unstyled components mb-5">
+                        <li class="active">
+                            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+                        </li>
+                        <li>
+                            <router-link to="Lessons" class="navbar-brand col-md-4">
+                                <font-awesome-icon class="icon" icon="fa-solid fa-graduation-cap"/> Academy
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="Articles" class="navbar-brand col-md-4">
+                                <font-awesome-icon class="icon" icon="fa-solid fa-book"/> Articles
+                            </router-link>
+                        </li>
+                        <li>
+                        <a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>
+                        </li>
+                        <li>
+                        <a href="#"><span class="fa fa-suitcase mr-3"></span> Gallery</a>
+                        </li>
+                        <li>
+                        <a href="#"><span class="fa fa-cogs mr-3"></span> Services</a>
+                        </li>
+                        <li>
+                        <a href="#"><span class="fa fa-paper-plane mr-3"></span> Contacts</a>
+                        </li>
+                        </ul>
+
+                        <div class="mb-5">
+                            <h3 class="h6 mb-3">log Out</h3>
+                        </div>
+
+
+
+                    </div>
+                    </nav>
+
+                    <!-- Page Content  -->
+                <div id="content" class="p-4 p-md-5 pt-5">
+                    <h2 class="mb-4">Sidebar #05</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                    </div>
+
+
+
     </div>
 
 </template>
@@ -84,6 +144,7 @@
 .icon:hover {
     transform: translateY(-4px);
 }
+
 #mikro-navbar {
     padding: 50px;
 }
@@ -92,10 +153,16 @@
     background-color: gray;
 }
 
+#sidebar {
+    background-color: rgb(24, 24, 24);
+}
+
 </style>
 
-
 <script>
+ 
+    import './NavBar.css'
+
     export default 
     {
         data()
@@ -109,6 +176,16 @@
         props: 
         {
 
+        },
+        
+        methods: 
+        {
+            sideBarStatus()
+            {
+                
+                alert("Im clicked!")
+            }
         }
+
     }
 </script>

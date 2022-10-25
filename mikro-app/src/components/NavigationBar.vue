@@ -165,8 +165,15 @@
               link: '/lessons',
               component: 'Lessons',
               name: 'Academy',
-              tooltip: 'User',
-              icon: 'bx-user',
+              tooltip: 'Book',
+              icon: 'bx-book',
+            },
+            {
+              link: '/articles',
+              component: 'Article',
+              name: 'Article',
+              tooltip: 'Book',
+              icon: 'bx-book',
             },
             {
               link: '/progress',

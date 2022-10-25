@@ -9,6 +9,7 @@ import Faq from "../views/FaqPage"
 import Article from "../views/ArticlesPage.vue"
 
 
+
 const routes =
   [
       {path: '/', name: 'Home', component: Home },
@@ -18,6 +19,7 @@ const routes =
       {path: '/progress', name: 'Progress', component: Progress},
       {path: '/faq', name: 'Faq', component: Faq},
       {path: '/article', name: 'Article', component: Article}
+    
     //   {path: '/lessons', name: 'lessons', component: () => import('../views/Contact')},
     //   {path: '*', name: 'broken', component: () => import('../views/NotFound')}
   ]

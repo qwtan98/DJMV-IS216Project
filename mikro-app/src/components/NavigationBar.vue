@@ -126,7 +126,7 @@
         //! Menu settings
         isMenuOpen: {
           type: Boolean,
-          default: true,
+          default: false,
         },
 
         menuLogo: {

@@ -13,7 +13,7 @@
       :src="menuLogo"
       alt="menu-logo"
       class="menu-logo icon"
-      style="width: auto; font-size: 10px"
+      style="width: auto; height: 30px"
     >
     <i
       v-else
@@ -33,13 +33,13 @@
       <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; max-height: calc(100% - 60px);">
         <div class="options">
             <router-link to="Login">
-                <button class="btn btn-primary" style="font-size: 12px">
+                <button class="btn btn-primary">
                     Log in
                 </button>
             </router-link>
             <span>
                 <router-link to="Register">
-                    <button class="btn btn-outline-primary" style="font-size: 12px">
+                    <button class="btn btn-outline-primary">
                         Register
                     </button>
                 </router-link>
@@ -331,10 +331,16 @@
       margin: 0 10px 0 10px;
     }
 
-    .options
-    {
-       text-align:  center;
+    .options {
+      text-align: center;
     }
+    
+    .options button
+    {
+       font-size: 12px;
+
+    }
+    
 
     .sidebar {
       position: relative;

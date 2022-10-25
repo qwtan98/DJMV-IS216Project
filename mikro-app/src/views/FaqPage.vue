@@ -1,5 +1,5 @@
 <template>
-    <div class="hello">
+    <div class="faq" style="margin-left: 78px;">
         <h1>This is the FAQ Page.</h1>
     </div>
   </template>

@@ -4,35 +4,34 @@
       :class="isOpened ? 'open' : ''"
       :style="cssVars"
     >
-      <div
-        class="logo-details"
-        style="margin: 6px 14px 0 14px;"
-      >
-        <img
-          v-if="menuLogo"
-          :src="menuLogo"
-          alt="menu-logo"
-          class="menu-logo icon"
-          style="width: auto; font-size: 10px"
-        >
-        <i
-          v-else
-          class="bx icon"
-          :class="menuIcon"
-        />
-        <i
-          class="bx"
-          :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
-          id="btn"
-          @click="isOpened = !isOpened"
-        />
-  
+    <div
+      class="logo-details"
+      style="margin: 6px 14px 0 14px;"
+    >
+    <img
+      v-if="menuLogo"
+      :src="menuLogo"
+      alt="menu-logo"
+      class="menu-logo icon"
+      style="width: auto; font-size: 10px"
+    >
+    <i
+      v-else
+      class="bx icon"
+      :class="menuIcon"
+    />
+    <i
+      class="bx"
+      :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
+      id="btn"
+      @click="isOpened = !isOpened"
+    />
     </div>
   
 
 
-      <div style="display: flex ; flex-direction: column; justify-content: space-between; flex-grow: 1; max-height: calc(100% - 60px);">
-       <div class="options">
+      <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; max-height: calc(100% - 60px);">
+        <div class="options">
             <router-link to="Login">
                 <button class="btn btn-primary" style="font-size: 12px">
                     Log in
@@ -75,7 +74,8 @@
                 <a :href="menuItem.link">
                   <i
                     class="bx"
-                    :class="menuItem.icon || 'bx-square-rounded'"
+                    :class= "isOpened ? 'bx-moving ' + menuItem.icon || 'bx-square-rounded' : 'bx-stationary ' + menuItem.icon || 'bx-square-rounded'"
+                    @click="isOpened = !isOpened"
                   />
                   <span class="links_name">{{ menuItem.name }}</span>
                 </a>
@@ -182,8 +182,8 @@
               icon: 'bx-pie-chart-alt-2',
             },
             {
-              link: '#',
-              name: 'Saved',
+              link: '/article',
+              name: 'Articles',
               tooltip: 'Saved',
               icon: 'bx-heart',
             },
@@ -488,7 +488,9 @@
     }
     .sidebar li a:hover {
       background: var(--menu-items-hover-color);
+      transform: translateX(15%) scale(1.15);
     }
+    
     .sidebar li a .links_name {
       color: var(--menu-items-text-color);
       font-size: 15px;
@@ -502,11 +504,45 @@
       opacity: 1;
       pointer-events: auto;
     }
-    .sidebar li a:hover .links_name,
-    .sidebar li a:hover i {
-      transition: all 0.5s ease;
+
+    /* <!-- Animation --> */
+    .sidebar li a:hover .bx-moving.bx-grid-alt,
+    .sidebar li a:hover .bx-moving.bx-pie-chart-alt-2,
+    .sidebar li a:hover .bx-moving.bx-cog {
+      transition: all 0.5s ease-in-out;
+      transform: translateX(30px) rotate(180deg);
       color: var(--bg-color);
     }
+    .sidebar li a:hover .bx-moving.bx-heart,
+    .sidebar li a:hover .bx-moving.bx-user,
+    .sidebar li a:hover .bx-moving.bx-chat {
+      transition: all 0.5s ease;
+      transform: translateX(30px) scale(1.25);
+      color: var(--bg-color);
+    }
+
+    .sidebar li a:hover .bx-stationary.bx-grid-alt,
+    .sidebar li a:hover .bx-stationary.bx-pie-chart-alt-2,
+    .sidebar li a:hover .bx-stationary.bx-cog {
+      transition: all 0.5s ease-in-out;
+      transform: rotate(180deg);
+      color: var(--bg-color);
+    }
+    .sidebar li a:hover .bx-stationary.bx-heart,
+    .sidebar li a:hover .bx-stationary.bx-user,
+    .sidebar li a:hover .bx-stationary.bx-chat {
+      transition: all 0.5s ease;
+      transform: scale(1.25);
+      color: var(--bg-color);
+    }
+
+    .sidebar li a:hover .bx-moving i,
+    .sidebar li a:hover .bx-moving ~.links_name {
+      transition: all 0.5s ease;
+      transform: translateX(30px);
+      color: var(--bg-color);
+    }
+    
     .sidebar li i {
       height: 50px;
       line-height: 50px;

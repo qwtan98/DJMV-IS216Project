@@ -37,7 +37,7 @@
 
                         <div>
                             <router-link to="/">
-                                <button class="btn btn-outline-primary w-100 mt-3" style="font-size:20px; height: 65px;">
+                                <button id="register-btn" class="btn btn-outline-primary w-100 mt-3" style="font-size:20px; height: 65px;">
                                     Register
                                 </button>
                             </router-link>
@@ -169,6 +169,11 @@
     height: 50px;
 }
 
+#login-btn:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
 #login-btn-container {
     position: relative;
 
@@ -176,9 +181,10 @@
     justify-content: center;
     align-items: center;
 
-    left: 18px;
     font-size:25px; 
+
     height: 50px;
+    padding-left: 35px;
 
     transition: 0.3s;
 }
@@ -207,5 +213,11 @@
 
 #login-btn-container:hover #login-btn-overlay {
     transform: translateX(10px);
+}
+
+
+#register-btn:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
 }
 </style>

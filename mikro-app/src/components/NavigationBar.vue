@@ -521,6 +521,7 @@
     }
     .sidebar li a:hover .bx-moving.bx-heart,
     .sidebar li a:hover .bx-moving.bx-user,
+    .sidebar li a:hover .bx-moving.bx-book,
     .sidebar li a:hover .bx-moving.bx-chat {
       transition: all 0.5s ease;
       transform: translateX(30px) scale(1.25);
@@ -536,6 +537,7 @@
     }
     .sidebar li a:hover .bx-stationary.bx-heart,
     .sidebar li a:hover .bx-stationary.bx-user,
+    .sidebar li a:hover .bx-stationary.bx-book,
     .sidebar li a:hover .bx-stationary.bx-chat {
       transition: all 0.5s ease;
       transform: scale(1.25);
@@ -587,6 +589,7 @@
       font-weight: 400;
       color: var(--menu-footer-text-color);
       white-space: nowrap;
+      pointer-events: none;
     }
     .sidebar div.profile .job {
       font-size: 12px;

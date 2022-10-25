@@ -1,8 +1,13 @@
 <template>
   <div id="app">
+<<<<<<< Updated upstream
     <NavigationBar @search-input-emit="search"/>
     <router-view></router-view>
     <TheFooter/>
+=======
+  <img alt="Vue logo" src="./assets/ui/mikro_logo.png">
+  <router-view></router-view>
+>>>>>>> Stashed changes
   <!-- <LoginPage/>
   <RegisterPage/>
   <AchievementsPage/>

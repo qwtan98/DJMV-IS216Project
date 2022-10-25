@@ -1,5 +1,5 @@
 <template>
-    <div id="home">
+    <div id="home" style="margin-left: 78px;">
       <h1>This is the Home Page.</h1>
       <h2>{{ quotes[0] }}</h2>
       <h3>User insights and dashboard goes here</h3>      

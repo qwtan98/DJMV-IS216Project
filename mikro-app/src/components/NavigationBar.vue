@@ -126,7 +126,7 @@
         //! Menu settings
         isMenuOpen: {
           type: Boolean,
-          default: true,
+          default: false,
         },
 
         menuLogo: {
@@ -165,8 +165,15 @@
               link: '/lessons',
               component: 'Lessons',
               name: 'Academy',
-              tooltip: 'User',
-              icon: 'bx-user',
+              tooltip: 'Book',
+              icon: 'bx-book',
+            },
+            {
+              link: '/articles',
+              component: 'Article',
+              name: 'Article',
+              tooltip: 'Book',
+              icon: 'bx-book',
             },
             {
               link: '/progress',
@@ -175,8 +182,8 @@
               icon: 'bx-pie-chart-alt-2',
             },
             {
-              link: '#',
-              name: 'Saved',
+              link: '/article',
+              name: 'Articles',
               tooltip: 'Saved',
               icon: 'bx-heart',
             },
@@ -298,11 +305,11 @@
           }
         },
       },
-      watch: {
-        isOpened() {
-          window.document.body.style.paddingLeft = this.isOpened && this.isPaddingLeft ? this.menuOpenedPaddingLeftBody : this.menuClosedPaddingLeftBody
-        }
-      }
+      // watch: {
+      //   isOpened() {
+      //     window.document.body.style.paddingLeft = this.isOpened && this.isPaddingLeft ? this.menuOpenedPaddingLeftBody : this.menuClosedPaddingLeftBody
+      //   }
+      // }
     }
   </script>
   

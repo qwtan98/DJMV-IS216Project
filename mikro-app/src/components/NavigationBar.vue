@@ -29,11 +29,6 @@
     </div>
   
 
-<<<<<<< Updated upstream
-=======
-    <router-link to="/">Home </router-link>
-    <router-link to="/lessons">Lessons</router-link>
->>>>>>> Stashed changes
 
       <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; max-height: calc(100% - 60px);">
         <div class="options">
@@ -180,8 +175,8 @@
               icon: 'bx-pie-chart-alt-2',
             },
             {
-              link: '#',
-              name: 'Saved',
+              link: '/article',
+              name: 'Articles',
               tooltip: 'Saved',
               icon: 'bx-heart',
             },

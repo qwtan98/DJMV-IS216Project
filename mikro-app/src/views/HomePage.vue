@@ -1,13 +1,8 @@
 <template>
     <div id="home">
       <h1>This is the Home Page.</h1>
-<<<<<<< Updated upstream
       <h2>{{ quotes[0] }}</h2>
       <h3>User insights and dashboard goes here</h3>      
-=======
-      <h2>{{ quotes[1] }}</h2>
-      <h2>{{ quotes[0] }}</h2>
->>>>>>> Stashed changes
     </div>
   </template>
   

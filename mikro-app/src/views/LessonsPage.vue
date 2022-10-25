@@ -1,5 +1,5 @@
 <template>
-    <div class="container m-3" id="lesson">
+    <div class="container" id="lesson" style="margin-left: 78px;">
         <h1 class="">Academy</h1>
         <span v-for="(lesson, index) in lessons" :key="lesson.id">
             <div class="row m-3">

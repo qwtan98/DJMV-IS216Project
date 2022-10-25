@@ -6,6 +6,7 @@ import Login from "../views/LoginPage"
 import Register from "../views/RegisterPage"
 import Progress from "../views/ProgressPage"
 import Faq from "../views/FaqPage"
+import Article from "../views/ArticlesPage.vue"
 
 
 const routes =
@@ -15,7 +16,8 @@ const routes =
       {path: '/login', name: 'Login', component: Login},
       {path: '/register', name: 'Register', component: Register},
       {path: '/progress', name: 'Progress', component: Progress},
-      {path: '/faq', name: 'Faq', component: Faq}
+      {path: '/faq', name: 'Faq', component: Faq},
+      {path: '/article', name: 'Article', component: Article}
     //   {path: '/lessons', name: 'lessons', component: () => import('../views/Contact')},
     //   {path: '*', name: 'broken', component: () => import('../views/NotFound')}
   ]

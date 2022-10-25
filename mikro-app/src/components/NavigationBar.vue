@@ -175,8 +175,8 @@
               icon: 'bx-pie-chart-alt-2',
             },
             {
-              link: '#',
-              name: 'Saved',
+              link: '/article',
+              name: 'Articles',
               tooltip: 'Saved',
               icon: 'bx-heart',
             },

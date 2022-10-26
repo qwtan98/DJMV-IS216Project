@@ -171,21 +171,15 @@
             {
               link: '/articles',
               component: 'Article',
-              name: 'Article',
+              name: 'Articles',
               tooltip: 'Book',
-              icon: 'bx-book',
+              icon: 'bx-heart',
             },
             {
               link: '/progress',
               name: 'Progress',
               tooltip: 'Messages',
               icon: 'bx-pie-chart-alt-2',
-            },
-            {
-              link: '/article',
-              name: 'Articles',
-              tooltip: 'Saved',
-              icon: 'bx-heart',
             },
             {
               link: '/faq',

@@ -399,6 +399,7 @@
       font-size: 28px;
       text-align: center;
       line-height: 60px;
+      margin-right: 10px;
     }
     .sidebar .nav-list {
       margin-top: 20px;

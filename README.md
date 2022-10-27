@@ -7,7 +7,7 @@ Today, the majority of migrant workers don't have easy access to resources for e
 Mikro is a one-stop knowledge investment platform to increase financial inclsuion and literacy among migrant workers in Singapore, that helps to kickstart and improve their knowledge on investing. 
 
 ## List of APIs Used (TBC)
-
+<li>marketaux API: Provide stock articles and information</li>
 
 ## Project setup
 ```

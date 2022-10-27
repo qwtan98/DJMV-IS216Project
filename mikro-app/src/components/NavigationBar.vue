@@ -346,7 +346,7 @@
       height: 100%;
       min-height: min-content;
       /* overflow-y: auto; */
-      width: 78px;
+      width: 55px;
       background: var(--bg-color);
       /* padding: 6px 14px 0 14px; */
       z-index: 99;
@@ -354,7 +354,7 @@
     }
 
     .sidebar.open {
-      width: 250px;
+      width: 240px;
     }
     .sidebar .logo-details {
       height: 60px;
@@ -395,7 +395,7 @@
     .sidebar i {
       color: var(--icons-color);
       height: 60px;
-      min-width: 50px;
+      min-width: 30px;
       font-size: 28px;
       text-align: center;
       line-height: 60px;
@@ -554,7 +554,7 @@
     .sidebar div.profile {
       position: relative;
       height: 60px;
-      width: 78px;
+      width: 55px;
       /* left: 0;
       bottom: 0; */
       padding: 10px 14px;
@@ -563,7 +563,7 @@
       overflow: hidden;
     }
     .sidebar.open div.profile {
-      width: 250px;
+      width: 240px;
     }
     .sidebar div .profile-details {
       display: flex;

@@ -70,7 +70,8 @@
               v-for="(menuItem, index) in menuItems"
               :key="index"
             >
-              <li>
+              <li
+                :class="isOpened ? 'nav-open': 'nav-closed'">
                 <a :href="menuItem.link">
                   <i
                     class="bx"
@@ -487,11 +488,13 @@
       transition: all 0.4s ease;
       background: var(--bg-color);
     }
-    .sidebar li a:hover {
+    .sidebar li.nav-open a:hover {
       background: var(--menu-items-hover-color);
       transform: translateX(15%) scale(1.15);
     }
-    
+    .sidebar li.nav-closed a:hover {
+      background: var(--menu-items-hover-color);
+    }
     .sidebar li a .links_name {
       color: var(--menu-items-text-color);
       font-size: 15px;

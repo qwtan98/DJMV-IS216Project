@@ -1,5 +1,5 @@
 <template>
-    <div class="hello">
+    <div class="register" style="margin-left: 78px;">
         <h1>This is the Register Page.</h1>
     </div>
   </template>

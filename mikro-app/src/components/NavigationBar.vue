@@ -13,7 +13,7 @@
       :src="menuLogo"
       alt="menu-logo"
       class="menu-logo icon"
-      style="width: auto; font-size: 10px"
+      style="width: auto; height: 30px"
     >
     <i
       v-else
@@ -33,13 +33,13 @@
       <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; max-height: calc(100% - 60px);">
         <div class="options">
             <router-link to="Login">
-                <button class="btn btn-primary" style="font-size: 12px">
+                <button class="btn btn-primary">
                     Log in
                 </button>
             </router-link>
             <span>
                 <router-link to="Register">
-                    <button class="btn btn-outline-primary" style="font-size: 12px">
+                    <button class="btn btn-outline-primary">
                         Register
                     </button>
                 </router-link>
@@ -70,7 +70,8 @@
               v-for="(menuItem, index) in menuItems"
               :key="index"
             >
-              <li>
+              <li
+                :class="isOpened ? 'nav-open': 'nav-closed'">
                 <a :href="menuItem.link">
                   <i
                     class="bx"
@@ -171,21 +172,15 @@
             {
               link: '/articles',
               component: 'Article',
-              name: 'Article',
+              name: 'Articles',
               tooltip: 'Book',
-              icon: 'bx-book',
+              icon: 'bx-heart',
             },
             {
               link: '/progress',
               name: 'Progress',
               tooltip: 'Messages',
               icon: 'bx-pie-chart-alt-2',
-            },
-            {
-              link: '/article',
-              name: 'Articles',
-              tooltip: 'Saved',
-              icon: 'bx-heart',
             },
             {
               link: '/faq',
@@ -331,10 +326,16 @@
       margin: 0 10px 0 10px;
     }
 
-    .options
-    {
-       text-align:  center;
+    .options {
+      text-align: center;
     }
+    
+    .options button
+    {
+       font-size: 12px;
+
+    }
+    
 
     .sidebar {
       position: relative;
@@ -346,7 +347,7 @@
       height: 100%;
       min-height: min-content;
       /* overflow-y: auto; */
-      width: 78px;
+      width: 55px;
       background: var(--bg-color);
       /* padding: 6px 14px 0 14px; */
       z-index: 99;
@@ -354,7 +355,7 @@
     }
 
     .sidebar.open {
-      width: 250px;
+      width: 240px;
     }
     .sidebar .logo-details {
       height: 60px;
@@ -395,10 +396,11 @@
     .sidebar i {
       color: var(--icons-color);
       height: 60px;
-      min-width: 50px;
+      min-width: 30px;
       font-size: 28px;
       text-align: center;
       line-height: 60px;
+      margin-right: 10px;
     }
     .sidebar .nav-list {
       margin-top: 20px;
@@ -486,11 +488,13 @@
       transition: all 0.4s ease;
       background: var(--bg-color);
     }
-    .sidebar li a:hover {
+    .sidebar li.nav-open a:hover {
       background: var(--menu-items-hover-color);
       transform: translateX(15%) scale(1.15);
     }
-    
+    .sidebar li.nav-closed a:hover {
+      background: var(--menu-items-hover-color);
+    }
     .sidebar li a .links_name {
       color: var(--menu-items-text-color);
       font-size: 15px;
@@ -554,7 +558,7 @@
     .sidebar div.profile {
       position: relative;
       height: 60px;
-      width: 78px;
+      width: 55px;
       /* left: 0;
       bottom: 0; */
       padding: 10px 14px;
@@ -563,7 +567,7 @@
       overflow: hidden;
     }
     .sidebar.open div.profile {
-      width: 250px;
+      width: 240px;
     }
     .sidebar div .profile-details {
       display: flex;

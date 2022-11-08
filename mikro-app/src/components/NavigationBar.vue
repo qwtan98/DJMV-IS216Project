@@ -580,7 +580,6 @@
       object-fit: cover;
       border-radius: 6px;
       margin-right: 10px;
-      visibility: hidden; 
     
     }
     .sidebar div.profile .name,

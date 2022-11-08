@@ -7,24 +7,25 @@
                     
                     <div class="settings-subbox">
                         <h1>Settings</h1>
-                        <p>Edit Profile</p>
+                        
+                        <p><img id="setting-icons" src="../assets/ui/user.png" alt="">Edit Profile</p>
                     </div>
                     
                     <div class="settings-subbox">
                         <h2>Help & Support</h2>
-                        <p>Support</p>
+                        <p><img id="setting-icons" src="../assets/ui/support.png" alt="">Support</p>
                     </div>
                     
                     <div class="settings-subbox">
                         <h2>Theme</h2>
-                        <p>Dark Mode</p>
+                        <p><img id="setting-icons" src="../assets/ui/dark_mode.png" alt="">Dark Mode</p>
                     </div>
                     
                     <div class="settings-subbox">
                         <h2>Privacy</h2>
-                        <p>Change Password</p>
-                        <p>Terms & Conditions</p>
-                        <p>About Mikro</p>
+                        <p><img id="setting-icons" src="../assets/ui/password.png" alt="">Change Password</p>
+                        <p><img id="setting-icons" src="../assets/ui/tnc.png" alt="">Terms & Conditions</p>
+                        <p><img id="setting-icons" src="../assets/ui/about.png" alt="">About Mikro</p>
                     </div>
                 </div>
             </div>
@@ -80,5 +81,11 @@
 
     display: flex;
     justify-content: center;
+}
+
+#setting-icons {
+    height: 15px;
+    padding-right: 4px;
+    margin-bottom: 3px;
 }
 </style>

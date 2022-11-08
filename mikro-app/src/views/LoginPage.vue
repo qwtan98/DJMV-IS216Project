@@ -36,7 +36,7 @@
                         </div>
 
                         <div>
-                            <router-link to="/">
+                            <router-link to="Register">
                                 <button id="register-btn" class="btn btn-outline-primary w-100 mt-3" style="font-size:20px; height: 65px;">
                                     Register
                                 </button>

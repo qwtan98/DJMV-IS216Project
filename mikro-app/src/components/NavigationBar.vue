@@ -189,7 +189,7 @@
               icon: 'bx-chat',
             },
             {
-              link: '#',
+              link: '/settings',
               name: 'Settings',
               tooltip: 'Settings',
               icon: 'bx-cog',

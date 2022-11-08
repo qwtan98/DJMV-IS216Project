@@ -13,7 +13,6 @@
                     <div class="settings-subbox">
                         <h2>Help & Support</h2>
                         <p>Support</p>
-                        <p>Test</p>
                     </div>
                     
                     <div class="settings-subbox">

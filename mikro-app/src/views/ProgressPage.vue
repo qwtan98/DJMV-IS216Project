@@ -1,5 +1,5 @@
 <template>
-    <div id="progress" style="margin-left: 78px;">
+    <div id="progress" style="margin-left: 63px;">
         <h1>This is the Progress Page.</h1>
         <h2>You will see ur achievements/badges, lesson progress here</h2>
     </div>

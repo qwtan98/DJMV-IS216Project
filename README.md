@@ -32,7 +32,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/qwtan98/DJMV-IS216Project">
-    <img src="mikro-app/src/assets/ui/mikro_logo.png" width="400" height="400" title="Mikro logo">
+    <img src="mikro-app/src/assets/ui/mikro_logo.png" width="300" height="300" title="Mikro logo">
   </a>
 
 <!--<h3 align="center">Mikro</h3> -->

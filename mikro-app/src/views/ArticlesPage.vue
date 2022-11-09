@@ -1,6 +1,6 @@
 <template>
     <div class="container" style="margin-left: 78px;">
-        <h1>This is the Articles Page.</h1>
+        <h1>Today's Stock News Articles</h1>
       
         <select name="stock_region" v-model="selected_topic" @change="created">
                 <option disabled value="">Please select one topic</option>
@@ -10,19 +10,20 @@
         </select>
         Sort: 
         <button class="rounded-pill"  @click="changeStatus($event)" value="EARLIEST">
-            Earliest
+            Oldest
         </button>
         <button class="rounded-pill" @click="changeStatus($event)" value="LATEST">
             Latest
         </button>
-        <div id="content">
+        <div id="content" class="mt-3">
             <div v-for="article of articles" :key="article.id">
                 <div class="card mb-4">
+                    <h3 class=""> {{ article.time_published.substring(5,7) + "/" + article.time_published.substring(7,8) + "/" + article.time_published.substring(0,4) + "," + article.time_published.substring(10,13)}}</h3>
                     <img :src="article.banner_image" style="width: 25%;" >
                     <div class="card-body">
                         <h5 class="card-title">{{ article.title }}</h5>
                         <p class="card-text">{{ article.summary }}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a :href="article.url" target="__blank" class="btn btn-primary">Read More 🔍</a>
                     </div>
                     <br/>
                 </div>

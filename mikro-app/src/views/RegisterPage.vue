@@ -34,8 +34,9 @@
                         </div>
 
                         <div class="d-flex justify-content-start mt-3" style="font-size:20px">
+                            Already have an account?&nbsp; 
                             <router-link to="Login">
-                                Have an account? Sign in here
+                                 Sign in here
                             </router-link>
                         </div>
                     </div>

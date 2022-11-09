@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavigationBar @search-input-emit="search"/>
+    <NavigationBar/>
     <router-view></router-view>
     <TheFooter/>
   <!-- <LoginPage/>

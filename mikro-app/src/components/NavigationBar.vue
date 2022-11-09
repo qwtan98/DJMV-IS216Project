@@ -39,7 +39,7 @@
             </router-link>
             <span>
                 <router-link to="Register">
-                    <button class="btn btn-outline-primary" style="display: flex; justify-content:center; text-decoration: none;">
+                    <button class="btn btn-outline-primary">
                         Register
                     </button>
                 </router-link>

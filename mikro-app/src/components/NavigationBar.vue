@@ -580,6 +580,7 @@
       object-fit: cover;
       border-radius: 6px;
       margin-right: 10px;
+    
     }
     .sidebar div.profile .name,
     .sidebar div.profile .job {

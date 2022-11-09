@@ -8,11 +8,13 @@ import Progress from "../views/ProgressPage"
 import Faq from "../views/FaqPage"
 import Article from "../views/ArticlesPage.vue"
 import Settings from "../views/SettingsPage"
+import Landing from "../views/LandingPage.vue"
 
 
 const routes =
   [
-      {path: '/', name: 'Home', component: Home },
+      {path: '/', name: 'Landing', component: Landing },
+      {path: '/home', name: 'Home', component: Home },
       {path: '/lessons', name: 'Lessons', component: Lessons },
       {path: '/login', name: 'Login', component: Login},
       {path: '/register', name: 'Register', component: Register},

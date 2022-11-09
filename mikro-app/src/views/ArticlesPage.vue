@@ -15,21 +15,37 @@
         <button class="rounded-pill" @click="changeStatus($event)" value="LATEST">
             Latest
         </button>
-        <div id="content" class="mt-3">
-            <div v-for="article of articles" :key="article.id">
-                <div class="card mb-4">
-                    <h3 class=""> {{ article.time_published.substring(5,7) + "/" + article.time_published.substring(7,8) + "/" + article.time_published.substring(0,4) + "," + article.time_published.substring(10,13)}}</h3>
-                    <img :src="article.banner_image" style="width: 25%;" >
-                    <div class="card-body">
-                        <h5 class="card-title">{{ article.title }}</h5>
+        <div id="content" class="row mt-3">
+
+                    <div v-for="article of articles" :key="article.id" class="col-md-4 card mb-3" style="font-size:12px"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px; width: 25%;" :src="article.banner_image" />
+                        {{ article.time_published.substring(5,7) + "/" + article.time_published.substring(7,8) + "/" + article.time_published.substring(0,4) + "," + article.time_published.substring(10,13)}}
+                        <div class="card-body p-4">
+                        <span v-for="topic of article.topics" :key="topic.id">
+                            <span v-if="!(article.topics.indexOf(topic) == article.topics.length-1)">
+                                <span class="text-primary card-text mb-0">{{ topic.topic }} | </span>
+                            </span>
+                            <span v-else> <span class="text-primary card-text mb-0">{{ topic.topic }}</span></span>
+                        </span>
+                        <h4 class="card-title">{{ article.title }}</h4>
                         <p class="card-text">{{ article.summary }}</p>
-                        <a :href="article.url" target="__blank" class="btn btn-primary">Read More 🔍</a>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" />
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <p class="fw-bold mb-0">{{ article.authors[0] }}</p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a :href="article.url" target="__blank" class="btn btn-primary">Read More 🔍</a>
+                                </div>
+                    
+                            </div>
+                        </div>
+                        
                     </div>
-                    <br/>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+    
     
   </template>
 

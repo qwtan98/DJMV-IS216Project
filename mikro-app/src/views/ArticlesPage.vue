@@ -1,5 +1,5 @@
 <template>
-    <div class="container" style="margin-left: 78px;">
+    <div class="container" style="margin-left: 55px;">
         <h1>Today's Stock News Articles</h1>
       
         <select name="stock_region" v-model="selected_topic" @change="created">

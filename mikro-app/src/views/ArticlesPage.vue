@@ -17,8 +17,7 @@
         </button>
         <div id="content" class="row mt-3">
 
-            <div v-for="article of articles" :key="article.id">
-                    <div class="col-md-4 card mb-3" style="font-size:12px"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px; width: 25%;" :src="article.banner_image" />
+                    <div v-for="article of articles" :key="article.id" class="col-md-4 card mb-3" style="font-size:12px"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px; width: 25%;" :src="article.banner_image" />
                         {{ article.time_published.substring(5,7) + "/" + article.time_published.substring(7,8) + "/" + article.time_published.substring(0,4) + "," + article.time_published.substring(10,13)}}
                         <div class="card-body p-4">
                         <span v-for="topic of article.topics" :key="topic.id">
@@ -46,7 +45,7 @@
                     </div>
                 </div>
             </div>
-    </div>
+    
     
   </template>
 

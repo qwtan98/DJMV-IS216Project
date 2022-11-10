@@ -24,10 +24,8 @@ export default {
     TheFooter
   },
   methods: {
-    search()
-    {
-      
-    }
+
+    
   }
 }
 </script>

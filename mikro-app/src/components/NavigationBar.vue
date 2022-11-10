@@ -165,6 +165,13 @@
               icon: 'bx-heart',
             },
             {
+              link: '/conversion',
+              component: 'Conversion Rates',
+              name: 'Conversion',
+              tooltip: 'Book',
+              icon: 'bx-money',
+            },
+            {
               link: '/progress',
               name: 'Progress',
               tooltip: 'Messages',

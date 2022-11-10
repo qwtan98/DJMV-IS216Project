@@ -1,5 +1,7 @@
 <!-- To Do:
 Add dark mode functionality.
+Centre camera icon over pfp. Now it is lower than the centre.
+Consider making it clickable, and prompts for image.
 Insert content in Edit Profile, Change Password. -->
 
 
@@ -27,7 +29,11 @@ Insert content in Edit Profile, Change Password. -->
                                     </div>
 
                                     <div class="modal-body">
-                                        Add in username field, change profile picture, change title (maybe title link to Achievements, like Salesforce)
+                                        <div>
+                                            <img src="../assets/ui/chatur.webp" id="editProfileModalPFP">
+                                            <img src="../assets/ui/camera.png" id="editProfileModalPFPOverlay">
+                                        </div>
+                                        Set title (maybe title link to Achievements, like Salesforce)
                                     </div>
 
                                     <div class="modal-footer">
@@ -221,4 +227,29 @@ Insert content in Edit Profile, Change Password. -->
     margin-bottom: 3px;
 }
 
+#editProfileModalPFP {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #344c64;
+    filter: brightness(50%);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin: auto;
+}
+
+#editProfileModalPFPOverlay {
+    height: 30px;
+    width: 30px;
+    z-index:2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: auto;
+}
 </style>

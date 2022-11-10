@@ -1,7 +1,6 @@
 <!-- To Do:
-Find a way to get the modals to centre vertically.
 Add dark mode functionality.
-Insert content in Edit Profile, Support, Change Password, and TnC. -->
+Insert content in Edit Profile, Change Password. -->
 
 
 <template>
@@ -19,7 +18,7 @@ Insert content in Edit Profile, Support, Change Password, and TnC. -->
                         
                         <!-- Edit Profile Modal id="editProfileModel" -->
                         <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
 
                                     <div class="modal-header">
@@ -50,7 +49,7 @@ Insert content in Edit Profile, Support, Change Password, and TnC. -->
                         
                         <!-- Support Modal id="supportModal" -->
                         <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
 
                                     <div class="modal-header">
@@ -59,7 +58,11 @@ Insert content in Edit Profile, Support, Change Password, and TnC. -->
                                     </div>
 
                                     <div class="modal-body">
-                                        Add in support hotline, hours.
+                                        Hotline: +65 9123 4567
+                                        <br><br>
+                                        Weekday: 9 a.m. - 6 p.m.
+                                        <br>
+                                        Weekend: 10 a.m. - 3 p.m.
                                     </div>
 
                                     <div class="modal-footer">
@@ -83,7 +86,7 @@ Insert content in Edit Profile, Support, Change Password, and TnC. -->
                         
                         <!-- Change Password Modal id="changePasswordModal" -->
                         <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
 
                                     <div class="modal-header">
@@ -108,7 +111,7 @@ Insert content in Edit Profile, Support, Change Password, and TnC. -->
                         
                         <!-- TNC Modal id="tncModal" -->
                         <div class="modal fade" id="tncModal" tabindex="-1" aria-labelledby="tncModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
 
                                     <div class="modal-header">
@@ -117,7 +120,7 @@ Insert content in Edit Profile, Support, Change Password, and TnC. -->
                                     </div>
 
                                     <div class="modal-body">
-                                        Terms and Conditions
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit et atque voluptate alias delectus nesciunt, saepe dolorum a beatae facere perspiciatis doloribus sit veritatis. Voluptatem consectetur soluta quisquam et doloribus!
                                     </div>
 
                                     <div class="modal-footer">
@@ -132,7 +135,7 @@ Insert content in Edit Profile, Support, Change Password, and TnC. -->
                         
                         <!-- About Modal id="aboutModal" -->
                         <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
 
                                     <div class="modal-header">
@@ -218,8 +221,4 @@ Insert content in Edit Profile, Support, Change Password, and TnC. -->
     margin-bottom: 3px;
 }
 
-.modal-dialog {
-    padding-top: 20%;
-    /* modal might extend downwards if too big. change if this happens. */
-}
 </style>

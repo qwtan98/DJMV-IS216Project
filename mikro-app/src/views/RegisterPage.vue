@@ -8,15 +8,15 @@
                     <img class="card-img-top mx-auto" src="../assets/ui/mikro_logo_trim.png" alt="mikro logo" style="max-width:250px;padding:50px">
 
                     <div class="card-body">
-                        <form>
+                        <form @submit.prevent="register">
                             <div id="register_inputfields" class="form-group mt-2">
-                                <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="registerInputUID" required="required">
+                                <input type="email" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="registerInputUID" required="required" v-model="email">
                                 <span id="input-field-label">User ID</span>
                                 <span id="input-field-underline"></span>
                             </div>
 
                             <div id="register_inputfields" class="form-group mt-5">
-                                <input type="password" class="form-control rounded-0" id="registerInputPW" required="required">
+                                <input type="password" class="form-control rounded-0" id="registerInputPW" required="required" v-model="password">
                                 <span id="input-field-label">Password</span>
                                 <span id="input-field-underline"></span>
                             </div>
@@ -24,7 +24,7 @@
 
                         <div>
                             <router-link to="/">
-                                <button id="register-btn" class="btn btn-primary w-100 mt-5">
+                                <button id="register-btn" class="btn btn-primary w-100 mt-5" type="submit">
                                     <div id="register-btn-container">
                                         <span>Register</span>
                                         <img id="register-btn-img" src="../assets/ui/enter-icon.png" alt=""><div id="register-btn-overlay"></div>
@@ -49,16 +49,32 @@
   </template>
 
 <script>
-    export default 
-    {
-        name: 'RegisterPage',
-        props: 
-        {
-    
-        }
-    }
-</script>
 
+    import firebase from 'firebase';
+export default {
+    name: 'RegisterPage',
+    data() {
+        return {
+            email: '',
+            password: '',
+        };
+    },
+    methods: {
+        register() {
+            firebase
+                .auth()
+                .createUserWithEmailAndPassword(this.email, this.password)
+                .then(() => {
+                    alert('Successfully registered! Please login.');
+                    this.$router.push('/');
+                })
+                .catch(error => {
+                    alert(error.message);
+                });
+        },
+    },
+};
+</script>
 <style>
 #register-card {
     margin: 50px 0px 50px 0px;

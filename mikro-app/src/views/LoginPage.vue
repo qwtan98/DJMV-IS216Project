@@ -8,15 +8,15 @@
                     <img class="card-img-top mx-auto" src="../assets/ui/mikro_logo_trim.png" alt="mikro logo" style="max-width:250px; padding:50px"> 
                     
                     <div class="card-body">
-                        <form>
+                        <form @submit.prevent="login">
                             <div id="login_inputfields" class="form-group mt-2">
-                                <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="loginInputUID" required="required">
+                                <input type="email" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="loginInputUID" required="required" v-model="email">
                                 <span id="input-field-label">User ID</span>
                                 <span id="input-field-underline"></span>
                             </div>
 
                             <div id="login_inputfields" class="form-group mt-5">
-                                <input type="password" class="form-control rounded-0" id="loginInputPW" required="required">
+                                <input type="password" class="form-control rounded-0" id="loginInputPW" required="required" v-model="password">
                                 <span id="input-field-label">Password</span>
                                 <span id="input-field-underline"></span>
                             </div>
@@ -24,7 +24,7 @@
 
                         <div>
                             <router-link to="/">
-                                <button id="login-btn" class="btn btn-primary w-100 mt-5">
+                                <button id="login-btn" class="btn btn-primary w-100 mt-5" type="submit">
                                     <div id="login-btn-container">
                                         <span>Log in</span>
                                         <img id="login-btn-img" src="../assets/ui/enter-icon.png" alt="">

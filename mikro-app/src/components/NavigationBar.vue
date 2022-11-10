@@ -166,8 +166,8 @@
             },
             {
               link: '/conversion',
-              component: 'Conversion Rates',
-              name: 'Conversion',
+              component: 'Conversion',
+              name: 'Conversion Rates',
               tooltip: 'Book',
               icon: 'bx-money',
             },

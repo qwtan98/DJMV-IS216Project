@@ -1,4 +1,5 @@
 <template>
+    <NavigationBar/>
     <div class="faq" style="margin-left: 78px;">
         <h1>This is the FAQ Page.</h1>
         <p>
@@ -10,9 +11,11 @@
   </template>
 
 <script>
+    import NavigationBar from '../components/NavigationBar.vue';
     export default 
     {
         name: 'FaqPage',
+        components: { NavigationBar },
         props: 
         {
     

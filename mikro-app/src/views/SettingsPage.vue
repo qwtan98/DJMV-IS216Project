@@ -6,6 +6,7 @@ Insert content in Edit Profile, Change Password. -->
 
 
 <template>
+    <NavigationBar/>
     <div class="settings-background">
 
             <div class="settings">
@@ -171,9 +172,11 @@ Insert content in Edit Profile, Change Password. -->
 </template>
   
 <script>
+    import NavigationBar from "../components/NavigationBar";
     export default 
     {
         name: 'SettingsPage',
+        components: {NavigationBar},
         props: 
         {
 

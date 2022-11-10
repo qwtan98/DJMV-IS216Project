@@ -1,4 +1,5 @@
 <template>
+    <NavigationBar/>
     <div id="progress" style="margin-left: 55px;">
         <FirebaseDatabase></FirebaseDatabase>
         <div class="container-fluid">
@@ -26,7 +27,8 @@
   </template>
   
 <script>
-import FirebaseDatabase from '../components/FirebaseDatabase.vue';
+    import FirebaseDatabase from '../components/FirebaseDatabase.vue';
+    import NavigationBar from '../components/NavigationBar.vue';
 
 // Initialize Firebase
 
@@ -35,8 +37,10 @@ import FirebaseDatabase from '../components/FirebaseDatabase.vue';
     
         props: {},
     
-        components: { 
-            FirebaseDatabase 
+        components: {
+            FirebaseDatabase,
+            NavigationBar,
+  
         }
     }
 </script>

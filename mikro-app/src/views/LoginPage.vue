@@ -23,7 +23,7 @@
                         </form>
 
                         <div>
-                            <router-link to="/">
+                            <router-link to="/home">
                                 <button id="login-btn" class="btn btn-primary w-100 mt-5">
                                     <div id="login-btn-container">
                                         <span>Log in</span>

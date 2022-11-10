@@ -1,4 +1,5 @@
 <template>
+    <NavigationBar/>
     <div class="container" style="margin-left: 55px;">
         <h1>Today's Stock News Articles</h1>
       
@@ -51,11 +52,17 @@
 
   
 <script>
-    /* import axios */
+    import NavigationBar from '../components/NavigationBar.vue';
     import axios from 'axios'
+
     export default 
     {
         name: 'ArticlesPage',
+        components: {
+            NavigationBar
+        
+        },
+
         data()
         {
             return {

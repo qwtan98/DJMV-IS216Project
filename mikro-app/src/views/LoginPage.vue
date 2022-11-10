@@ -35,13 +35,13 @@
                             </router-link>
                         </div>
 
-                        <div>
-                            <router-link to="/">
+                        <!-- <div>
+                            <router-link to="Register">
                                 <button id="register-btn" class="btn btn-outline-primary w-100 mt-3" style="font-size:20px; height: 65px;">
                                     Register
                                 </button>
                             </router-link>
-                        </div>
+                        </div> -->
 
                         <div class ="d-flex justify-content-start mt-3" style="font-size:20px;">
                             <router-link to="/">

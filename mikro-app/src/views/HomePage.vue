@@ -1,9 +1,12 @@
 <template>
-    <div id="home" style="margin-left: 78px;">
+  <div class="container">
+    <div id="home" style="margin-left: 58px;">
       <h1>This is the Home Page.</h1>
       <h2>{{ quotes[0] }}</h2>
       <h3>User insights and dashboard goes here</h3>      
     </div>
+  </div>
+
   </template>
   
   <script>
@@ -32,7 +35,7 @@
       }
   }
   </script>
-  
+
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
   h3 {

@@ -53,18 +53,6 @@
             class="nav-list"
             style="overflow: visible;"
           >
-            <li
-              v-if="isSearch"
-              @click="isOpened = true"
-            >
-              <i class="bx bx-search" />
-              <input
-                type="text"
-                :placeholder="searchPlaceholder"
-                @input="$emit('search-input-emit', $event.target.value)"
-              >
-              <span class="tooltip">{{ searchTooltip }}</span>
-            </li>
   
             <span
               v-for="(menuItem, index) in menuItems"
@@ -177,19 +165,20 @@
               icon: 'bx-heart',
             },
             {
+              link: '/conversion',
+              component: 'Conversion Rates',
+              name: 'Conversion',
+              tooltip: 'Book',
+              icon: 'bx-money',
+            },
+            {
               link: '/progress',
               name: 'Progress',
               tooltip: 'Messages',
               icon: 'bx-pie-chart-alt-2',
             },
             {
-              link: '/faq',
-              name: 'FAQ',
-              tooltip: 'FAQ',
-              icon: 'bx-chat',
-            },
-            {
-              link: '#',
+              link: '/settings',
               name: 'Settings',
               tooltip: 'Settings',
               icon: 'bx-cog',
@@ -293,7 +282,7 @@
             '--logo-title-color': this.logoTitleColor,
             '--icons-color': this.iconsColor,
             '--items-tooltip-color': this.itemsTooltipColor,
-            '--serach-input-text-color': this.searchInputTextColor,
+
             '--menu-items-hover-color': this.menuItemsHoverColor,
             '--menu-items-text-color': this.menuItemsTextColor,
             '--menu-footer-text-color': this.menuFooterTextColor,
@@ -332,8 +321,9 @@
     
     .options button
     {
-       font-size: 12px;
-
+       font-size: 10px;
+       width: 55px;
+  
     }
     
 
@@ -461,23 +451,7 @@
       padding: 0 20px 0 50px;
       width: 100%;
     }
-    .sidebar .bx-search {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      font-size: 22px;
-      background: var(--secondary-color);
-      color: var(--icons-color);
-    }
-    .sidebar.open .bx-search:hover {
-      background: var(--secondary-color);
-      color: var(--icons-color);
-    }
-    .sidebar .bx-search:hover {
-      background: var(--menu-items-hover-color);
-      color: var(--bg-color);
-    }
+
     .sidebar li a {
       display: flex;
       height: 100%;
@@ -579,7 +553,8 @@
       width: 45px;
       object-fit: cover;
       border-radius: 6px;
-      margin-right: 10px;
+      margin-right: 10px; 
+    
     }
     .sidebar div.profile .name,
     .sidebar div.profile .job {
@@ -628,6 +603,7 @@
       width: calc(100% - 78px);
       transition: all 0.5s ease;
       z-index: 2;
+      
     }
     .sidebar.open ~ .home-section {
       left: 250px;

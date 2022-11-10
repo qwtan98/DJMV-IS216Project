@@ -1,4 +1,5 @@
 <template>
+  <NavigationBar/>
   <div class="container">
     <div id="home" style="margin-left: 58px;">
       <h1>This is the Home Page.</h1>
@@ -10,14 +11,13 @@
   </template>
   
   <script>
-  //import NavigationBar from "../components/NavigationBar";
+  import NavigationBar from "../components/NavigationBar";
   export default 
   {
       name: 'HomePage',
 
-      components: 
-      {
-
+      components: {
+        NavigationBar
       },
 
       data()

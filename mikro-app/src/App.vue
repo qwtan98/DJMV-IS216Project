@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavigationBar/>
+    <!-- <NavigationBar/> -->
     <router-view></router-view>
     <TheFooter/>
   <!-- <LoginPage/>
@@ -12,7 +12,7 @@
 
 <script>
 // import HomePage from './views/HomePage.vue';
-import NavigationBar from './components/NavigationBar.vue';
+// import NavigationBar from './components/NavigationBar.vue';
 import TheFooter from './components/TheFooter.vue';
 
 
@@ -20,7 +20,6 @@ export default {
   name: 'App',
 
   components: {
-    NavigationBar,
     TheFooter
   },
   methods: {

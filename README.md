@@ -98,7 +98,7 @@ Mikro is a one-stop knowledge investment platform to increase financial inclsuio
 * [![Vue][Vue.js]][Vue-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
-* Alpha Vantage API: Provide stock articles news and information
+* Alpha Vantage API: Provide stock articles news and information (https://www.alphavantage.co/documentation)
 * Google Firebase: Real-time Database
 * vue-google-translate: Translate content corresponding to selected language (https://www.npmjs.com/package/vue-google-translate)
 

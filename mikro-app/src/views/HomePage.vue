@@ -2,9 +2,8 @@
   <NavigationBar/>
   <div class="container">
     <div id="home" style="margin-left: 58px;">
-      <h1>This is the Home Page.</h1>
-      <h2>{{ quotes[0] }}</h2>
-      <h3>User insights and dashboard goes here</h3>      
+      <h1>Hello, Chatur!</h1>
+   
     </div>
   </div>
 
@@ -40,10 +39,6 @@
   <style scoped>
   body {
     top: 0 !important;
-  }
-
-  .skiptranslate {
-    display: none !important;
   }
 
   h3 {

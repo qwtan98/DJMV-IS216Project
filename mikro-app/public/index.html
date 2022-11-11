@@ -6,11 +6,60 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            ("google_element"),
+        );
+      }
+      // app can be changed to the default id of your vue app available in App.vue or an id section of where
+      // you need translated
+      </script>
+
+      <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+      ></script>
+      <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/lewis-kori/vue-google-translate@main/src/utils/translatorRegex.js"
+      ></script>
+
+    <style> 
+      .translated-ltr {
+        margin-top: -40px;
+      }
+ 
+      .goog-te-banner-frame {
+        display: none;
+        margin-top: -20px;
+      }
+      
+      .goog-logo-link {
+        display: none !important;
+      }
+      
+
+      .goog-te-gadget {
+        color: transparent !important;
+        top: 0px;
+        left:  2px;
+      } 
+
+      #google_element {
+        margin-left: 58px;
+      }
+
+    </style>
   </head>
+
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+   
+    <div id="google_element"></div>
+
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

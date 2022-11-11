@@ -13,7 +13,7 @@
                     </svg></li>
             </ul>
             <p class="text-muted mb-0">    
-              Mikro <v-spacer></v-spacer> &copy; {{ new Date().getFullYear() }}
+              <img src="../assets/ui/mikro_logo_trim.png" style="width: 25px"> <v-spacer></v-spacer> &copy; {{ new Date().getFullYear() }}
             </p>
         </div>
     </footer>

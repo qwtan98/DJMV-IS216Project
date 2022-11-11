@@ -23,6 +23,7 @@
     "save": "^2.9.0",
     "vue": "^3.2.13",
     "vue-axios": "^3.5.0",
+    "vue-google-translate": "^0.0.13",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {

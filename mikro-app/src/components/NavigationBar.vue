@@ -144,7 +144,7 @@
           type: Array,
           default: () => [
             {
-              link: '/',
+              link: '/home',
               component: 'Home',
               name: 'Home',
               tooltip: 'Dashboard',

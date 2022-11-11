@@ -1,4 +1,5 @@
 <template>
+    <NavigationBar/>
     <div class="container" id="lesson" style="margin-left: 58px;">
         <h1 class="">Academy</h1>
         <span v-for="(lesson, index) in lessons" :key="lesson.id">
@@ -20,23 +21,19 @@
   </template>
   
 <script>
+   
+    import NavigationBar from "../components/NavigationBar";
     export default 
     {
-        name: 'LessonsPage',
-        props: 
-        {
-
-
-        },
-
-        data()
-        {
-            return{
-                lessons: [{Title: 'The Basics of Investment', Subtitle: 'Understand concepts of investment'},
-                        {Title: 'Dive into Investment', Subtitle: ''}
-                    ]
-            }
-
-        }
-    }
+    name: "LessonsPage",
+    components: { NavigationBar },
+    props: {},
+    data() {
+        return {
+            lessons: [{ Title: "The Basics of Investment", Subtitle: "Understand concepts of investment" }, { Title: "Dive into Investment", Subtitle: "" }
+            ]
+        };
+    },
+    
+}
 </script>

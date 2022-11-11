@@ -1,14 +1,6 @@
 <template>
-    <div class="d-flex-block" id="progress" style="margin-left: 55px;">
-        <div class="container-fluid" style="max-height: 120px">
-            <div class="row d-flex-inline">
-                <img src="../assets/ui/chatur.webp" class="img-fluid" style="border-radius:20%; height: 100px; width: 100px"/>
-                <div id="achievement-profile-desc" class="d-flex-column">
-                    <span>Test</span>
-                    <span>Test2</span>
-                </div>
-            </div>
-        </div>
+    <div id="progress" style="margin-left: 55px;">
+        <FirebaseDatabase></FirebaseDatabase>
         <div class="container-fluid">
             <div class="row">
                 <div class="progress-page-tab col-6 text-center align-self-center">
@@ -57,7 +49,7 @@
   </template>
   
 <script>
-// import FirebaseDatabase from '../components/FirebaseDatabase.vue';
+import FirebaseDatabase from '../components/FirebaseDatabase.vue';
 
 // Initialize Firebase
 
@@ -67,7 +59,7 @@
         props: {},
     
         components: { 
-            // FirebaseDatabase 
+            FirebaseDatabase 
         }
     }
 </script>

@@ -15,16 +15,14 @@
 
             <div class="p-3 achievement-profile-tab">
 
-                <div class="d-flex p-2" style="height:75px">
+                <div class="d-flex p-2" style="width: 100%">
 
-                    <div class="col-3 d-flex justify-content-end">
-                        <img src="../assets/ui/chatur.webp" style="aspect-ratio: 1 / 1; object-fit: cover;">
+                    <div class="col-4 d-flex justify-content-end">
+                        <img src="../assets/ui/chatur.webp" class="img-fluid" style="aspect-ratio: 1/1 ;object-fit:cover; border-radius:15px">
                     </div>
 
-                    <div class="col-1"></div>
-
-                    <div class="col-8 d-flex align-items-center">
-                        <span style="font-size:min(5.5vw, 50px);">Tan Quan Wah </span>
+                    <div class="col-8 ms-4 d-flex align-items-center">
+                        <span style="font-size:min(6vw, 50px);">Tan Quan Wah </span>
                     </div>
 
                 </div>
@@ -58,7 +56,7 @@
             <div id="recent-achievement-section">
                 <div class="d-flex align-items-center achievement-page-section-header" style="background-color:#2f4863d9; color:beige">
                     <img src="../assets/achievement.png" class="col-2 p-2">
-                    <span class ="col" style="font-size:1.25rem; font-weight: bold;">Recent Achievements </span>
+                    <span class ="col" style="font-size:min(4.5vw, 1.25rem); font-weight: bold;">Recent Achievements </span>
                 </div>
 
                 <div class="d-flex-block">
@@ -104,7 +102,7 @@
                 
                 <div class="d-flex align-items-center achievement-page-section-header" style="background-color:#2f4863d9; color:beige">
                     <img src="../assets/badge.png" class="col-2 p-2">
-                    <span class ="col" style="font-size:1.25rem; font-weight: bold;">Recent Badges </span>
+                    <span class ="col" style="font-size:min(4.5vw, 1.25rem); font-weight: bold;">Recent Badges </span>
                 </div>
                 
                 <div class="d-flex-block">

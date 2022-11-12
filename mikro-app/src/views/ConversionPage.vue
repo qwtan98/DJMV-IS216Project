@@ -167,7 +167,6 @@
 
 
         <div class="" id="converted_output">
-            {{ input_amt }}
             <span v-for="[key, value] of Object.entries(rates_array)" :key="key.id" class="">
                 <span v-if= "key == to_currency">
                     1 {{ from_currency }} -> {{ value }} {{ to_currency}}

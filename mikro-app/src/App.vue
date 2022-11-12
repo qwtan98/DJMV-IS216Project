@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <NavigationBar/> -->
     <router-view></router-view>
-    <TheFooter/>
+    <!-- <TheFooter/> -->
   <!-- <LoginPage/>
   <RegisterPage/>
   <AchievementsPage/>
@@ -13,14 +13,14 @@
 <script>
 // import HomePage from './views/HomePage.vue';
 // import NavigationBar from './components/NavigationBar.vue';
-import TheFooter from './components/TheFooter.vue';
+// import TheFooter from './components/TheFooter.vue';
 
 
 export default {
   name: 'App',
 
   components: {
-    TheFooter
+    // TheFooter
   },
   methods: {
 

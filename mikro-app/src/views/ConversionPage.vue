@@ -1,24 +1,25 @@
 <template>
     <NavigationBar/>
-    <div id="conversion" style="margin-left: 63px; margin-right: 63px; height: 100vh; display: flex; flex-direction: column; ">
+    <div id="conversion" style="margin-left: 63px; margin-right: 63px;">
         <br/>
-        <h4 style="width: 100vh">Real time currency conversion rates</h4>
-        <div class="form-group" style="text-align: center;">
+        <h4 style="width: 320px" class="m-0">Real time currency conversion rates</h4>
+        <div class="form-group text-center">
             <br/>
             <div class="input-group-prepend">
-                <span class="input-group-text">Amount to be converted</span>
+                <span class="input-group-text" style="border-radius: 0; padding: 5; ">Amount to be converted</span>
             </div>
             <input type="number" 
-                   class="form-control searchBox text-center" 
+                   class="form-control searchBox" 
                    placeholder="0" 
+                   style="border-radius:0;"
                    v-model="input_amt">
             <br/>
         
 
         <div class="row">
-                <div class="input-group mb-3">
+                <div class="input-group mb-3" >
                     <div class="input-group-prepend">
-                        <span class="input-group-text">From</span>
+                        <span style="border-radius:0;" class="input-group-text">From</span>
                     </div>
                     <select class="form-control to" v-model="from_currency" aria-describedby="describeTo">
                         <option value="">Select base currency</option>
@@ -75,19 +76,19 @@
                         <option value="UYU">UYU</option>
                         <option value="ZAR">ZAR</option>
                     </select>
-                    <small id="describeTo" class="form-text text-muted">Choose a currency you want to convert from</small>
+                    <small id="describeTo" class="form-text text-muted" style="margin-left: 18px; font-size: 12px;">Choose a currency you want to convert from</small>
                 </div>
          
             </div>
             <i class="bx bx-down-arrow" style="margin-left: 10px;"></i>
 
-            <div class="row">
+            <div class="row mt-3">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">To</span>
+                        <span class="input-group-text" style="border-radius:0;">To</span>
                     </div>
                     <select class="form-control to" id="sel2" v-model="to_currency">
-                        <option value="">Select to-be converted currency</option>
+                        <option value="">Select convert currency</option>
                         <option value="USD">USD</option>
                         <option value="AED">AED</option>
                         <option value="ARS">ARS</option>
@@ -141,7 +142,7 @@
                         <option value="UYU">UYU</option>
                         <option value="ZAR">ZAR</option>
                     </select>
-                    <small id="describeTo" class="form-text text-muted">Choose a currency you want to convert to</small>
+                    <small id="describeTo" class="form-text text-muted" style="margin-left: 20px; font-size: 12px;">Choose a currency you want to convert to</small>
                 </div>
             
         </div>
@@ -155,6 +156,7 @@
           </button>
         </div>
         <div class="" id="converted_output">
+            {{ input_amt }}
             <span v-for="[key, value] of Object.entries(rates_array)" :key="key.id" class="">
                 <span v-if= "key == to_currency">
                     1 {{ from_currency }} -> {{ value }} {{ to_currency}}
@@ -165,7 +167,6 @@
                         <br/><p class="btn btn-danger">Please input an amount to be converted</p>
                     </span>
                 </span>
-                <!-- {{ key }} - {{ value }}<br/> -->
             </span>
         
         </div>

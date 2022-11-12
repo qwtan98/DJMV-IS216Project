@@ -144,7 +144,7 @@
           type: Array,
           default: () => [
             {
-              link: '/',
+              link: '/home',
               component: 'Home',
               name: 'Home',
               tooltip: 'Dashboard',
@@ -156,6 +156,12 @@
               name: 'Academy',
               tooltip: 'Book',
               icon: 'bx-book',
+            },
+            {
+              link: '/progress',
+              name: 'Progress',
+              tooltip: 'Messages',
+              icon: 'bx-pie-chart-alt-2',
             },
             {
               link: '/articles',
@@ -170,12 +176,6 @@
               name: 'Conversion Rates',
               tooltip: 'Book',
               icon: 'bx-money',
-            },
-            {
-              link: '/progress',
-              name: 'Progress',
-              tooltip: 'Messages',
-              icon: 'bx-pie-chart-alt-2',
             },
             {
               link: '/settings',
@@ -307,9 +307,16 @@
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
+
+    #btn 
+    {
+      margin: 0;
+    }
+
     body {
       transition: all 0.5s ease;
     }
+
     .menu-logo {
       width: 20px;
       margin: 0 10px 0 10px;
@@ -523,6 +530,9 @@
       color: var(--bg-color);
     }
     
+    #btn.bx.bx-menu::before {
+      margin-left: 20px;
+    }
     .sidebar li i {
       height: 50px;
       line-height: 50px;

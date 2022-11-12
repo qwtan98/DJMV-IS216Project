@@ -2,7 +2,8 @@
   <NavigationBar/>
   <div class="container-fluid">
     <div id="home" style="margin-left: 58px;">
-      <h1>Hello, Chatur!</h1>
+      <br/>
+      <h3 class="m-0">Hello, Chatur!</h3>
 
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
        
@@ -65,11 +66,21 @@
       {
         created: function() {
           let api_endpoint = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=01d127c2f33a483c939e689920e7bab9"
-
+          let api_endpoint2 = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
           axios.get(api_endpoint).then(response =>
             {
               console.log(response.data.articles)
               this.headlines = response.data.articles
+            })
+
+          .catch(error => {
+            console.log(error)
+          })
+
+          axios.get(api_endpoint2).then(response =>
+            {
+              console.log(response.data)
+             
             })
 
           .catch(error => {

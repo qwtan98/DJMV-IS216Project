@@ -2,7 +2,6 @@
     <NavigationBar/>
     <div class="container" style="margin-left: 55px;">
         <br/>
-        <br/>
         <h3 class="margin-top: 5px">Today's Stock News Articles</h3>
       
         <select name="stock_region" v-model="selected_topic" @change="created" class="mb-2">
@@ -22,7 +21,7 @@
         </button>
         <div id="content" class="row mt-3">
 
-                    <div v-for="article of articles" :key="article.id" class="col-md-4 card mb-3" style="font-size:12px">
+                    <div v-for="article of articles" :key="article.id" class="col-md-4 p-1 card mb-3" style="font-size:12px">
                         <span v-if="article.banner_image">
                             <img class="card-img-top w-100 d-block fit-cover" style="height: 200px; width: 25%;" :src="article.banner_image" />
                         </span>
@@ -31,7 +30,7 @@
                             <img class="card-img-top w-100 d-block fit-cover" style="height: 200px; width: 25%;" src=../assets/ui/noArticle.jpg>
                         </span>
                         
-                        {{ article.time_published.substring(5,7) + "/" + article.time_published.substring(7,8) + "/" + article.time_published.substring(0,4) + "," + article.time_published.substring(10,13)}}
+                        {{ article.time_published.substring(5,7) + "/" + article.time_published.substring(7,8) + "/" + article.time_published.substring(0,4) + ", " + article.time_published.substring(10,11) + "." + article.time_published.substring(11,13)}}
                         <div class="card-body p-4">
                         <span v-for="topic of article.topics" :key="topic.id">
                             <span v-if="!(article.topics.indexOf(topic) == article.topics.length-1)">
@@ -44,16 +43,15 @@
                         <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" />
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <span v-if="article.authors">
-                                        <p class="fw-bold mb-0">{{ article.authors[0] }}</p>
-                                    </span>
-                                    <span v-else>
+                                    <span v-if="article.authors.length == 0">
                                         <p class="fw-bold mb-0">No identified author :(</p>
                                     </span>
-                                    <p class="text-muted mb-0">Erat netus</p>
+                                    <span v-else>
+                                        <p class="fw-bold mb-0">{{ article.authors[0] }}</p>
+                                    </span>
                                 </div>
                                 <div class="col-sm-4">
-                                    <a :href="article.url" target="__blank" class="btn btn-primary">Read More 🔍</a>
+                                    <a :href="article.url" target="__blank" style="font-size: 10px" class="btn btn-primary">Read More 🔍</a>
                                 </div>
                     
                             </div>

@@ -10,7 +10,7 @@
                         <div class="card-body">
                         <h5 class="card-title">Lesson {{ index + 1}}: {{ lesson.Title }}</h5>
                         <p class="card-text">{{ lesson.Subtitle }}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="LessonsQuiz" class="btn btn-primary">Go to LessonsQuiz</a>
                         </div>
                     </div>
                 </div>

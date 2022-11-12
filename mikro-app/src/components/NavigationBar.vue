@@ -31,20 +31,6 @@
 
 
       <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; max-height: calc(100% - 60px);">
-        <div class="options">
-            <router-link to="Login">
-                <button class="btn btn-primary">
-                    Log in
-                </button>
-            </router-link>
-            <span>
-                <router-link to="Register">
-                    <button class="btn btn-outline-primary">
-                        Register
-                    </button>
-                </router-link>
-            </span>
-        </div>
         <div
           id="my-scroll"
           style="margin: 6px 14px 0 14px;"
@@ -97,12 +83,14 @@
               </div>
             </div>
           </div>
+          <router-link to="/login">
           <i
             v-if="isExitButton"
             class="bx bx-log-out"
+            style="margin: 0; font-size: 25px;"
             id="log_out"
-            @click.stop="$emit('button-exit-clicked')"
           />
+        </router-link>
         </div>
       </div>
     </div>

@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="col-8 ms-4 d-flex align-items-center">
-                        <span style="font-size:min(6vw, 50px);">Chatur Ramilingan Azur </span>
+                        <span style="font-size:min(6vw, 50px);">Chatur Ramalingam</span>
                     </div>
 
                 </div>

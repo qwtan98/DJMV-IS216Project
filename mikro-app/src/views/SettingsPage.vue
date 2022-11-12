@@ -253,6 +253,9 @@ Insert content in Edit Profile, Change Password. -->
     right: 0;
     bottom: 0;
     display: block;
-    margin: auto;
+    margin-top: 40px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 </style>

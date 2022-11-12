@@ -23,11 +23,11 @@
 
                     <div v-for="article of articles" :key="article.id" class="col-md-4 p-1 card mb-3" style="font-size:12px">
                         <span v-if="article.banner_image">
-                            <img class="card-img-top w-100 d-block fit-cover" style="height: 200px; width: 25%;" :src="article.banner_image" />
+                            <img class="card-img-top w-100" style="height: auto; width: 25%;" :src="article.banner_image" />
                         </span>
 
                         <span v-else>
-                            <img class="card-img-top w-100 d-block fit-cover" style="height: 200px; width: 25%;" src=../assets/ui/noArticle.jpg>
+                            <img class="card-img-top w-100" style="height: auto; width: 25%;" src=../assets/ui/noArticle.jpg>
                         </span>
                         
                         {{ article.time_published.substring(5,7) + "/" + article.time_published.substring(7,8) + "/" + article.time_published.substring(0,4) + ", " + article.time_published.substring(10,11) + "." + article.time_published.substring(11,13)}}

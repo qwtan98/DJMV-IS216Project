@@ -1,11 +1,12 @@
 <template>
     <NavigationBar/>
     <div class="container" id="lesson" style="margin-left: 58px;">
+        <br/>
         <h1 class="">Academy</h1>
         <span v-for="(lesson, index) in lessons" :key="lesson.id">
-            <div class="row m-3">
+            <div class="row" style="margin-bottom: 10px;">
                 <div class="col-12">
-                    <div class="card" style="width:;">
+                    <div class="card" style="width: 100%;">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
                         <h5 class="card-title">Lesson {{ index + 1}}: {{ lesson.Title }}</h5>

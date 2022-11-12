@@ -1,8 +1,9 @@
 <template>
-    <div class="login-register">
-        <div class="container align-items-center justify-content-center">
-            <div class="row">
-                <div id="log-in-card" class="card col-md-6 mx-auto rounded-0">
+    <div class="login-register " >
+        <div class="container align-items-center justify-content-center default" v-bind:class="{ smaller: showButton }" id="animationrow">
+            <transition name="expand" mode="out-in">
+            <div class="row " >
+                <div id="log-in-card" class="card col-md-6 mx-auto rounded-0 " >
                     <span id="card-outline" style="height:4px"></span>
 
                     <img class="card-img-top mx-auto" src="../assets/ui/mikro_logo_trim.png" alt="mikro logo" style="max-width:250px; padding:50px"> 
@@ -23,16 +24,16 @@
                         </form>
 
                         <div>
-                            <router-link to="/home">
-                                <button id="login-btn" class="btn btn-primary w-100 mt-5">
+                            <!-- <router-link to="/home"> -->
+                                <button id="login-btn" class="btn btn-primary w-100 mt-5" @click="changeImage();toggleBigger();changePage()">
                                     <div id="login-btn-container">
-                                        <span>Log in</span>
-                                        <img id="login-btn-img" src="../assets/ui/enter-icon.png" alt="">
-                                        <div id="login-btn-overlay"></div>
+                                            <span id="login-text">Log in</span>
+                                            <img id="login-btn-img" src="../assets/ui/enter-icon.png" alt="">
+                                            <div id="login-btn-overlay"></div>
                                     </div>
                                 
                                 </button>
-                            </router-link>
+                            <!-- </router-link> -->
                         </div>
 
                         <!-- <div>
@@ -48,11 +49,20 @@
                                 Forgot your User ID or Password?
                             </router-link>
                         </div>
+
+                        <!-- <button @click="toggleBigger">
+                            <transition name="expand" mode="out-in">
+                             <div  class="default" v-bind:class="{ smaller: showButton }"> B </div> -->
+                       
+                            <!--<input-div><</input-div>-->
+                             <!-- </transition>
+                           </button> -->
                     </div>
 
                     <span id="card-outline" class="mt-5" style="height:4px"></span>
                 </div>
             </div>
+        </transition>
         </div>
         
     </div>
@@ -71,11 +81,69 @@
         props: 
         {
 
+        },
+
+        data()
+        {
+            return {
+                showButton: false,
+            }
+        },
+
+        methods: {
+            toggleBigger: function(){
+                this.showButton = !this.showButton;
+            },
+
+            changePage: function(){
+                setTimeout( () => this.$router.push({ path: '/home'}), 1300);
+            },
+
+            changeImage: function(){
+                var loginText = document.getElementById("login-text");
+                var loginImage = document.getElementById("login-btn-img");
+                var loginContainer = document.getElementById("login-btn-container");
+                if (loginText && loginImage && loginContainer)
+                {
+                    loginText.innerText = "";
+                    loginImage.style.visibility = "hidden";
+                    loginContainer.style.backgroundSize = "50px 50px";
+                    loginContainer.style.transform = "translate(0px)";
+                }
+
+            }
+        },
+        created(){
+            
+        },
+    
+        mounted() {
+
         }
-    }
+}
+
 </script>
 
 <style>
+
+.default {
+    transition: ease-out;
+     opacity: 1;
+     transition-property: width, height, opacity;
+    }
+
+.smaller{
+    transition: ease-out;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0.7s;
+    transition-property: width, height, opacity;
+  }
+
+
+
 #log-in-card {
     margin: 50px 0px 50px 0px;
     padding: 40px 30px 60px 30px;
@@ -85,6 +153,7 @@
 
     width:540px;
     background-color: azure;
+    overflow:hidden;
 }
 
 #card-outline {
@@ -135,6 +204,7 @@
     font-size: 25px;
     letter-spacing: 0.1ch;
     z-index: 20;
+    overflow: hidden;
 }
 
 .form-group #input-field-label {
@@ -187,6 +257,10 @@
     padding-left: 35px;
 
     transition: 0.3s;
+    background-image: url("../assets/ui/load.gif");
+    background-repeat: no-repeat;
+    background-size: 0px, 0px;
+    background-position: center;
 }
 
 #login-btn-container:hover {
@@ -203,7 +277,7 @@
 #login-btn-container #login-btn-overlay {
     
     height: 20px;
-    width: 20px;
+    width: 27px;
 
     transform: translateX(-10px);
 

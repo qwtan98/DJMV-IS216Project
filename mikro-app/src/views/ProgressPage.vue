@@ -18,11 +18,11 @@
                 <div class="d-flex p-2" style="width: 100%">
 
                     <div class="col-4 d-flex justify-content-end">
-                        <img src="../assets/ui/chatur.webp" class="img-fluid" style="aspect-ratio: 1/1 ;object-fit:cover; border-radius:15px">
+                        <img src="../assets/ui/chatur.webp" class="img-fluid" style="max-height: 100px; aspect-ratio: 1/1 ;object-fit:cover; border-radius:15px">
                     </div>
 
                     <div class="col-8 ms-4 d-flex align-items-center">
-                        <span style="font-size:min(6vw, 50px);">Tan Quan Wah </span>
+                        <span style="font-size:min(6vw, 50px);">Chatur Ramilingan Azur </span>
                     </div>
 
                 </div>

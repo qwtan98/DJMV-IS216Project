@@ -99,6 +99,7 @@ Mikro is a one-stop knowledge investment platform to increase financial inclsuio
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
 * Alpha Vantage API: Provide stock articles news and information (https://www.alphavantage.co/documentation)
+* ExchangeRate API: Provide latest exchange rates (https://app.exchangerate-api.com/dashboard)
 * Google Firebase: Real-time Database
 * vue-google-translate: Translate content corresponding to selected language (https://www.npmjs.com/package/vue-google-translate)
 

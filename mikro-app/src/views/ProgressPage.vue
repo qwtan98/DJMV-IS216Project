@@ -1,56 +1,158 @@
 <template>
-    <div id="progress" style="margin-left: 55px;">
-        <FirebaseDatabase></FirebaseDatabase>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="progress-page-tab col-6 text-center align-self-center">
-                    <span class>Achievements</span>
+    <div id="progress" style="margin:0 0 35px 57px; padding: 20px 0px 20px 0px">
+        <div class="">
+
+            <!-- <div class="mx-auto p-4 achievement-category-tab">
+                <div class="d-flex align-items-center">
+                    <div class="col-2 d-flex justify-content-start align-items-center me-4" style="max-height: 250px">
+                        <img src="../assets/achievement.png" style="min-width:50px; width:auto; height:auto; max-height: 160px">
+                    </div>
+                    <div class="col-10 d-flex justify-content-start align-items-center">
+                        <span style="font-size:min(5.5vw, 75px);">Achievements</span>
+                    </div>
                 </div>
-                <div class="progress-page-tab col-6 text-center align-self-center">
-                    <span class>Badges</span>
+            </div> -->
+
+            <div class="p-3 achievement-profile-tab">
+
+                <div class="d-flex p-2" style="height:75px">
+
+                    <div class="col-3 d-flex justify-content-end">
+                        <img src="../assets/ui/chatur.webp" style="aspect-ratio: 1 / 1; object-fit: cover;">
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <div class="col-8 d-flex align-items-center">
+                        <span style="font-size:min(5.5vw, 50px);">Tan Quan Wah </span>
+                    </div>
+
+                </div>
+
+                <div class="d-flex">
+
+                    <div class="col-6 d-flex flex-column justify-content-start align-items-center">
+
+                        <img src="../assets/achievement.png" style="width:70%">
+                        <div class="text-center d-flex flex-column" style="width:100%">
+                            <span style="font-size: min(3.5vw, 1rem)">Achievements</span>
+                            <span style="font-size: min(2.5vw, 0.8rem)">32/32 completed</span>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+
+                        <img src="../assets/badge.png" style="width:70%">
+
+                        <div class="text-center d-flex flex-column" style="width:100%">
+                            <span style="font-size: min(3.5vw, 1rem)">Badges</span>
+                            <span style="font-size: min(2.5vw, 0.8rem)">23/35 received</span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="container-fluid" style="background-color:wheat">
-            <div class="row d-flex-inlne" style ="padding: 10px">
-                <div class="col-4 align-self-center">
-                    <img src="../assets/ui/chatur.webp" class="img-fluid" style="height:75px;"/>
+
+            
+            <div id="recent-achievement-section">
+                <div class="d-flex align-items-center achievement-page-section-header" style="background-color:#2f4863d9; color:beige">
+                    <img src="../assets/achievement.png" class="col-2 p-2">
+                    <span class ="col" style="font-size:1.25rem; font-weight: bold;">Recent Achievements </span>
                 </div>
-                <div class="col-8 d-flex-column align-self-end">
-                    <p class="f-3">An achievement!</p>
-                    <p>Get an achievement</p>
-                    <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-                </div>
+
+                <div class="d-flex-block">
+
+                    <!-- <div v-if =""> -->
+                        <div class ="">
+                        <span class="d-flex align-items-center justify-content-center p-2" style="font-size:0.8rem; border-radius: 0 0 15px 15px; background-color: beige;">
+                            - No recent achievements to show -
+                        </span>
+                    </div>
+                    <div class="pt-2"></div>
+
+                    <div class="d-flex pb-2" style="background-color:white">
+                        <img src="../assets/achievement.png" class="col-2 p-1">
+                        <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
+                            <span style="font-size:1rem;">Achievement</span>
+                            <span style="font-size:0.8rem;">Details</span>
+                        </div>
+                    </div>
+                    <div class="d-flex pb-2" style="background-color:white">
+                        <img src="../assets/achievement.png" class="col-2 p-1">
+                        <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
+                            <span style="font-size:1rem;">Achievement</span>
+                            <span style="font-size:0.8rem;">Details</span>
+                        </div>
+                    </div>
+                    <div class="d-flex pb-2" style="background-color:white">
+                        <img src="../assets/achievement.png" class="col-2 p-1">
+                        <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
+                            <span style="font-size:1rem;">Achievement</span>
+                            <span style="font-size:0.8rem;">Details</span>
+                        </div>
+                    </div>
+                    <div style="background-color:beige" class="achievement-page-section-end d-flex align-items-center justify-content-center p-2">
+                        <span class ="ms-3" style="font-size:1rem;">View more >> </span>
+                    </div>
+                </div> 
+
             </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 badge-container">
-                    <img src="../assets/badge-img.png" alt="" style = "height: 100px; width: 100px">
-                    <p>Badge description</p>
+
+
+            <div id="recent-badge-section">
+                
+                <div class="d-flex align-items-center achievement-page-section-header" style="background-color:#2f4863d9; color:beige">
+                    <img src="../assets/badge.png" class="col-2 p-2">
+                    <span class ="col" style="font-size:1.25rem; font-weight: bold;">Recent Badges </span>
                 </div>
-                <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 badge-container">
-                    <img src="../assets/badge-img.png" alt="" style = "height: 100px; width: 100px">
-                    <p>Badge description</p>
-                </div>                <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 badge-container">
-                    <img src="../assets/badge-img.png" alt="" style = "height: 100px; width: 100px">
-                    <p>Badge description</p>
-                </div>                <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 badge-container">
-                    <img src="../assets/badge-img.png" alt="" style = "height: 100px; width: 100px">
-                    <p>Badge description</p>
-                </div>
+                
+                <div class="d-flex-block">
+
+                    <!-- <div v-if =""> -->
+                    <div>
+                        <span class="d-flex align-items-center justify-content-center p-2" style="font-size:0.8rem; border-radius: 0 0 15px 15px; background-color: beige;">
+                            - No recent badges to show -
+                        </span>
+                    </div>
+                    <div class="pt-2"></div>
+
+                    <div class="d-flex pb-2" style="background-color:white">
+                        <img src="../assets/badge.png" class="col-2 p-1">
+                        <div class="recent-badge-details d-flex flex-column align-items-left justify-content-center col">
+                            <span style="font-size:1rem;">Badge</span>
+                            <span style="font-size:0.8rem;">Details</span>
+                        </div>
+                    </div>
+                    <div class="d-flex pb-2" style="background-color:white">
+                        <img src="../assets/badge.png" class="col-2 p-1">
+                        <div class="recent-badge-details d-flex flex-column align-items-left justify-content-center col">
+                            <span style="font-size:1rem;">Badge</span>
+                            <span style="font-size:0.8rem;">Details</span>
+                        </div>
+                    </div>
+                    <div class="d-flex pb-2" style="background-color:white">
+                        <img src="../assets/badge.png" class="col-2 p-1">
+                        <div class="recent-badge-details d-flex flex-column align-items-left justify-content-center col">
+                            <span style="font-size:1rem;">Badge</span>
+                            <span style="font-size:0.8rem;">Details</span>
+                        </div>
+                    </div>
+                    <div style="background-color:beige" class="achievement-page-section-end d-flex align-items-center justify-content-center p-2">
+                        <span class ="ms-3" style="font-size:1rem;">View more >> </span>
+                    </div>
+
+                </div> 
+
             </div>
+
         </div>
+
     </div>
     
   </template>
   
 <script>
-import FirebaseDatabase from '../components/FirebaseDatabase.vue';
-
 // Initialize Firebase
 
     export default {
@@ -59,25 +161,51 @@ import FirebaseDatabase from '../components/FirebaseDatabase.vue';
         props: {},
     
         components: { 
-            FirebaseDatabase 
         }
     }
 </script>
 
 <style>
-.progress-page-tab {
-    background-color:aquamarine;
-    justify-content: center;
+.achievement-profile-tab {
 
-    font-size: 15px;
-    padding: 15px;
+    background-color: beige;
+    color: rgb(47, 72, 99);
+ 
+    border-radius: 15px;
+/*  box-shadow: 8px 8px rgba(47,72,99,.35);
+    transition: all .25s ease; */
+} 
+
+.achievement-category-tab:hover {
+  box-shadow: 5px 5px #2f4863d9;
 }
-.badge-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.achievement-page-section-header {
+    border-radius: 15px 15px 0 0;
+}
+
+.achievement-page-section-end {
+    border-radius: 0 0 15px 15px;
+}
+
+#recent-achievement-section {
     
-    height: 200px;
 }
+
+#recent-badge-section {
+
+}
+
+.recent-achievement-details {
+    
+}
+
+.recent-badge-details {
+
+}
+
+</style>
+
+<style scoped>
+
 </style>

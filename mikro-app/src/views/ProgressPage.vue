@@ -1,30 +1,41 @@
 <template>
-    <div id="progress" style="margin:0 0 35px 57px; padding: 20px 0px 20px 0px">
+    <NavigationBar/>
+    <div id="progress" style="margin:0 0 35px 55px; padding: 0">
         <div class="">
-
-            <!-- <div class="mx-auto p-4 achievement-category-tab">
-                <div class="d-flex align-items-center">
-                    <div class="col-2 d-flex justify-content-start align-items-center me-4" style="max-height: 250px">
-                        <img src="../assets/achievement.png" style="min-width:50px; width:auto; height:auto; max-height: 160px">
-                    </div>
-                    <div class="col-10 d-flex justify-content-start align-items-center">
-                        <span style="font-size:min(5.5vw, 75px);">Achievements</span>
+            <p href="#progress_popup" data-bs-toggle="modal">Test</p>                          
+            
+            <!-- Edit Profile Modal id="editProfileModel" -->
+            <div class="modal" id="editProfileModal" tabindex="-1" aria-labelledby="progress_popup" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+    
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+    
+                        <div class="modal-body">
+                            <div>
+                            </div>
+                        </div>
+    
+                        <div class="modal-footer">
+                        </div>
+    
                     </div>
                 </div>
-            </div> -->
-
+            </div>  
             <div class="p-3 achievement-profile-tab">
 
-                <div class="d-flex p-2" style="height:75px">
+                <div class="d-flex p-2" style="width: 100%">
 
-                    <div class="col-3 d-flex justify-content-end">
-                        <img src="../assets/ui/chatur.webp" style="aspect-ratio: 1 / 1; object-fit: cover;">
+                    <div class="col-4 d-flex justify-content-end">
+                        <img    src="../assets/ui/chatur.webp" class="img-fluid" 
+                                style="max-height: 100px; aspect-ratio: 1/1 ;object-fit:cover; border-radius:15px">
+
                     </div>
 
-                    <div class="col-1"></div>
-
-                    <div class="col-8 d-flex align-items-center">
-                        <span style="font-size:min(5.5vw, 50px);">Tan Quan Wah </span>
+                    <div class="col-8 ms-4 d-flex align-items-center">
+                        <span style="font-size:min(6vw, 50px);">Chatur Ramilingan Azur </span>
                     </div>
 
                 </div>
@@ -33,10 +44,13 @@
 
                     <div class="col-6 d-flex flex-column justify-content-start align-items-center">
 
-                        <img src="../assets/achievement.png" style="width:70%">
-                        <div class="text-center d-flex flex-column" style="width:100%">
+                        <img    src="../assets/achievement.png" 
+                                style="width:70%">
+                        <div    class="text-center d-flex flex-column" 
+                                style="width:100%">
+
                             <span style="font-size: min(3.5vw, 1rem)">Achievements</span>
-                            <span style="font-size: min(2.5vw, 0.8rem)">32/32 completed</span>
+                            <span style="font-size: min(2.5vw, 0.8rem)">21/32 completed</span>
                         </div>
 
                     </div>
@@ -45,7 +59,8 @@
 
                         <img src="../assets/badge.png" style="width:70%">
 
-                        <div class="text-center d-flex flex-column" style="width:100%">
+                        <div    class="text-center d-flex flex-column" 
+                                style="width:100%">
                             <span style="font-size: min(3.5vw, 1rem)">Badges</span>
                             <span style="font-size: min(2.5vw, 0.8rem)">23/35 received</span>
                         </div>
@@ -58,40 +73,53 @@
             <div id="recent-achievement-section">
                 <div class="d-flex align-items-center achievement-page-section-header" style="background-color:#2f4863d9; color:beige">
                     <img src="../assets/achievement.png" class="col-2 p-2">
-                    <span class ="col" style="font-size:1.25rem; font-weight: bold;">Recent Achievements </span>
+                    <span   class="col" 
+                            style="font-size:min(4.5vw, 1.25rem); font-weight: bold;">Recent Achievements 
+                    </span>
                 </div>
 
-                <div class="d-flex-block">
+                <div class="d-flex-block" style="background-color: beige;">
 
                     <!-- <div v-if =""> -->
-                        <div class ="">
-                        <span class="d-flex align-items-center justify-content-center p-2" style="font-size:0.8rem; border-radius: 0 0 15px 15px; background-color: beige;">
+                    <div class ="" style="">
+                        <span   class="d-flex align-items-center justify-content-center p-2" 
+                                style="font-size:0.8rem;">
                             - No recent achievements to show -
                         </span>
                     </div>
                     <div class="pt-2"></div>
 
-                    <div class="d-flex pb-2" style="background-color:white">
-                        <img src="../assets/achievement.png" class="col-2 p-1">
-                        <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
-                            <span style="font-size:1rem;">Achievement</span>
-                            <span style="font-size:0.8rem;">Details</span>
+                    <div>
+                        <div class="d-flex py-2">
+                            <img src="../assets/achievement.png" class="col-2 p-1">
+                            <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
+                                <span style="font-size:1rem;">Achievement</span>
+                                <span style="font-size:0.8rem;">Details</span>
+                            </div>
                         </div>
+                        <hr style="margin:0; padding: 0">
                     </div>
-                    <div class="d-flex pb-2" style="background-color:white">
-                        <img src="../assets/achievement.png" class="col-2 p-1">
-                        <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
-                            <span style="font-size:1rem;">Achievement</span>
-                            <span style="font-size:0.8rem;">Details</span>
+                    <div>
+                        <div class="d-flex py-2">
+                            <img src="../assets/achievement.png" class="col-2 p-1">
+                            <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
+                                <span style="font-size:1rem;">Achievement</span>
+                                <span style="font-size:0.8rem;">Details</span>
+                            </div>
                         </div>
+                        <hr style="margin:0; padding: 0">
                     </div>
-                    <div class="d-flex pb-2" style="background-color:white">
-                        <img src="../assets/achievement.png" class="col-2 p-1">
-                        <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
-                            <span style="font-size:1rem;">Achievement</span>
-                            <span style="font-size:0.8rem;">Details</span>
+                    <div>
+                        <div class="d-flex py-2">
+                            <img src="../assets/achievement.png" class="col-2 p-1">
+                            <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
+                                <span style="font-size:1rem;">Achievement</span>
+                                <span style="font-size:0.8rem;">Details</span>
+                            </div>
                         </div>
+                        <hr style="margin:0; padding: 0">
                     </div>
+
                     <div style="background-color:beige" class="achievement-page-section-end d-flex align-items-center justify-content-center p-2">
                         <span class ="ms-3" style="font-size:1rem;">View more >> </span>
                     </div>
@@ -104,10 +132,10 @@
                 
                 <div class="d-flex align-items-center achievement-page-section-header" style="background-color:#2f4863d9; color:beige">
                     <img src="../assets/badge.png" class="col-2 p-2">
-                    <span class ="col" style="font-size:1.25rem; font-weight: bold;">Recent Badges </span>
+                    <span class ="col" style="font-size:min(4.5vw, 1.25rem); font-weight: bold;">Recent Badges </span>
                 </div>
                 
-                <div class="d-flex-block">
+                <div class="d-flex-block" style="background-color: beige;">
 
                     <!-- <div v-if =""> -->
                     <div>
@@ -117,27 +145,39 @@
                     </div>
                     <div class="pt-2"></div>
 
-                    <div class="d-flex pb-2" style="background-color:white">
-                        <img src="../assets/badge.png" class="col-2 p-1">
-                        <div class="recent-badge-details d-flex flex-column align-items-left justify-content-center col">
-                            <span style="font-size:1rem;">Badge</span>
-                            <span style="font-size:0.8rem;">Details</span>
+                    <div>
+                        <div class="d-flex py-2">
+                            <img src="../assets/badge.png" class="col-2 p-1">
+                            <div class="recent-badge-details d-flex flex-column align-items-left justify-content-center col">
+                                <span style="font-size:1rem;">Badge</span>
+                                <span style="font-size:0.8rem;">Details</span>
+                            </div>
                         </div>
+                        <hr style="margin:0; padding: 0">
                     </div>
-                    <div class="d-flex pb-2" style="background-color:white">
-                        <img src="../assets/badge.png" class="col-2 p-1">
-                        <div class="recent-badge-details d-flex flex-column align-items-left justify-content-center col">
-                            <span style="font-size:1rem;">Badge</span>
-                            <span style="font-size:0.8rem;">Details</span>
+
+                    <div>
+                        <div class="d-flex py-2">
+                            <img src="../assets/badge.png" class="col-2 p-1">
+                            <div class="recent-badge-details d-flex flex-column align-items-left justify-content-center col">
+                                <span style="font-size:1rem;">Badge</span>
+                                <span style="font-size:0.8rem;">Details</span>
+                            </div>
                         </div>
+                        <hr style="margin:0; padding: 0">
                     </div>
-                    <div class="d-flex pb-2" style="background-color:white">
-                        <img src="../assets/badge.png" class="col-2 p-1">
-                        <div class="recent-badge-details d-flex flex-column align-items-left justify-content-center col">
-                            <span style="font-size:1rem;">Badge</span>
-                            <span style="font-size:0.8rem;">Details</span>
+                    
+                    <div>
+                        <div class="d-flex py-2">
+                            <img src="../assets/badge.png" class="col-2 p-1">
+                            <div class="recent-badge-details d-flex flex-column align-items-left justify-content-center col">
+                                <span style="font-size:1rem;">Badge</span>
+                                <span style="font-size:0.8rem;">Details</span>
+                            </div>
                         </div>
+                        <hr style="margin:0; padding: 0">
                     </div>
+
                     <div style="background-color:beige" class="achievement-page-section-end d-flex align-items-center justify-content-center p-2">
                         <span class ="ms-3" style="font-size:1rem;">View more >> </span>
                     </div>
@@ -154,14 +194,18 @@
   
 <script>
 // Initialize Firebase
-
-    export default {
-        name: "AchievementsPage",
-    
+    import NavigationBar from "../components/NavigationBar";
+    export default 
+    {
+        name: "ProgressPage",
+        components: { NavigationBar },
         props: {},
-    
-        components: { 
-        }
+        data() {
+            return {
+                lessons: [{ Title: "The Basics of Investment", Subtitle: "Understand concepts of investment" }, { Title: "Dive into Investment", Subtitle: "" }
+                ]
+            };
+        },
     }
 </script>
 
@@ -189,11 +233,13 @@
 }
 
 #recent-achievement-section {
-    
+    background-color: #2f4863;
+    border-radius: 15px;
 }
 
 #recent-badge-section {
-
+    background-color: #2f4863;
+    border-radius: 15px;
 }
 
 .recent-achievement-details {

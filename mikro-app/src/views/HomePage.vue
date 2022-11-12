@@ -1,6 +1,6 @@
 <template>
   <NavigationBar/>
-  <div class="container-fluid">
+  <div class="container">
     <div id="home" style="margin-left: 58px;">
       <br/>
       <h3 class="m-0">Hello, Chatur!</h3>

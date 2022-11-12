@@ -2,8 +2,17 @@
     <NavigationBar/>
     <div id="conversion" style="margin-left: 63px; margin-right: 63px;">
         <br/>
-        <h4 style="width: 320px" class="m-0">Real time currency conversion rates</h4>
-        <div class="form-group text-center">
+        
+        <h4 style="width: 320px" class="m-0"></h4>
+        <div class="form-group text-center card p-2" style="box-shadow: 0 2px 18px 1px rgb(49 53 72 / 10%); ">
+            <div class="card-header mt-3">
+                <h4 class="text-bold-500 info">
+                   Real time currency conversion rates
+                </h4>
+            </div>
+            <div class="card-subtitle p-0 mt-3 mx-2">	                   
+                <h5 class="">Understand the economy right now.</h5>
+            </div>
             <br/>
             <div class="input-group-prepend">
                 <span class="input-group-text" style="border-radius: 0; padding: 5; ">Amount to be converted</span>
@@ -56,7 +65,7 @@
                         <option value="MVR">MVR</option>
                         <option value="MXN">MXN</option>
                         <option value="MYR">MYR</option>
-                        <option value="NOK">NOK</option>
+                        <option value="NOK"></option>
                         <option value="NZD">NZD</option>
                         <option value="PAB">PAB</option>
                         <option value="PEN">PEN</option>
@@ -143,18 +152,20 @@
                         <option value="ZAR">ZAR</option>
                     </select>
                     <small id="describeTo" class="form-text text-muted" style="margin-left: 20px; font-size: 12px;">Choose a currency you want to convert to</small>
-                </div>
-            
+                </div> 
         </div>
-        
+              
+   
         <div class="text-center"> 
             <!-- convert button -->
             <button class="btn btn-primary convert m-2" 
                     type="submit"
                     @click="convert()">
-                 Convert
+                 Convert 💱
           </button>
         </div>
+
+
         <div class="" id="converted_output">
             {{ input_amt }}
             <span v-for="[key, value] of Object.entries(rates_array)" :key="key.id" class="">
@@ -172,12 +183,14 @@
         </div>
     </div>
     </div>
-    <i class="bx bx:calculator"></i>
+
+    
     
   </template>
   <style>
     body {
         background-color: aliceblue;
+        height: 100%;
     }
 
     .searchBox {
@@ -187,6 +200,7 @@
     .form-group {
       text-align: center;
       width: 300px;
+      background-color: rgb(246, 250, 255);
     }
     
     .form-control {

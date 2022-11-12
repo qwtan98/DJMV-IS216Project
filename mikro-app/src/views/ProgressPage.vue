@@ -1,18 +1,29 @@
 <template>
-    <div id="progress" style="margin:0 0 35px 57px; padding: 20px 0px 20px 0px">
+    <NavigationBar/>
+    <div id="progress" style="margin:0 0 35px 55px; padding: 0">
         <div class="">
-
-            <!-- <div class="mx-auto p-4 achievement-category-tab">
-                <div class="d-flex align-items-center">
-                    <div class="col-2 d-flex justify-content-start align-items-center me-4" style="max-height: 250px">
-                        <img src="../assets/achievement.png" style="min-width:50px; width:auto; height:auto; max-height: 160px">
-                    </div>
-                    <div class="col-10 d-flex justify-content-start align-items-center">
-                        <span style="font-size:min(5.5vw, 75px);">Achievements</span>
+            <p href="#progress_popup" data-bs-toggle="modal">Test</p>                          
+            
+            <!-- Edit Profile Modal id="editProfileModel" -->
+            <div class="modal" id="editProfileModal" tabindex="-1" aria-labelledby="progress_popup" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+    
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+    
+                        <div class="modal-body">
+                            <div>
+                            </div>
+                        </div>
+    
+                        <div class="modal-footer">
+                        </div>
+    
                     </div>
                 </div>
-            </div> -->
-
+            </div>  
             <div class="p-3 achievement-profile-tab">
 
                 <div class="d-flex p-2" style="width: 100%">
@@ -39,7 +50,7 @@
                                 style="width:100%">
 
                             <span style="font-size: min(3.5vw, 1rem)">Achievements</span>
-                            <span style="font-size: min(2.5vw, 0.8rem)">32/32 completed</span>
+                            <span style="font-size: min(2.5vw, 0.8rem)">21/32 completed</span>
                         </div>
 
                     </div>
@@ -67,7 +78,7 @@
                     </span>
                 </div>
 
-                <div class="d-flex-block" style="background-color: beige; border-radius: 0 0 0 15px">
+                <div class="d-flex-block" style="background-color: beige;">
 
                     <!-- <div v-if =""> -->
                     <div class ="" style="">
@@ -124,7 +135,7 @@
                     <span class ="col" style="font-size:min(4.5vw, 1.25rem); font-weight: bold;">Recent Badges </span>
                 </div>
                 
-                <div class="d-flex-block" style="background-color: beige; border-radius: 15px;">
+                <div class="d-flex-block" style="background-color: beige;">
 
                     <!-- <div v-if =""> -->
                     <div>
@@ -183,14 +194,18 @@
   
 <script>
 // Initialize Firebase
-
-    export default {
-        name: "AchievementsPage",
-    
+    import NavigationBar from "../components/NavigationBar";
+    export default 
+    {
+        name: "ProgressPage",
+        components: { NavigationBar },
         props: {},
-    
-        components: { 
-        }
+        data() {
+            return {
+                lessons: [{ Title: "The Basics of Investment", Subtitle: "Understand concepts of investment" }, { Title: "Dive into Investment", Subtitle: "" }
+                ]
+            };
+        },
     }
 </script>
 

@@ -8,7 +8,7 @@
                     <div class="card" style="width:;">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
-                        <h5 class="card-title">Lesson {{ index }}: {{ lesson.Title }}</h5>
+                        <h5 class="card-title">Lesson {{ index + 1}}: {{ lesson.Title }}</h5>
                         <p class="card-text">{{ lesson.Subtitle }}</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>

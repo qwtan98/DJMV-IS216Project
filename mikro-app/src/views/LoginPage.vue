@@ -1,5 +1,5 @@
 <template>
-    <div class="login-register " >
+    <div class="login-register" >
         <div class="container align-items-center justify-content-center default" v-bind:class="{ smaller: showButton }" id="animationrow">
             <transition name="expand" mode="out-in">
             <div class="row " >

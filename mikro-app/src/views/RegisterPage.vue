@@ -1,6 +1,6 @@
 <template>
-    <div class="register">
-        <div class="container align-items-center justify-content-center">
+
+        <div class="register container align-items-center justify-content-center">
             <div class="row">
                 <div id="register-card" class="card col-md-6 mx-auto rounded-0">
                     <span id="card-outline" style="height:4px"></span>
@@ -45,7 +45,6 @@
                 </div>
             </div>
         </div>
-    </div>
   </template>
 
 <script>
@@ -63,12 +62,10 @@
 #register-card {
     margin: 50px 0px 50px 0px;
     padding: 40px 30px 60px 30px;
-
     outline: none;
     border: none;
-
-    width:540px;
     background-color: azure;
+    box-shadow: rgba(255, 255, 255, 0.2) 3px 7px 29px 3px;
 }
 
 #card-outline {
@@ -101,6 +98,7 @@
 <style scoped>
 .register {
     background-color: #2f4863;
+    background-image: url(../assets/ui/background.webp);
 }
 
 .form-group {

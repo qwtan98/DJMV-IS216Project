@@ -141,8 +141,13 @@ Consider adding prompt for image. But as I understand, need a place to store the
 
 <style scoped>
 
+.skiptranslate {
+    display: inline;
+=======
+
 h1 {
     text-align: center;
+
 }
 .settings-background {
     background-color: aliceblue;

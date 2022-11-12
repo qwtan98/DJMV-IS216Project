@@ -1,34 +1,27 @@
 <template>
     <NavigationBar/>
-    <div id="conversion" style="margin-left: 63px; background-color: aliceblue; height: 100vh;">
-        <h1>Real time currency conversion rates</h1>
-        <div class="form-group">
+    <div id="conversion" style="margin-left: 63px; margin-right: 63px; height: 100vh; display: flex; flex-direction: column; ">
+        <br/>
+        <h4 style="width: 100vh">Real time currency conversion rates</h4>
+        <div class="form-group" style="text-align: center;">
             <br/>
-            <label for="input_amt">
-                Amount to Convert : 
-            </label>
+            <div class="input-group-prepend">
+                <span class="input-group-text">Amount to be converted</span>
+            </div>
             <input type="number" 
-                   class="form-control searchBox" 
-                   placeholder="0.00" 
+                   class="form-control searchBox text-center" 
+                   placeholder="0" 
                    v-model="input_amt">
-
-            <span v-for="[key, value] of Object.entries(rates_array)" :key="key.id" class="">
-                <span v-if= "key == input_amt">
-                    {{ value }} hi
-                </span>
-                {{ key }} - {{ value }}<br/>
-            </span>
-        </div>
+            <br/>
+        
 
         <div class="row">
-            
-            <div class="col-sm-6">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">From</span>
                     </div>
-                    <select class="form-control to" v-model="from_currency">
-                        <option value="">Select One …</option>
+                    <select class="form-control to" v-model="from_currency" aria-describedby="describeTo">
+                        <option value="">Select base currency</option>
                         <option value="USD">USD</option>
                         <option value="AED">AED</option>
                         <option value="ARS">ARS</option>
@@ -82,16 +75,19 @@
                         <option value="UYU">UYU</option>
                         <option value="ZAR">ZAR</option>
                     </select>
+                    <small id="describeTo" class="form-text text-muted">Choose a currency you want to convert from</small>
                 </div>
+         
             </div>
+            <i class="bx bx-down-arrow" style="margin-left: 10px;"></i>
 
-            <div class="col-sm-6">
+            <div class="row">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">To</span>
                     </div>
                     <select class="form-control to" id="sel2" v-model="to_currency">
-                        <option value="">Select One …</option>
+                        <option value="">Select to-be converted currency</option>
                         <option value="USD">USD</option>
                         <option value="AED">AED</option>
                         <option value="ARS">ARS</option>
@@ -145,11 +141,12 @@
                         <option value="UYU">UYU</option>
                         <option value="ZAR">ZAR</option>
                     </select>
+                    <small id="describeTo" class="form-text text-muted">Choose a currency you want to convert to</small>
                 </div>
-            </div>
-        </div>
-        <div class="text-center">
             
+        </div>
+        
+        <div class="text-center"> 
             <!-- convert button -->
             <button class="btn btn-primary convert m-2" 
                     type="submit"
@@ -157,15 +154,47 @@
                  Convert
           </button>
         </div>
-
         <div class="" id="converted_output">
-            You get {{ output }}
+            <span v-for="[key, value] of Object.entries(rates_array)" :key="key.id" class="">
+                <span v-if= "key == to_currency">
+                    1 {{ from_currency }} -> {{ value }} {{ to_currency}}
+                    <span v-if="!isNaN(input_amt)">
+                        <br/>You get 💸{{ (value * input_amt).toFixed(2) }} {{ to_currency }}
+                    </span>
+                    <span v-else>
+                        <br/><p class="btn btn-danger">Please input an amount to be converted</p>
+                    </span>
+                </span>
+                <!-- {{ key }} - {{ value }}<br/> -->
+            </span>
+        
         </div>
-
     </div>
+    </div>
+    <i class="bx bx:calculator"></i>
     
   </template>
-  
+  <style>
+    body {
+        background-color: aliceblue;
+    }
+
+    .searchBox {
+        
+    }
+
+    .form-group {
+      text-align: center;
+      width: 300px;
+    }
+    
+    .form-control {
+
+    }
+
+
+
+  </style>
 <script>
 import axios from 'axios';
 import NavigationBar from '../components/NavigationBar.vue';
@@ -214,10 +243,11 @@ import NavigationBar from '../components/NavigationBar.vue';
 
         convert() {
             this.created()
+            console.log(this.rates_array)
             console.log(this.to_currency)
             console.log(this.from_currency)
             console.log(this.input_amt)
-            this.doConversion()
+            
         },
 
         doConversion() {

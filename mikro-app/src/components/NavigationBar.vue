@@ -83,13 +83,14 @@
               </div>
             </div>
           </div>
+          <router-link to="/login">
           <i
             v-if="isExitButton"
             class="bx bx-log-out"
-            style="margin: 0;"
+            style="margin: 0; font-size: 25px;"
             id="log_out"
-            @click.stop="$emit('button-exit-clicked')"
           />
+        </router-link>
         </div>
       </div>
     </div>

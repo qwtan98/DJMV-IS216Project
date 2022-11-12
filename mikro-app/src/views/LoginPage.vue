@@ -1,9 +1,9 @@
 <template>
-    <div class="login-register" >
+    <div class="login-register">
         <div class="container align-items-center justify-content-center default" v-bind:class="{ smaller: showButton }" id="animationrow">
             <transition name="expand" mode="out-in">
-            <div class="row " >
-                <div id="log-in-card" class="card col-md-6 mx-auto rounded-0 " >
+            <div class="row">
+                <div id="log-in-card" class="card col-sm-12 col-md-6 mx-auto rounded-0" style="margin-" >
                     <span id="card-outline" style="height:4px"></span>
 
                     <img class="card-img-top mx-auto" src="../assets/ui/mikro_logo_trim.png" alt="mikro logo" style="max-width:250px; padding:50px"> 
@@ -126,6 +126,10 @@
 
 <style>
 
+body {
+
+}
+
 .default {
     transition: ease-out;
      opacity: 1;
@@ -147,13 +151,14 @@
 #log-in-card {
     margin: 50px 0px 50px 0px;
     padding: 40px 30px 60px 30px;
-
+    
     outline: none;
     border: none;
 
     width:540px;
     background-color: azure;
     overflow:hidden;
+    box-shadow: rgba(121, 121, 121, 0.988) 3px 7px 29px 3px;
 }
 
 #card-outline {
@@ -187,6 +192,8 @@
 <style scoped>
 .login-register {
     background-color: #2f4863;
+    background-image: url(../assets/ui/background.webp);
+    
 }
 
 .form-group {

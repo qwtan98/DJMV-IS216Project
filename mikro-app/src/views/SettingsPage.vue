@@ -186,7 +186,9 @@ Insert content in Edit Profile, Change Password. -->
 
 
 <style scoped>
-
+.skiptranslate {
+    display: inline;
+}
 .settings-background {
     background-color: white;
 

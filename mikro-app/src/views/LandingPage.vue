@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
                     <div>
-                        <img src="../assets/ui/mikro_logo_trim.png" style="">
+                        <img src="../assets/ui/mikro_logo_trim.png" style="width: 300px;">
                         <h1 class="text-uppercase fw-bold mb-5"><br />Migrating to a better future</h1>
                         <!-- <p class="mb-4">Etiam a rutrum, mauris lectus aptent convallis. Fusce vulputate aliquam, sagittis odio metus. Nulla porttitor vivamus viverra laoreet, aliquam netus.</p> -->
                         <router-link to="/register">
@@ -27,6 +27,7 @@
     margin: 0;
     padding: 0;
   }
+
 </style>
 
 <script>

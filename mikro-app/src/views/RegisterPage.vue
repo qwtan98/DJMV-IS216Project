@@ -1,7 +1,7 @@
 <template>
 
-        <div class="register container align-items-center justify-content-center">
-            <div class="row">
+        <div class="register container align-items-center justify-content-center ">
+            <div class="row transition">
                 <div id="register-card" class="card col-md-6 mx-auto rounded-0">
                     <span id="card-outline" style="height:4px"></span>
 
@@ -9,13 +9,13 @@
 
                     <div class="card-body">
                         <form>
-                            <div id="register_inputfields" class="form-group mt-2">
+                            <div id="register_inputfields" class="form-group mt-2" style="width: 100%;">
                                 <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="registerInputUID" required="required">
                                 <span id="input-field-label">User ID</span>
                                 <span id="input-field-underline"></span>
                             </div>
 
-                            <div id="register_inputfields" class="form-group mt-5">
+                            <div id="register_inputfields" class="form-group mt-5" style="width: 100%;">
                                 <input type="password" class="form-control rounded-0" id="registerInputPW" required="required">
                                 <span id="input-field-label">Password</span>
                                 <span id="input-field-underline"></span>
@@ -59,6 +59,12 @@
 </script>
 
 <style>
+
+.transition {
+    padding-left:25px;
+    width:100%;
+}
+
 #register-card {
     margin: 50px 0px 50px 0px;
     padding: 40px 30px 60px 30px;

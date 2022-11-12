@@ -1,7 +1,7 @@
 <template>
     <div class="login-register">
         <div class="container align-items-center justify-content-center default" v-bind:class="{ smaller: showButton }" id="animationrow">
-            <transition name="expand" mode="out-in">
+            <transition class="transition" name="expand" mode="out-in" >
             <div class="row">
                 <div id="log-in-card" class="card col-sm-12 col-md-6 mx-auto rounded-0" style="margin-" >
                     <span id="card-outline" style="height:4px"></span>
@@ -10,13 +10,13 @@
                     
                     <div class="card-body">
                         <form>
-                            <div id="login_inputfields" class="form-group mt-2">
+                            <div id="login_inputfields" class="form-group mt-2" style="width: 100%;">
                                 <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="loginInputUID" required="required">
                                 <span id="input-field-label">User ID</span>
                                 <span id="input-field-underline"></span>
                             </div>
 
-                            <div id="login_inputfields" class="form-group mt-5">
+                            <div id="login_inputfields" class="form-group mt-5" style="width: 100%;">
                                 <input type="password" class="form-control rounded-0" id="loginInputPW" required="required">
                                 <span id="input-field-label">Password</span>
                                 <span id="input-field-underline"></span>
@@ -96,19 +96,22 @@
             },
 
             changePage: function(){
-                setTimeout( () => this.$router.push({ path: '/home'}), 1300);
+                setTimeout( () => this.$router.push({ path: '/home'}), 1000);
             },
 
             changeImage: function(){
                 var loginText = document.getElementById("login-text");
                 var loginImage = document.getElementById("login-btn-img");
                 var loginContainer = document.getElementById("login-btn-container");
+                var loginImageOverlay = document.getElementById("login-btn-overlay");
                 if (loginText && loginImage && loginContainer)
                 {
                     loginText.innerText = "";
+                    loginImageOverlay.style.visibility = "hidden";
                     loginImage.style.visibility = "hidden";
                     loginContainer.style.backgroundSize = "50px 50px";
                     loginContainer.style.transform = "translate(0px)";
+                    
                 }
 
             }
@@ -129,6 +132,10 @@
 body {
 
 }
+.transition {
+    padding-left:25px;
+    width:100%;
+}
 
 .default {
     transition: ease-out;
@@ -141,7 +148,7 @@ body {
     width: 0%;
     height: 0%;
     opacity: 0;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-delay: 0.7s;
     transition-property: width, height, opacity;
   }
@@ -159,6 +166,7 @@ body {
     background-color: azure;
     overflow:hidden;
     box-shadow: rgba(121, 121, 121, 0.988) 3px 7px 29px 3px;
+    
 }
 
 #card-outline {

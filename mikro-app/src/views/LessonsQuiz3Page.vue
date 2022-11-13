@@ -34,7 +34,7 @@
                                 You've got it all correct! Good job!<br><small>You can now return to the Lessons page.</small>
                             </div>
 
-                            <div class="modal-body" v-else>Oh no! You've got a question or two wrong. Go back and try again!</div>
+                            <div class="modal-body" v-else>Oh no! You've got incorrect answers. Go back and try again!</div>
 
                             <div class="modal-footer">
                                 <router-link to="Lessons" class="btn btn-secondary" value="" style="margin-bottom: 10px" data-bs-dismiss="modal" v-if='selected_ans.includes("The interest rate is too high") && selected_ans.includes("$259")  && selected_ans.includes("$206") && selected_ans.includes("Compound interest")'>Return to Lessons</router-link>

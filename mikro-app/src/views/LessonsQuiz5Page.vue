@@ -34,7 +34,7 @@
                                 You've got it all correct! Good job!<br><small>You can now return to the Lessons page.</small>
                             </div>
 
-                            <div class="modal-body" v-else>Oh no! You've got a question or two wrong. Go back and try again!</div>
+                            <div class="modal-body" v-else>Oh no! You've got incorrect answers. Go back and try again!</div>
 
                             <div class="modal-footer">
                                 <router-link to="Lessons" class="btn btn-secondary" value="" style="margin-bottom: 10px" data-bs-dismiss="modal" v-if='selected_ans.includes("As soon as possible.") && selected_ans.includes("Yes, for a rainy day.")  && selected_ans.includes("No, because the market is volatile and I should make sensible decisions.")'>Return to Lessons</router-link>

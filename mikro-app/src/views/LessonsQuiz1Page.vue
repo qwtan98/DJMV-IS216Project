@@ -34,7 +34,7 @@
                                         You've got it all correct! Good job!<br><small>You can now return to the Lessons page.</small>
                                     </div>
 
-                                    <div class="modal-body" v-else>Oh no! You've got a question or two wrong. Go back and try again!</div>
+                                    <div class="modal-body" v-else>Oh no! You've got incorrect answers. Go back and try again!</div>
 
                                     <div class="modal-footer">
                                         <router-link to="Lessons" class="btn btn-secondary" value="" style="margin-bottom: 10px" data-bs-dismiss="modal" v-if='selected_ans.includes("Inflation") && selected_ans.includes("2 - 2.5%") && selected_ans.includes("$1000") && selected_ans.includes("A cup of coffee in 1970 is worth $0.25. Now it is worth $1.59 in 2022.") && selected_ans.includes("Savings/Investment account")'>Return to Lessons</router-link>

@@ -34,7 +34,7 @@
                                 You've got it all correct! Good job!<br><small>You can now return to the Lessons page.</small>
                             </div>
 
-                            <div class="modal-body" v-else>Oh no! You've got a question or two wrong. Go back and try again!</div>
+                            <div class="modal-body" v-else>Oh no! You've got incorrect answers. Go back and try again!</div>
 
                             <div class="modal-footer">
                                 <router-link to="Lessons" class="btn btn-secondary" value="" style="margin-bottom: 10px" data-bs-dismiss="modal" v-if='selected_ans.includes("Yes, because house prices double every 10 years.") && selected_ans.includes("When an asset increases in value over time.")  && selected_ans.includes("Yes, it is known as investing in shares.")'>Return to Lessons</router-link>

@@ -139,7 +139,7 @@ Mikro is a one-stop knowledge investment platform to increase financial inclsuio
 
 ### Version Control
 
-> Back End is coded in Javascript with NodeJS.
+> Project files are hosted on Github 
 
 | Service | Description                                         | Link                         |
 | ------- | --------------------------------------------------- | ---------------------------- |
@@ -195,6 +195,12 @@ npm run serve
 ```
 
 Open a browser (preferably Google Chrome) and enter http://localhost:8080/ to access Mikro!
+
+##### Login Credentials
+
+| Email         | Password |
+| ------------- | -------- |
+| ape@gmail.com | apeape   |
 
 ### Preferred Devices
 

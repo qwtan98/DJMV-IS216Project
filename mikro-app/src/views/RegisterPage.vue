@@ -1,21 +1,20 @@
 <template>
 
-        <div class="register container align-items-center justify-content-center">
-            <div class="row">
-                <div id="register-card" class="card col-md-6 mx-auto rounded-0">
+        <div class="register container align-items-center justify-content-center ">
+            <div class="row transition">
+                <div id="register-card" class="card col-md-6 w-100mx-auto rounded-0">
                     <span id="card-outline" style="height:4px"></span>
-
                     <img class="card-img-top mx-auto" src="../assets/ui/mikro_logo_trim.png" alt="mikro logo" style="max-width:250px;padding:50px">
 
                     <div class="card-body">
                         <form>
-                            <div id="register_inputfields" class="form-group mt-2">
+                            <div id="register_inputfields" class="form-group mt-2" style="width: 100%;">
                                 <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="registerInputUID" required="required">
                                 <span id="input-field-label">User ID</span>
                                 <span id="input-field-underline"></span>
                             </div>
 
-                            <div id="register_inputfields" class="form-group mt-5">
+                            <div id="register_inputfields" class="form-group mt-5" style="width: 100%;">
                                 <input type="password" class="form-control rounded-0" id="registerInputPW" required="required">
                                 <span id="input-field-label">Password</span>
                                 <span id="input-field-underline"></span>
@@ -25,15 +24,15 @@
                         <div>
                             <router-link to="/">
                                 <button id="register-btn" class="btn btn-primary w-100 mt-5">
-                                    <div id="register-btn-container">
-                                        <span>Register</span>
+                                    <div id="register-btn-container" >
+                                        <span style="font-size:large">Register</span>
                                         <img id="register-btn-img" src="../assets/ui/enter-icon.png" alt=""><div id="register-btn-overlay"></div>
                                     </div>
                                 </button>
                             </router-link>
                         </div>
 
-                        <div class="d-flex justify-content-start mt-3" style="font-size:20px">
+                        <div class="d-flex justify-content-start mt-3" style="font-size: 14px">
                             Already have an account?&nbsp; 
                             <router-link to="Login">
                                  Sign in here
@@ -41,7 +40,7 @@
                         </div>
                     </div>
 
-                    <span id="card-outline" class="mt-5" style="height:4px"></span>
+                    <span id="card-outline" class="mt-4" style="height:4px"></span>
                 </div>
             </div>
         </div>
@@ -59,8 +58,13 @@
 </script>
 
 <style>
+
+.transition {
+    padding-left:25px;
+    width:100%;
+}
+
 #register-card {
-    margin: 50px 0px 50px 0px;
     padding: 40px 30px 60px 30px;
     outline: none;
     border: none;
@@ -71,8 +75,6 @@
 #card-outline {
     width: 100%;
     background-color:#344c64;
-
-
     display: flex;
     justify-content: center;
 }
@@ -165,7 +167,7 @@
 
     font-size:25px; 
 
-    height: 50px;
+    height: 35px;
     padding-left: 35px;
 
     transition: 0.3s;

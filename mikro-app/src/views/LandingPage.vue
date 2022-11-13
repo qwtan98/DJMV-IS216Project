@@ -7,7 +7,7 @@
                         <img src="../assets/ui/mikro_logo_trim.png" style="width: 300px;">
                         <h1 class="text-uppercase fw-bold mb-5"><br />Migrating to a better future</h1>
                         <!-- <p class="mb-4">Etiam a rutrum, mauris lectus aptent convallis. Fusce vulputate aliquam, sagittis odio metus. Nulla porttitor vivamus viverra laoreet, aliquam netus.</p> -->
-                        <h6 class="text-uppercase mb-5"><br />Make smarter choices for your money with this one-stop investment application</h6>
+                        <h6 class="text-uppercase mb-5" style="font-weight: 300"><br />Make smarter choices with your money.</h6>
                         <router-link to="/register">
                             <button class="btn btn-primary fs-5 me-2 py-2 px-4" type="button">Get Started</button>
                         </router-link>

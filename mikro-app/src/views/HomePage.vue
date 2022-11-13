@@ -17,16 +17,16 @@
 
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img :src= headlines[0].urlToImage class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block ">
+            <a href="headlines[0].url"><img :src= headlines[0].urlToImage class="d-block w-100 p-0" alt="..."></a>
+            <div class="carousel-caption d-block">
               <h4 style="font-size: 15px;"></h4>
-              <p style="margin-top:5px">{{ headlines[0].content }}</p>
+              <p class="" style="margin-top:5px">{{ headlines[0].title }}</p>
             </div>
           </div>
           <div v-for="headline of headlines.splice(1, 9)" :key=headline.id class="carousel-item" data-bs-interval="5000">
-            <img :src= headline.urlToImage class="d-block w-100" alt="...">
+            <img :src= headline.urlToImage class="d-block w-100 p-0" alt="...">
             <div class="carousel-caption d-md-block">
-              <h4 style="font-size: 15px;">{{ headline.content }}</h4>
+              <h4 style="font-size: 15px;">{{ headline.title }}</h4>
               <!-- <p>Some representative placeholder content for the second slide.</p> -->
             </div>
           </div>
@@ -88,7 +88,7 @@
           <div class="card-body">
             <h5 class="card-title" style="font-size: 12px">BONDS DURING A RECESSION SUMMARY</h5>
             <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;MONDAY, NOVEMBER 28TH<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130PM - 230PM SGT<br/>📅&nbsp;Online Event</p>
-          <router-link to="/CommunityEvent3">
+          <router-link to="/CommunityEvent4">
             <a href="#" class="btn btn-primary" style="font-size: 13px; color: white;">Find out more</a>
           </router-link>
           </div>
@@ -129,7 +129,7 @@
       {
         created: function() {
           let api_endpoint = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=01d127c2f33a483c939e689920e7bab9"
-          // let api_endpoint2 = "https://www.googleapis.com/youtube/v3/search"
+      
           axios.get(api_endpoint).then(response =>
             {
               console.log(response.data.articles)
@@ -139,16 +139,6 @@
           .catch(error => {
             console.log(error)
           })
-
-          // axios.get(api_endpoint2).then(response =>
-          //   {
-          //     console.log(response)
-             
-          //   })
-
-          // .catch(error => {
-          //   console.log(error)
-          // })
         },
 
         callGreeting () {

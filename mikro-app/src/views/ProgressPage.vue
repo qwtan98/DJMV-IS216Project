@@ -10,7 +10,7 @@
                         <img :src="require(`../assets/${pop_up_data.img_name}.png`)" style="height:200px; width:200px">
                         <h2>{{pop_up_data.name}}</h2>
                         <p>{{pop_up_data.desc}}</p>
-                        <p>{{pop_up_data.completedDate }}</p>
+                        <p>You achieved this on {{pop_up_data.completedDate }}</p>
                     </div>
                 </div>
 
@@ -173,10 +173,10 @@ import NavigationBar from "../components/NavigationBar";
                 ],
                 my_data: 
                 {
-                    '1a2b3c': {aid: 1, type: "badge", description: 'some description 1', name: 'badge 1 name', img_name: "badge", completedDate: Date.now()},
-                    '1a2b3d': {aid: 2, type: "badge", description: 'some description 2', name: 'badge 2 name', img_name: "badge", completedDate: Date.now()},
-                    '1a2b3e': {aid: 3, type: "badge", description: 'some description 3', name: 'badge 3 name', img_name: "badge", completedDate: Date.now()},
-                    '1a2b3f': {aid: 4, type: "achievement", description: 'some description 4', name: 'achievement 4 name', img_name: "achievement", completedDate: Date.now()}
+                    '1a2b3c': {aid: 1, type: "badge", description: 'Finished 5 quizzes', name: 'Welcome!', img_name: "badge", completedDate: "11/13/2022"},
+                    '1a2b3d': {aid: 2, type: "badge", description: 'Finished 3 quizzes', name: 'One step at a time', img_name: "badge", completedDate: '11/11/2022'},
+                    '1a2b3e': {aid: 3, type: "badge", description: 'Finished 1 quiz', name: 'Out of the woods', img_name: "badge", completedDate: "11/12/2022"},
+                    '1a2b3f': {aid: 4, type: "achievement", description: 'Logged in for 5 days', name: 'We\'ll miss WAD2 😭', img_name: "achievement", completedDate:"11/12/2022"}
                 },
                 pop_up_data: 
                 {

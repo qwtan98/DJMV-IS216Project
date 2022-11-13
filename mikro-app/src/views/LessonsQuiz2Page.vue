@@ -3,7 +3,8 @@
     <div id="lessonsquiz" style="margin-left: 58px;">
         
         <div id="quiz2" class="container">
-            <h1>Quiz 2: How to curb inflation</h1>
+            <br/>
+            <h3>Quiz 2: How to curb inflation</h3>
             <span v-for="(value, index) in questions" :key="value.id">
                 <div class="row" style="margin-bottom: 10px;">
                     <div class="col-12">
@@ -11,7 +12,7 @@
                             <div class="card-body">
                                 <p class="card-text">Q{{index+1}}: {{value.Qn}}</p>
                                 <span v-for="que in value.Answers" :key="que.id">
-                                    <input type="checkbox" v-model="selected_ans" :value="que"/>{{que}}<br>
+                                    <input type="checkbox" v-model="selected_ans" :value="que"/>&nbsp;{{que}}<br>
                                 </span>
                             </div>
                         </div>
@@ -34,7 +35,7 @@
                                 You've got it all correct! Good job!<br><small>You can now return to the Lessons page.</small>
                             </div>
 
-                            <div class="modal-body" v-else>Oh no! You've got a question or two wrong. Go back and try again!</div>
+                            <div class="modal-body" v-else>Oh no! You've got incorrect answers. Go back and try again!</div>
 
                             <div class="modal-footer">
 

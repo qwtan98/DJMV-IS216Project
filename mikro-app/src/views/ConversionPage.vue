@@ -1,17 +1,17 @@
 <template>
     <NavigationBar/>
-    <div id="conversion" style="margin-left: 55px;">
+    <div id="conversion" class="h-100" style="margin-left: 55px;">
         <br/>
         <div class="container">
-            <h4 style="width: 320px" class="m-0"></h4>
-            <div class="form-group text-center card p-2" style="box-shadow: 0 2px 18px 1px rgb(49 53 72 / 10%); ">
+            <h4 style="width:" class="m-0"></h4>
+            <div class="form-group w-100 text-center card p-2" style="box-shadow: 0 2px 18px 1px rgb(49 53 72 / 10%); ">
                 <div class="card-header mt-3">
                     <h4 class="text-bold-500 info" id="words">
-                     Currency conversion calculator
+                        <i class="bx bx-calculator"></i> Currency conversion calculator
                     </h4>
                 </div>
                 <div class="card-subtitle p-0 mt-3 mx-2">	                   
-                    <h5 class="">Understand the economy right now.</h5>
+                    <h5 class="" style="font-weight: 400">View current rates now.</h5>
                 </div>
                 <br/>
                 <div class="input-group-prepend">
@@ -199,7 +199,6 @@
 
     .form-group {
       text-align: center;
-      width: 300px;
       background-color: rgb(246, 250, 255);
     }
     

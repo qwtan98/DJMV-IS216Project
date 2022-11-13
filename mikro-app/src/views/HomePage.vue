@@ -8,7 +8,7 @@
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
        
         <div class="row">
-          <h6 class="mt-4 mb-1" style="font-weight: bold">Daily Brief 🏠</h6>
+          <h6 class="mt-4 mb-1" style="font-weight: bold">Daily Brief 📰</h6>
           <small class="text-muted" style="font-size: 10px">Insights curated specially for you</small>
           <hr/>
         </div>

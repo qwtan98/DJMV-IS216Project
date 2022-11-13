@@ -5,116 +5,146 @@ Consider adding prompt for image. But as I understand, need a place to store the
 
 <template>
     <NavigationBar/>
-    <div class="settings-background">
+    
+    <div style="margin-left: 55px;">
+        <div class="container settings-background">
+            <div class="settings-subbox">
+                <br/>
+                <h1>Settings</h1>
+                
+                <div class="settingsBackground bg-dark mb-4" style="height: 100px">
 
-            <div class="settings">
+                </div>
+                <h2 style="font-size: 20px" href="#editProfileModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/user.png" alt="">&nbsp;Edit Profile</h2>                          
+                
+                <!-- Edit Profile Modal id="editProfileModel" -->
+                <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
 
-                <div class="settings-list">
-                    
-                    <div class="settings-subbox">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editProfileModalLabel">&nbsp; Edit Profile</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
 
-                        <h1>Settings</h1><br>
-                        
-                        <h2 href="#editProfileModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/user.png" alt="">Edit Profile</h2>                          
-                        
-                        <!-- Edit Profile Modal id="editProfileModel" -->
-                        <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="editProfileModalLabel">Edit Profile</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <div>
-                                            <img src="../assets/ui/chatur.webp" id="editProfileModalPFP">
-                                            <img src="../assets/ui/camera.png" id="editProfileModalPFPOverlay">
-                                        </div>
-                                        <div class="m-4">
-                                            <!-- Set title (maybe title link to Achievements, like Salesforce) -->
-                                            <label for="editProfileUsername" style="margin-left:10px; margin-bottom: 5px;">Change Username</label>
-                                            <input type="text" class="form-control" id="editProfileUsername" placeholder="Chatur Ramalingam">
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" id="saveChangesBtn" v-on:click="saveChangesBtnFunc()">{{saveChangesBtn}}</button>
-                                    </div>
-
+                            <div class="modal-body">
+                                <div>
+                                    <img src="../assets/ui/chatur.webp" id="editProfileModalPFP">
+                                    <img src="../assets/ui/camera.png" id="editProfileModalPFPOverlay">
+                                </div>
+                                <div class="m-4 text-center">
+                                    <!-- Set title (maybe title link to Achievements, like Salesforce) -->
+                                    <label for="editProfileUsername" class="" style="margin-left:10px; margin-bottom: 5px;">Change Username</label>
+                                    <input type="text" class="form-control text-center" id="editProfileUsername" placeholder="Chatur Ramalingam">
                                 </div>
                             </div>
-                        </div>  
 
+                            <div class="modal-footer d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary pull-left" id="saveChangesBtn" style="" v-on:click="saveChangesBtnFunc()">{{saveChangesBtn}}</button>
+                                <button type="button" class="btn btn-secondary pull-right" data-bs-dismiss="modal" style="">Close</button>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="settings-subbox">
+                </div>  
+                <hr/>
+            </div>
 
-                        <h2 href="#supportModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/support.png" alt="">Support</h2>
-                        
-                        <!-- Support Modal id="supportModal" -->
-                        <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
+            <div class="settings-subbox">
 
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="supportModalLabel">Support</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
+                <h2 style="font-size: 20px" href="#supportModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/support.png" alt="">&nbsp;Support</h2>
+                
+                <!-- Support Modal id="supportModal" -->
+                <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
 
-                                    <div class="modal-body">
-                                        Hotline: +65 9123 4567
-                                        <br><br>
-                                        Weekday: 9 a.m. - 6 p.m.
-                                        <br>
-                                        Weekend: 10 a.m. - 3 p.m.
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    </div>
-
-                                </div>
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="supportModalLabel">Support</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                        </div>  
 
+                            <div class="modal-body">
+                                Hotline: +65 9123 4567
+                                <br><br>
+                                Weekday: 9 a.m. - 6 p.m.
+                                <br>
+                                Weekend: 10 a.m. - 3 p.m.
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
                     </div>
-                    
-                    <div class="settings-subbox">
+                </div>  
+                <hr/>
+            </div>
+            
+            <div class="settings-subbox">
 
-                        <h2 href="#aboutModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/about.png" alt="">About Mikro</h2>
-                        
-                        <!-- About Modal id="aboutModal" -->
-                        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
+                <h2 style="font-size: 20px" href="#aboutModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/about.png" alt="">&nbsp;About Mikro</h2>
+                
+                <!-- About Modal id="aboutModal" -->
+                <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
 
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="aboutModalLabel">About Mikro</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        Mikro is a project aiming to increase financial inclusion and literacy among migrant workers in Singapore, by creating an accessible one-stop financial solution to help kickstart or improve migrant workers' knowledge on investing.
-                                        <br><br>
-                                        The reason that propelled us to do so is because today, the majority of migrant workers don't have easy access to resources for expanding their investment knowledge, which restricts their capacity to grow their wealth. For migrant workers, accessing financial services on learning how to invest conveniently has undeniably proven to be a constant challenge.
-                                        <br><br>
-                                        We aim to combat this with Mikro.
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thanks!</button>
-                                    </div>
-
-                                </div>
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="aboutModalLabel">About Mikro</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
+
+                            <div class="modal-body">
+                                Mikro is a project aiming to increase financial inclusion and literacy among migrant workers in Singapore, by creating an accessible one-stop financial solution to help kickstart or improve migrant workers' knowledge on investing.
+                                <br><br>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+
+            <div class="settings-subbox">
+
+                <h2 style="font-size: 20px" href="#rateModal" data-bs-toggle="modal"><i id="" class="bx bx-star" alt=""></i>&nbsp;Rate us</h2>
+                
+                <!-- About Modal id="aboutModal" -->
+                <div class="modal fade" id="rateModal" tabindex="-1" aria-labelledby="rateModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="aboutModalLabel">Are you happy with Mikro App?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body text-center">
+                                <button @click="Satisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 20px; border-radius: 50%">😃</button>
+                                <button  @click="notSatisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 20px; border-radius: 50%" >😶</button>
+                                <br><br>
+                                Select One Emoji
+                                <br/>
+                                <p>{{ message }}</p>
+                            </div>
+                           
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <hr/>
+    </div>
 </template>
 
 <script>
@@ -126,14 +156,25 @@ Consider adding prompt for image. But as I understand, need a place to store the
     data() {
         return {
             saveChangesBtn: "Save changes",
+            message: "",
         }
     },
     methods: {
         saveChangesBtnFunc() {
             this.saveChangesBtn = "Changes saved!";
-            }
+            },
+
+        notSatisfied() {
+            this.message = "Thanks for the input, do let us know what to improve on in the app store!"
+            return this.message
+        },
+
+        Satisfied() {
+            this.message = "Thanks for the input, we will continously work to improve the application 😊"
+            return this.message
         }
     }
+}
 
 
 </script>
@@ -150,14 +191,6 @@ h1 {
 }
 .settings-background {
     background-color: aliceblue;
-
-}
-.settings {
-    margin-left: 78px;
-}
-
-.settings-list {
-    margin-top: 28px;
 
 }
 
@@ -189,6 +222,7 @@ h1 {
     height: 15px;
     padding-right: 4px;
     margin-bottom: 3px;
+    margin-left: 2px;
 }
 
 #editProfileModalPFP {

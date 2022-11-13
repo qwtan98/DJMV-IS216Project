@@ -8,28 +8,39 @@
 
                     <div class="card-body">
                         <form>
-                            <div id="register_inputfields" class="form-group mt-2" style="width: 100%;">
-                                <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="registerInputUID" required="required">
-                                <span id="input-field-label">User ID</span>
+                            <div id="register_email" class="form-group mt-2" style="width: 100%;">
+                                <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="registerInputUID" required="required" v-model="myemail">
+                                <span id="input-field-label">Email</span>
                                 <span id="input-field-underline"></span>
                             </div>
 
-                            <div id="register_inputfields" class="form-group mt-5" style="width: 100%;">
-                                <input type="password" class="form-control rounded-0" id="registerInputPW" required="required">
+                            <div id="register_name" class="form-group mt-5" style="width: 100%;">
+                                <input type="text" class="form-control rounded-0" id="registerInputName" required="required" v-model="myname">
+                                <span id="input-field-label">Name</span>
+                                <span id="input-field-underline"></span>
+                            </div>
+
+                            <div id="register_password" class="form-group mt-5" style="width: 100%;">
+                                <input type="password" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="registerPasswordUID" required="required" v-model="mypw">
                                 <span id="input-field-label">Password</span>
                                 <span id="input-field-underline"></span>
                             </div>
+
+                            <div id="register_confirmpassword" class="form-group mt-5" style="width: 100%;">
+                                <input type="password" class="form-control rounded-0" id="registerInputConfirmPW" required="required" v-model="mysecondpw">
+                                <span id="input-field-label">Confirm Password</span>
+                                <span id="input-field-underline"></span>
+                            </div>
+
                         </form>
 
                         <div>
-                            <router-link to="/">
-                                <button id="register-btn" class="btn btn-primary w-100 mt-5">
-                                    <div id="register-btn-container" >
-                                        <span style="font-size:large">Register</span>
-                                        <img id="register-btn-img" src="../assets/ui/enter-icon.png" alt=""><div id="register-btn-overlay"></div>
-                                    </div>
-                                </button>
-                            </router-link>
+                            <button id="register-btn" class="btn btn-primary w-100 mt-5" @click="register">
+                                <div id="register-btn-container" >
+                                    <span style="font-size:large">Register</span>
+                                    <img id="register-btn-img" src="../assets/ui/enter-icon.png" alt=""><div id="register-btn-overlay"></div>
+                                </div>
+                            </button>
                         </div>
 
                         <div class="d-flex justify-content-start mt-3" style="font-size: 14px">
@@ -46,13 +57,82 @@
         </div>
   </template>
 
+<script setup>
+
+</script>
 <script>
+    import { useRouter } from 'vue-router'
+    import { ref, child, get, set } from "firebase/database"
+    import { database, auth } from "../main.js"
+    import { createUserWithEmailAndPassword } from "firebase/auth"
+
     export default 
     {
         name: 'RegisterPage',
         props: 
         {
     
+        },
+        data() 
+        {
+            return {
+                myemail: "",
+                mypw: "",
+                myname: "",
+                mysecondpw: "",
+
+                router: useRouter()
+            }
+        },
+        methods: 
+        {
+            register() {
+                if (this.mypw != this.mysecondpw) {
+                    console.log("Confirmation password not the same")
+
+                    this.myemail = "";
+                    this.mypw = "";
+                    this.myname = "";
+                    this. mysecondpw = "";
+
+                    return;
+                }
+                createUserWithEmailAndPassword(auth, this.myemail, this.mypw)
+                .then((data) => {
+                    console.log("Success!", data);
+
+                    set(ref(database, 'users/' + auth.currentUser.uid), {
+                        email: this.myemail,
+                        name: this.myname,
+                    });
+
+                    get(child(ref(database), `achievements/`)).then((snapshot) => {
+                        if (snapshot.exists()) {
+                            let achievements_badges = {}
+
+                            for (const [id, value] of Object.entries(snapshot.val())) {
+
+                                console.log(id === 0)
+
+                                achievements_badges[value.aid] = 0
+                                set(ref(database, 'users/' + auth.currentUser.uid + '/achievements_badges/'), {
+                                    ongoing: achievements_badges
+                                });
+                            }
+
+                            this.router.push('/login')
+                            
+                        } else {
+                            console.log("No data available");
+                        }
+                    }).catch((error) => {
+                        console.error(error);
+                    });
+                })
+                .catch((e) => {
+                    console.log(e.code);
+                });
+            }
         }
     }
 </script>
@@ -68,7 +148,7 @@
     padding: 40px 30px 60px 30px;
     outline: none;
     border: none;
-    background-color: azure;
+    background-color: aliceblue;
     box-shadow: rgba(255, 255, 255, 0.2) 3px 7px 29px 3px;
 }
 
@@ -93,7 +173,7 @@
 .btn-outline-primary, .btn-outline-primary:hover {
     border-color: #2f4863 !important;
     color:#2f4863 !important;
-    background-color: azure;
+    background-color: aliceblue;
 }
 </style>
 
@@ -112,10 +192,10 @@
     background: transparent;
     border: none;
     outline: none;
-    color: azure;
+    color: aliceblue;
 
     min-height: 50px;
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 0.1ch;
     z-index: 20;
 }

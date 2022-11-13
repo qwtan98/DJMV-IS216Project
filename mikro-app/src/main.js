@@ -26,7 +26,7 @@ import "bootstrap/dist/js/bootstrap.js";
 
 import { initializeApp }from "firebase/app";
 // import { getDatabase, ref } from "firebase/database";
-import { getDatabase, ref } from "firebase/database";
+import { getDatabase } from "firebase/database";
 // import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut ,setPersistence,browserSessionPersistence} from "firebase/auth"
 import { getAuth } from "firebase/auth"
 
@@ -45,7 +45,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth();
 
-export { database, auth, app, ref }
+export { database, auth, app }
 // document.getElementById("databasetesting").addEventListener('click', (e) => {
 //       console.log("test")
     //   var email = document.getElementById('email').value;

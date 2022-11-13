@@ -5,9 +5,9 @@
         <div class="container">
         <h1 class="">Academy</h1>
         <span v-for="(lesson, index) in lessons" :key="lesson.id">
-            <div class="row" style="margin-bottom: 10px;">
+            <div class="row">
                 <div class="col-12">
-                    <div class="card" style="width: 100%;">
+                    <div class="card" style="width: 100%; margin-bottom: 10px;">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
                         <h5 class="card-title">Lesson {{ index + 1}}: {{ lesson.Title }}</h5>

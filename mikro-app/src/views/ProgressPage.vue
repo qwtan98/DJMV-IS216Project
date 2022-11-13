@@ -17,9 +17,14 @@
             </div>
         </div>
     </div>  
+
     <div id="progress" style="margin:0 0 35px 55px; padding: 0">
         <div class="">
-            <!-- Edit Profile Modal id="editProfileModel" -->
+
+            <button @click="register" type="button"  class="btn btn-secondary">reg</button>
+            <button @click="login" type="button" class="btn btn-secondary">log</button>
+            <button @click="handleLogout" v-if="isLoggedIn" type="button" class="btn btn-secondary">log</button>
+
             <div class="p-3 achievement-profile-tab">
 
                 <div class="d-flex p-2" style="width: 100%">
@@ -150,8 +155,101 @@
 
     </div>
     
-  </template>
-  
+</template>
+
+<script setup>
+import { onMounted } from "vue";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { useRouter } from 'vue-router'
+import { ref, child, get, set } from "firebase/database"
+import { database, auth } from "../main.js";
+
+const email = "test852@gmail.com";
+const pw = "1234567890";
+const router = useRouter();
+
+let errorMsg = "";
+let isLoggedIn = false;
+
+onMounted(() => {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            isLoggedIn = true;
+        } else {
+            isLoggedIn = false;
+        }
+    })
+})
+
+const handleLogout = () => {
+    signOut(auth).then(()=> {
+        router.push('/');
+    })
+}
+
+const register = () => {
+    createUserWithEmailAndPassword(auth, email, pw)
+        .then((data) => {
+            console.log("Success!");
+            console.log(auth.currentUser)
+
+            set(ref(database, 'users/' + auth.currentUser.uid), {
+                email: email,
+            });
+
+            get(child(ref(database), `achievements/`)).then((snapshot) => {
+            if (snapshot.exists()) {
+                let achievements_badges = {}
+
+                for (const [id, value] of Object.entries(snapshot.val())) {
+                    achievements_badges[value.aid] = 0
+                    set(ref(database, 'users/' + auth.currentUser.uid + '/achievements_badges/'), {
+                        ongoing: achievements_badges
+                    });
+                }
+                
+            } else {
+                console.log("No data available");
+            }
+            }).catch((error) => {
+                console.error(error);
+            });
+        })
+        .catch((e) => {
+            console.log(e.code);
+            alert(e.message);
+        });
+    }
+
+const login = () => {
+    const auth = getAuth()
+    signInWithEmailAndPassword(auth, email, pw)
+        .then((data) => {
+            console.log("Success!");
+            console.log(auth.currentUser)
+            router.push('/home');
+        })
+        .catch((e) => {
+            console.log(e.code);
+            switch(e.code) {
+                case "auth/invalid-email":
+                    errorMsg = "Invalid email";
+                    break;
+                case "auth/user-not-found":
+                    errorMsg = "No account with taht email was found";
+                    break;
+                case "auth/wrong-password":
+                    errorMsg = "Incorrect password";
+                    break;
+                default:
+                    errorMsg = "Email or password was incorrect";
+                    break;
+            }
+            alert(errorMsg)
+        });
+    }
+</script>
+
 <script>
 // Initialize Firebase
 import NavigationBar from "../components/NavigationBar";

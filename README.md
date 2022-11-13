@@ -215,3 +215,44 @@ iPhone 7 and iPhone 8
 - Viewport (width x height): 375px x 667px 
 
 We chose these devices as the phones are inexpensive and not modern, which are the conditions common amongst the phones of our target user base of Foreign Domestic Workers (FDW).
+
+## How to Use Our Web Application
+
+When users visit the site for the first time, this is the screen they will see:
+
+<img src='img/Landing.jpeg' alt='...'>
+
+Followed by Log In or Register depending on their status as a user:
+<img src='img/Login,jpeg' alt='...'>
+
+<img src='img/Register.jpeg' alt='...'>
+
+After successfully logging into through our Firebase Authentication, users will get to the Home Page:
+
+<img src='img/Home.jpeg' alt='...'>
+
+> Here, they are greeted by the headlines in the financial industry and events in their community
+
+On the left of the Home Page, you can open up our Navigation Bar to access the other features:
+
+<img src='img/Nav.jpeg' alt='...'>
+
+Such as our Financial Academy:
+
+<img src='img/Academy.jpeg' alt='...'>
+
+User Progress:
+
+<img src='img/Progress.jpeg' alt='...'>
+
+Financial Articles:
+
+<img src='img/Articles.jpeg' alt='...'>
+
+Live Currency Converter Calculator:
+
+<img src='img/Currency.jpeg' alt='...'>
+
+Settings:
+
+<img src='img/Settings.jpeg' alt='...'>

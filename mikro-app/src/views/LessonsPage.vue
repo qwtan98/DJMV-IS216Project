@@ -1,7 +1,8 @@
 <template>
     <NavigationBar/>
-    <div class="container" id="lesson" style="margin-left: 58px;">
+    <div id="lesson" style="margin-left: 58px;">
         <br/>
+        <div class="container">
         <h1 class="">Academy</h1>
         <span v-for="(lesson, index) in lessons" :key="lesson.id">
             <div class="row" style="margin-bottom: 10px;">
@@ -17,6 +18,7 @@
                 </div>
             </div>
         </span>
+    </div>
     </div>
   </template>
   

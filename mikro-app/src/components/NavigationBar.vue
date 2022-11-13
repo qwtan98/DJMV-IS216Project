@@ -484,7 +484,7 @@ import { auth } from "../main.js";
     }
     .sidebar li a .links_name {
       color: var(--menu-items-text-color);
-      font-size: 15px;
+      font-size: 12px;
       font-weight: 400;
       white-space: nowrap;
       opacity: 0;
@@ -499,9 +499,10 @@ import { auth } from "../main.js";
     /* <!-- Animation --> */
     .sidebar li a:hover .bx-moving.bx-grid-alt,
     .sidebar li a:hover .bx-moving.bx-pie-chart-alt-2,
-    .sidebar li a:hover .bx-moving.bx-cog {
+    .sidebar li a:hover .bx-moving.bx-cog,
+    .sidebar li a:hover .bx-moving.bx-money {
       transition: all 0.5s ease-in-out;
-      transform: translateX(30px) rotate(180deg);
+      transform: translateX(15px) rotate(180deg);
       color: var(--bg-color);
     }
     .sidebar li a:hover .bx-moving.bx-heart,
@@ -509,13 +510,14 @@ import { auth } from "../main.js";
     .sidebar li a:hover .bx-moving.bx-book,
     .sidebar li a:hover .bx-moving.bx-chat {
       transition: all 0.5s ease;
-      transform: translateX(30px) scale(1.25);
+      transform: translateX(15px) scale(1.25);
       color: var(--bg-color);
     }
 
     .sidebar li a:hover .bx-stationary.bx-grid-alt,
     .sidebar li a:hover .bx-stationary.bx-pie-chart-alt-2,
-    .sidebar li a:hover .bx-stationary.bx-cog {
+    .sidebar li a:hover .bx-stationary.bx-cog
+    .sidebar li a:hover .bx-stationary.bx-money {
       transition: all 0.5s ease-in-out;
       transform: rotate(180deg);
       color: var(--bg-color);
@@ -532,7 +534,7 @@ import { auth } from "../main.js";
     .sidebar li a:hover .bx-moving i,
     .sidebar li a:hover .bx-moving ~.links_name {
       transition: all 0.5s ease;
-      transform: translateX(30px);
+      transform: translateX(15px);
       color: var(--bg-color);
     }
     

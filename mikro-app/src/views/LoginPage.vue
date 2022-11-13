@@ -237,7 +237,7 @@ body {
 .login-register {
     background-color: #2f4863;
     background-image: url(../assets/ui/background.webp);
-    
+    height: 100vh;
 }
 
 .form-group {

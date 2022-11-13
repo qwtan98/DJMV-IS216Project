@@ -12,10 +12,12 @@ Consider adding prompt for image. But as I understand, need a place to store the
                 <br/>
                 <h1 style="text-align: left">Settings</h1>
 
-                <div class="settingsBackground mb-4" style="height: 74px;">
+                <div class="settingsBackground mb-4" style="height: 75px;">
                     Invite your friends to join you on this investment journey today!
+                    <br/>
+                    <span style="font-size: 14px;" class="">Invite Link:</span>&nbsp;<a href="" style="font-size:10px;">https://mikroinvite?id=1011</a>
                 </div>
-                <h2 style="font-size: 20px" href="#editProfileModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/user.png" alt="">&nbsp;Edit Profile</h2>                          
+                <h2 style="font-size: 20px;" href="#editProfileModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/user.png" alt="">&nbsp;Edit Profile</h2>                          
                 
                 <!-- Edit Profile Modal id="editProfileModel" -->
                 <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
@@ -65,6 +67,8 @@ Consider adding prompt for image. But as I understand, need a place to store the
 
                             <div class="modal-body">
                                 Hotline: +65 9123 4567
+                                <br>
+                                Email: helpdesk@mikro.com
                                 <br><br>
                                 Weekday: 9 a.m. - 6 p.m.
                                 <br>
@@ -120,14 +124,14 @@ Consider adding prompt for image. But as I understand, need a place to store the
                         <div class="modal-content">
 
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="aboutModalLabel">Are you happy with Mikro App?</h1>
+                                <h1 class="modal-title fs-5" id="aboutModalLabel">How did you like Mikro?</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
 
                             <div class="modal-body text-center">
                                 <button @click="Satisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 40px; border-radius: 50%">😃</button>
                                 <button  @click="notSatisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 40px; border-radius: 50%" >😶</button>
-                                <br><br>
+                                <br>
                                 Select One Emoji
                                 <br/>
                                 <br/>
@@ -166,12 +170,12 @@ Consider adding prompt for image. But as I understand, need a place to store the
             },
 
         notSatisfied() {
-            this.message = "Thanks for the input, do let us know what to improve on in the app store 😊!"
+            this.message = "Thanks for the input! Do leave us a review for us to improve! 😊"
             return this.message
         },
 
         Satisfied() {
-            this.message = "Thanks for the input, we will continously work to improve the application 😊"
+            this.message = "Thanks for the input! We will continue working to improve Mikro! 😊"
             return this.message
         }
     }
@@ -195,7 +199,7 @@ h1 {
 
 .settings-background {
     height: 100vh;
-    background: url("../assets/ui/settingsBg.JPG") no-repeat bottom right;
+    background: url("../assets/ui/settingsBg.png") no-repeat bottom right;
     background-color: aliceblue;
     
 }

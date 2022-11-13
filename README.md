@@ -226,7 +226,7 @@ When users visit the site for the first time, this is the screen they will see:
 <img src='mikro-app/img/Landing.jpeg' alt='...'>
 
 Followed by Log In or Register depending on their status as a user:
-<img src='mikro-app/img/Login,jpeg' alt='...'>
+<img src='mikro-app/img/Login.jpeg' alt='...'>
 
 <img src='mikro-app/img/Register.jpeg' alt='...'>
 

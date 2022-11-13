@@ -2,7 +2,7 @@
     <NavigationBar/>
     <div id="lessonsquiz" style="margin-left: 58px;">
         
-        <div id="quiz1" class="container">
+        <div id="quiz4" class="container">
             <h1>Quiz 4: What is an investment?</h1>
             <span v-for="(value, index) in questions" :key="value.id">
                 <div class="row" style="margin-bottom: 10px;">
@@ -37,7 +37,7 @@
                             <div class="modal-body" v-else>Oh no! You've got a question or two wrong. Go back and try again!</div>
 
                             <div class="modal-footer">
-                                <router-link to="Lessons" class="btn btn-secondary" value="" style="margin-bottom: 10px" v-if='selected_ans.includes("Yes, because house prices double every 10 years.") && selected_ans.includes("When an asset increases in value over time.")  && selected_ans.includes("Yes, it is known as investing in shares.")'>Return to Lessons</router-link>
+                                <router-link to="Lessons" class="btn btn-secondary" value="" style="margin-bottom: 10px" data-bs-dismiss="modal" v-if='selected_ans.includes("Yes, because house prices double every 10 years.") && selected_ans.includes("When an asset increases in value over time.")  && selected_ans.includes("Yes, it is known as investing in shares.")'>Return to Lessons</router-link>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" v-else>Close</button>
                             </div>
                         </div>

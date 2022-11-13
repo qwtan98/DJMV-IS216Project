@@ -2,7 +2,7 @@
     <NavigationBar/>
     <div id="lessonsquiz" style="margin-left: 58px;">
         
-        <div id="quiz1" class="container">
+        <div id="quiz3" class="container">
             <h1>Quiz 3: Why just a savings account is insufficient</h1>
             <span v-for="(value, index) in questions" :key="value.id">
                 <div class="row" style="margin-bottom: 10px;">
@@ -37,7 +37,7 @@
                             <div class="modal-body" v-else>Oh no! You've got a question or two wrong. Go back and try again!</div>
 
                             <div class="modal-footer">
-                                <router-link to="Lessons" class="btn btn-secondary" value="" style="margin-bottom: 10px" v-if='selected_ans.includes("The interest rate is too high") && selected_ans.includes("$259")  && selected_ans.includes("$206") && selected_ans.includes("Compound interest")'>Return to Lessons</router-link>
+                                <router-link to="Lessons" class="btn btn-secondary" value="" style="margin-bottom: 10px" data-bs-dismiss="modal" v-if='selected_ans.includes("The interest rate is too high") && selected_ans.includes("$259")  && selected_ans.includes("$206") && selected_ans.includes("Compound interest")'>Return to Lessons</router-link>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" v-else>Close</button>
                             </div>
                         </div>

@@ -35,12 +35,14 @@ import NavigationBar from '../components/NavigationBar.vue';
         data() {
             return {
                 questions: [
-                    { Qn: "A", 
-                    Answers:["Yes", "No"]},
-                    { Qn: "B", 
-                    Answers: ["Yes", "No"]},
-                    { Qn: "C", 
-                    Answers: ["Yes", "No"]},
+                    { Qn: "Why do 10% interest rate savings accounts not exist?", 
+                    Answers:["The interest rate is too low", "The interest rate is too high"]},
+                    { Qn: "In 10 years time, how much would $100 in a 10% interest rate savings account grow to?", 
+                    Answers: ["$239", "$249", "$259", "$269"]},
+                    { Qn: "In comparison, how much would $100 (adjusted for inflation) be worth in 10 years time, without this savings account?", 
+                    Answers: ["$196", "$206", "$216", "$226"]},
+                    { Qn: "What type of interest have we been referring to?", 
+                    Answers: ["Compound interest", "Simple interest"]},
                 ]
             }
         }

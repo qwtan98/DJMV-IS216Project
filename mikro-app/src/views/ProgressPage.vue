@@ -24,14 +24,19 @@
 
                 <div class="d-flex p-2" style="width: 100%">
 
-                    <div class="col-4 d-flex justify-content-end">
+                    <!-- <div class="col-6 d-flex justify-content-end">
                         <img    src="../assets/ui/chatur.webp" class="img-fluid" 
                                 style="max-height: 100px; aspect-ratio: 1/1 ;object-fit:cover; border-radius:15px">
 
                     </div>
 
-                    <div class="col-8 ms-4 d-flex align-items-center">
+                    <div class="col-6 ms-4 d-flex align-items-center">
                         <span style="font-size:min(6vw, 50px);">Chatur Ramalingam</span>
+                    </div> -->
+                    <div class="d-flex justify-content-center" style="width: 100%">
+                        <img    src="../assets/ui/chatur.webp" class="img-fluid me-3" 
+                                style="max-height: 100px; aspect-ratio: 1/1 ;object-fit:cover; border-radius:15px">
+                        <span style="font-size:min(6vw, 50px);" class="d-flex align-items-center">Chatur Ramalingam</span>
                     </div>
 
                 </div>
@@ -41,8 +46,8 @@
                     <div class="col-6 d-flex flex-column justify-content-start align-items-center">
 
                         <div class="d-flex justify-content-center p-2 m-2"
-                            style="background-color: #11101d; height:100%; width: 70%; border-radius: 50px;">
-                            <img src="../assets/achievement.png" style="width:100%">
+                            style="background-color: #11101d; height:100%; width: 70%; max-width: 150px; max-height: 150px; border-radius: 50px;">
+                            <img src="../assets/achievement.png" style="width:100%; max-width:">
                         </div>
 
                         <div    class="text-center d-flex flex-column" 
@@ -57,7 +62,7 @@
                     <div class="col-6 d-flex flex-column justify-content-center align-items-center">
 
                         <div class="d-flex justify-content-center p-2 m-2"
-                            style="background-color: #11101d; height:100%; width: 70%; border-radius: 50px;">
+                            style="background-color: #11101d; height:100%; width: 70%; max-width: 150px; max-height: 150px; border-radius: 50px;">
                             <img src="../assets/badge.png" style="width:100%">
                         </div>
 
@@ -74,7 +79,7 @@
             
             <div id="recent-achievement-section">
                 <div class="d-flex align-items-center achievement-page-section-header" style="background-color:#2f4863d9; color:aliceblue">
-                    <img src="../assets/achievement.png" class="col-2 p-2">
+                    <img src="../assets/achievement.png" class="col-2 p-2" style="max-width: 150px; max-height: 150px;">
                     <span   class="col" 
                             style="font-size:min(4.5vw, 1.25rem); font-weight: bold;">Recent Achievements 
                     </span>
@@ -90,7 +95,7 @@
                         <div v-for="data in my_data" :key="data.aid" class="d-flex-block">
                             <div v-if="data.type =='achievement'" @click="get_data_from_index(data.aid)">
                                 <div class="d-flex py-2" href="#progressPopup" data-bs-toggle="modal">
-                                    <img src="../assets/achievement.png" class="col-2 p-1">
+                                    <img src="../assets/achievement.png" class="col-2 p-1" style="max-width: 150px; max-height: 150px;">
                                     <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
                                         <span style="font-size:1rem;">{{data.name}}</span>
                                         <span style="font-size:0.8rem;">{{data.description}}</span>
@@ -112,7 +117,7 @@
             <div id="recent-badge-section">
                 
                 <div class="d-flex align-items-center achievement-page-section-header" style="background-color:#2f4863d9; color:aliceblue">
-                    <img src="../assets/badge.png" class="col-2 p-2">
+                    <img src="../assets/badge.png" class="col-2 p-2" style="max-width: 150px; max-height: 150px;">
                     <span class ="col" style="font-size:min(4.5vw, 1.25rem); font-weight: bold;">Recent Badges </span>
                 </div>
                 
@@ -127,7 +132,7 @@
                         <div v-for="data in my_data" :key="data.aid" class="d-flex-block">
                             <div v-if="data.type =='badge'" @click="get_data_from_index(data.aid)">
                                 <div class="d-flex py-2" href="#progressPopup" data-bs-toggle="modal">
-                                    <img src="../assets/badge.png" class="col-2 p-1">
+                                    <img src="../assets/badge.png" class="col-2 p-1" style="max-width: 150px; max-height: 150px;">
                                     <div class="recent-achievement-details d-flex flex-column align-items-left justify-content-center col">
                                         <span style="font-size:1rem;">{{data.name}}</span>
                                         <span style="font-size:0.8rem;">{{data.description}}</span>

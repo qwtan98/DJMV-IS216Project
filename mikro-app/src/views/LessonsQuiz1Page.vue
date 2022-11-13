@@ -3,7 +3,8 @@
     <div id="lessonsquiz" style="margin-left: 58px;">
         
         <div id="quiz1" class="container">
-            <h1>Quiz 1: How inflation works!</h1>
+            <br/>
+            <h3>Quiz 1: How inflation works!</h3>
             <span v-for="(value, index) in questions" :key="value.id">
                 <div class="row" style="margin-bottom: 10px;">
                     <div class="col-12">

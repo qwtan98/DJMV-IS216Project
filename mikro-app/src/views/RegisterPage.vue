@@ -1,8 +1,8 @@
 <template>
-
-        <div class="register container align-items-center justify-content-center ">
-            <div class="row transition">
-                <div id="register-card" class="card col-md-6 w-100mx-auto rounded-0" style="">
+    <div class="register">
+        <div class="container align-items-center justify-content-center ">
+            <div class="row">
+                <div id="register-card" class="card col-sm-12 col-md-6 mx-auto rounded-0" style="">
                     <span id="card-outline" style="height:4px"></span>
                     <img class="card-img-top mx-auto" src="../assets/ui/mikro_logo_trim.png" alt="mikro logo" style="max-width:250px;padding:50px">
 
@@ -55,6 +55,7 @@
                 </div>
             </div>
         </div>
+    </div>
   </template>
 
 <script setup>
@@ -182,6 +183,7 @@
 .register {
     background-color: #2f4863;
     background-image: url(../assets/ui/background.webp);
+    height: 100vh;
 }
 
 .form-group {

@@ -10,7 +10,9 @@ import Conversion from "../views/ConversionPage"
 import Article from "../views/ArticlesPage.vue"
 import Settings from "../views/SettingsPage"
 import Landing from "../views/LandingPage.vue"
-
+import CommunityEvent1 from "../views/CommunityEvent1.vue"
+import CommunityEvent2 from "../views/CommunityEvent2"
+import CommunityEvent3 from "../views/CommunityEvent3"
 
 const routes =
   [
@@ -24,6 +26,9 @@ const routes =
       {path: '/conversion', name: 'Conversion', component: Conversion},
       {path: '/articles', name: 'Article', component: Article},
       {path: '/settings', name: 'Settings', component: Settings},
+      {path: '/CommunityEvent1', name: 'CommunityEvent1', component: CommunityEvent1},
+      {path: '/CommunityEvent2', name: 'CommunityEvent2', component: CommunityEvent2},
+      {path: '/CommunityEvent3', name: 'CommunityEvent3', component: CommunityEvent3}
 
     
     //   {path: '/lessons', name: 'lessons', component: () => import('../views/Contact')},

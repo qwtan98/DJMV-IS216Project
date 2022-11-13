@@ -3,7 +3,7 @@
     <div style="margin-left: 55px;">
         <br/>
         <div class="container">
-        <h3 class="margin-top: 5px">Today's Stock News Articles</h3>
+        <h3 class="margin-top: 5px;">Explore Latest Stock News</h3>
       
         <select name="stock_region" v-model="selected_topic" @change="created" class="mb-2">
                 <option disabled value="">Please select one topic</option>

@@ -6,8 +6,8 @@
             <h4 style="width: 320px" class="m-0"></h4>
             <div class="form-group text-center card p-2" style="box-shadow: 0 2px 18px 1px rgb(49 53 72 / 10%); ">
                 <div class="card-header mt-3">
-                    <h4 class="text-bold-500 info">
-                    Real time currency conversion rates
+                    <h4 class="text-bold-500 info" id="words">
+                     Currency conversion calculator
                     </h4>
                 </div>
                 <div class="card-subtitle p-0 mt-3 mx-2">	                   
@@ -160,6 +160,7 @@
                 <!-- convert button -->
                 <button class="btn btn-primary convert m-2" 
                         type="submit"
+                        style="animation: pulse 5s ease-out infinite"
                         @click="convert()">
                     Convert 💱
             </button>
@@ -224,6 +225,7 @@ import NavigationBar from '../components/NavigationBar.vue';
             to_currency: "",
             from_currency: "",
             output: 0,
+            words: ["Real-time rates updates", "From over 20+ countries"]
             // input_amt: 0
         }
     },  
@@ -275,7 +277,7 @@ import NavigationBar from '../components/NavigationBar.vue';
                 }
             }
             console.log(this.output)
-        }
+        },
 
     }
 }

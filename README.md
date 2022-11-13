@@ -120,7 +120,6 @@ Mikro is a one-stop knowledge investment platform to increase financial inclsuio
 | VUE-CLI   | Framework                             | [Vue CLI](https://cli.vuejs.org/)      |
 | Vuex      | State Management                      | [Vuex](https://next.vuex.vuejs.org/)   |
 | Bootstrap | Tooltips, Toasts, Offcanvas, Carousel | [Bootstrap](https://getbootstrap.com/) |
-| Typora    | README Editing and Formatting         | [Typora](https://typora.io)            |
 
 ### Front End Styling
 
@@ -155,6 +154,7 @@ Mikro is a one-stop knowledge investment platform to increase financial inclsuio
 | Google Firebase      | Real-time Database and Authentication                | [Google Firebase](https://firebase.google.com)               |
 | vue-google-translate | Translate content corresponding to selected language | [vue-google-translate](https://www.npmjs.com/package/vue-google-translate) |
 | Bootstrap Studio     | Drag and Drop designing of pages                     | [Bootstrap Studio](https://bootstrapstudio.io)               |
+| Typora               | README Editing and Formatting                        | [Typora](https://typora.io)                                  |
 
 ## How to Install and Run Our Web Application (for Developers) ##
 

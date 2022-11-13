@@ -6,21 +6,21 @@
             <h4 style="width:" class="m-0"></h4>
             <div class="form-group w-100 card p-2" style="box-shadow: 0 2px 18px 1px rgb(49 53 72 / 10%); ">
                 <div class="card-header mt-3">
-                    <h4 class="text-bold-500 info" id="words">
+                    <h4 class="text-bold-500 info text-center" id="words">
                         <i class="pt-2 bx bx-calculator"></i>&nbsp;Currency conversion calculator
                     </h4>
                 </div>
                 <div class="card-subtitle p-0 mt-3 mx-2">	                   
-                    <h5 class="" style="font-weight: 400; font-size: 15px;">View current rates now.</h5>
+                    <h5 class="" style="font-weight: 400; font-size: 15px; text-align:center">View current rates now.</h5>
                 </div>
                 <br/>
                 <div class="input-group-prepend">
-                    <span class="input-group-text" style="border-radius: 0; padding: 5;">Amount to be converted</span>
+                    <span class="input-group-text" style="border-radius: 0; padding: 5; text-align:center">Amount to be converted</span>
                 </div>
                 <input type="number" 
                     class="form-control searchBox" 
                     placeholder="0" 
-                    style="border-radius:0;"
+                    style="border-radius:0; text-align:center"
                     v-model="input_amt">
                 <br/>
             
@@ -85,11 +85,11 @@
                             <option value="UYU">UYU</option>
                             <option value="ZAR">ZAR</option>
                         </select>
-                        <small id="describeTo" class="form-text text-muted" style="margin-left: 18px; font-size: 12px;">Choose a currency you want to convert from</small>
+                        <small id="describeTo" class="form-text text-muted" style="text-align:center; margin-left: 18px; font-size: 12px;">Choose a currency you want to convert from</small>
                     </div>
             
                 </div>
-                <i class="bx bx-down-arrow" style="margin-left: 10px;"></i>
+                <i class="bx bx-down-arrow text-center" style="margin-left: 10px;"></i>
 
                 <div class="row mt-3">
                     <div class="input-group mb-3">

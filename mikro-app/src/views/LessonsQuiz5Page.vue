@@ -20,30 +20,17 @@
                 </div>
             </span>
             <div>
-                <div class="btn btn-primary" href="#supportModal" data-bs-toggle="modal" style="margin-bottom: 10px">Submit Quiz</div>
-
-                <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="supportModalLabel">Support</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-
-                            <div class="modal-body" v-if='selected_ans.includes("As soon as possible.") && selected_ans.includes("Yes, for a rainy day.")  && selected_ans.includes("No, because the market is volatile and I should make sensible decisions.")'>
-                                You've got it all correct! Good job!<br><small>You can now return to the Lessons page.</small>
-                            </div>
-
-                            <div class="modal-body" v-else>Oh no! You've got incorrect answers. Go back and try again!</div>
-
-                            <div class="modal-footer">
-                                <router-link to="Lessons" class="btn btn-secondary" value="" style="margin-bottom: 10px" data-bs-dismiss="modal" v-if='selected_ans.includes("As soon as possible.") && selected_ans.includes("Yes, for a rainy day.")  && selected_ans.includes("No, because the market is volatile and I should make sensible decisions.")'>Return to Lessons</router-link>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" v-else>Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="btn btn-primary" href="#supportModal" data-bs-toggle="modal" style="margin-bottom: 10px" @click="checkStatus()">Submit Quiz</div>
+                <span v-if= 'status == true' style="color: green" class="mb-2">
+                    <br/>{{ message }}
+                    <button class="btn btn-primary">
+                        <router-link to="lessons" style="color: white; text-decoration: none">Back to Lessons</router-link>
+                    </button>
+                </span> 
+                <span v-else style="color: red" class="mb-2">
+                  <br/>{{ message }}
+                </span>
+              
             </div>
         </div>
     </div>
@@ -58,6 +45,8 @@ import NavigationBar from '../components/NavigationBar.vue';
         props: {},
         data() {
             return {
+                message: "",
+                status: false,
                 questions: [
                     { Qn: "When is a good time to start investing?", 
                     Answers:["When I am in my late 80s, and have accumulated a large amount of savings.", "As soon as possible."]},
@@ -68,6 +57,20 @@ import NavigationBar from '../components/NavigationBar.vue';
                 ],
                 selected_ans: []
             }
+        },
+        methods: {
+            checkStatus() {
+                if(this.selected_ans.includes("As soon as possible.") && this.selected_ans.includes("Yes, for a rainy day.") && this.selected_ans.includes("No, because the market is volatile and I should make sensible decisions."))
+                {
+                    this.status = true
+                    this.message = "You've got it all correct! Good job!\nYou can now return to the Lessons page."
+                }
+                else 
+                {
+                    this.message = "Oh no! You've got a question or two wrong. Go back and try again!"
+                    this.status = false
+                }
+             }
         }
     }
 </script>

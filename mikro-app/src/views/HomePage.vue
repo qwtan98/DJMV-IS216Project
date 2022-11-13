@@ -63,7 +63,7 @@
           <img class="card-img-top" src="../assets/ui/inflation_community.avif" style="height: 50%" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title" style="font-size: 12px">HOW TO DIVERSIFY DURING HIGH INFLATION</h5>
-            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;MONDAY, NOVEMBER 14TH<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;530PM - 645PM SGT</p>
+            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;MONDAY, NOVEMBER 14TH<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;530PM - 645PM SGT<br/>📅&nbsp;Online Event</p>
             <router-link to="/CommunityEvent2">
             <a href="#" class="btn btn-primary" style="font-size: 13px; color: white;">Find out more</a>
             </router-link>
@@ -75,7 +75,7 @@
           <img class="card-img-top" src="../assets/ui/dividend_community.jpg" style="height: 50%" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title" style="font-size: 12px">YOUR GUIDE TO DIVIDEND STOCKS</h5>
-            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;WEDNESDAY, NOVEMBER 23RD<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130PM - 230PM SGT</p>
+            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;WEDNESDAY, NOVEMBER 23RD<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130PM - 230PM SGT<br/>📅&nbsp;Online Event</p>
           <router-link to="/CommunityEvent3">
             <a href="#" class="btn btn-primary" style="font-size: 13px; color: white;">Find out more</a>
           </router-link>

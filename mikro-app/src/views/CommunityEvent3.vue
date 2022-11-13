@@ -8,7 +8,7 @@
             <img class="card-img-top" src="../assets/ui/dividend_community.jpg" style="width: 100%; height: 50%" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title" style="font-size: 12px">YOUR GUIDE TO DIVIDEND STOCKS</h5>
-              <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i>&nbsp; WEDNESDAY, NOVEMBER 23RD<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130PM - 230PM SGT</p>
+              <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i>&nbsp; WEDNESDAY, NOVEMBER 23RD<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130PM - 230PM SGT<br/>📅&nbsp;Online Event</p>
                 <button class="btn btn-primary" style="font-size: 13px; color: white;" @click="comfirmRegister()">Register</button>
                 <br/>
                 <br/>

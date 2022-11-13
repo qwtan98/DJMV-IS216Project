@@ -12,7 +12,7 @@
                             <div class="card-body">
                                 <p class="card-text">Q{{index+1}}: {{value.Qn}}</p>
                                 <span v-for="que in value.Answers" :key="que.id">
-                                    <input type="checkbox" v-model="selected_ans" :value="que"/>{{que}}<br>
+                                    <input type="checkbox" v-model="selected_ans" :value="que"/>&nbsp;{{que}}<br>
                                 </span>
                             </div>
                         </div>

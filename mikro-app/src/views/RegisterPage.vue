@@ -2,13 +2,13 @@
 
         <div class="register container align-items-center justify-content-center ">
             <div class="row transition">
-                <div id="register-card" class="card col-md-6 w-100mx-auto rounded-0">
+                <div id="register-card" class="card col-md-6 w-100mx-auto rounded-0" style="">
                     <span id="card-outline" style="height:4px"></span>
                     <img class="card-img-top mx-auto" src="../assets/ui/mikro_logo_trim.png" alt="mikro logo" style="max-width:250px;padding:50px">
 
                     <div class="card-body">
                         <form>
-                            <div id="register_email" class="form-group mt-2" style="width: 100%;">
+                            <div id="register_email" class="form-group" style="width: 100%;">
                                 <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="registerInputUID" required="required" v-model="myemail">
                                 <span id="input-field-label">Email</span>
                                 <span id="input-field-underline"></span>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
 
-                    <span id="card-outline" class="mt-4" style="height:4px"></span>
+                    <span id="card-outline" class=" " style="height:4px"></span>
                 </div>
             </div>
         </div>
@@ -146,10 +146,11 @@
 
 #register-card {
     padding: 40px 30px 60px 30px;
+    margin: 0px 0 50px 0;
     outline: none;
     border: none;
     background-color: aliceblue;
-    box-shadow: rgba(255, 255, 255, 0.2) 3px 7px 29px 3px;
+    box-shadow: rgba(121, 121, 121, 0.988) 3px 7px 29px 3px;
 }
 
 #card-outline {
@@ -195,7 +196,7 @@
     color: aliceblue;
 
     min-height: 50px;
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 0.1ch;
     z-index: 20;
 }

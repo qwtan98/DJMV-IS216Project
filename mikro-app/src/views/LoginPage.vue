@@ -252,7 +252,7 @@ body {
     color: aliceblue;
 
     min-height: 50px;
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 0.1ch;
     z-index: 20;
     overflow: hidden;

@@ -54,7 +54,7 @@
 
 ## Project Overview
 
-[Go To Top](#IS216 - G6T6 Mikro)
+[Go To Top](#is216---g6t6-mikro)
 
 ### Our Problem Statement
 
@@ -109,7 +109,7 @@ Mikro is a one-stop knowledge investment platform to increase financial inclsuio
 
 ## Technologies Used
 
-[Go To Top](#IS216 - G6T6 Mikro)
+[Go To Top](#is216---g6t6-mikro)
 
 ### Front End Development (Core Libraries)
 
@@ -158,7 +158,7 @@ Mikro is a one-stop knowledge investment platform to increase financial inclsuio
 
 ## How to Install and Run Our Web Application (for Developers) ##
 
-[Go To Top](#IS216 - G6T6 Mikro)
+[[Go To Top](#is216---g6t6-mikro)](#IS216 - G6T6 Mikro)
 
 ### Project Setup
 

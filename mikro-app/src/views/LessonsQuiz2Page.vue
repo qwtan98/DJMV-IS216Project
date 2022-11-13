@@ -34,7 +34,7 @@
                                 You've got it all correct! Good job!<br><small>You can now return to the Lessons page.</small>
                             </div>
 
-                            <div class="modal-body" v-else>Oh no! You've got a question or two wrong. Go back and try again!</div>
+                            <div class="modal-body" v-else>Oh no! You've got incorrect answers. Go back and try again!</div>
 
                             <div class="modal-footer">
 

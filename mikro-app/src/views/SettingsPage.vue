@@ -10,14 +10,14 @@ Consider adding prompt for image. But as I understand, need a place to store the
         <div class="container settings-background">
             <div class="settings-subbox">
                 <br/>
-                <h1 style="text-align: left">Settings</h1>
+                <h3 style="text-align: left">Settings</h3>
 
-                <div class="settingsBackground mb-4" style="height: 75px;">
+                <div class="settingsBackground mb-4" style="height: 75px; font-size: 15px">
                     Invite your friends to join you on this investment journey today!
                     <br/>
-                    <span style="font-size: 14px;" class="">Invite Link:</span>&nbsp;<a href="" style="font-size:10px;">https://mikroinvite?id=1011</a>
+                    <span style="font-size: 12px;" class="">Invite Link:</span>&nbsp;<a href="" style="padding: 2px; font-size: 10px;">https://mikroinvite?id=1011</a>
                 </div>
-                <h2 style="font-size: 20px;" href="#editProfileModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/user.png" alt="">&nbsp;Edit Profile</h2>                          
+                <h2 style="font-size: 18px;" href="#editProfileModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/user.png" alt="">&nbsp;Edit Profile</h2>                          
                 
                 <!-- Edit Profile Modal id="editProfileModel" -->
                 <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
@@ -53,7 +53,7 @@ Consider adding prompt for image. But as I understand, need a place to store the
 
             <div class="settings-subbox">
 
-                <h2 style="font-size: 20px" href="#supportModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/support.png" alt="">&nbsp;Support</h2>
+                <h2 style="font-size: 18px" href="#supportModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/support.png" alt="">&nbsp;Support</h2>
                 
                 <!-- Support Modal id="supportModal" -->
                 <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
@@ -87,7 +87,7 @@ Consider adding prompt for image. But as I understand, need a place to store the
             
             <div class="settings-subbox">
 
-                <h2 style="font-size: 20px" href="#aboutModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/about.png" alt="">&nbsp;About Mikro</h2>
+                <h2 style="font-size: 18px" href="#aboutModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/about.png" alt="">&nbsp;About Mikro</h2>
                 
                 <!-- About Modal id="aboutModal" -->
                 <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
@@ -116,7 +116,7 @@ Consider adding prompt for image. But as I understand, need a place to store the
 
             <div class="settings-subbox">
 
-                <h2 style="font-size: 20px" href="#rateModal" data-bs-toggle="modal"><i id="" class="bx bx-star" alt=""></i>&nbsp;Rate us</h2>
+                <h2 style="font-size: 18px" href="#rateModal" data-bs-toggle="modal"><i id="" class="bx bx-star" alt=""></i>&nbsp;Rate us</h2>
                 
                 <!-- About Modal id="aboutModal" -->
                 <div class="modal fade" id="rateModal" tabindex="-1" aria-labelledby="rateModalLabel" aria-hidden="true">
@@ -129,8 +129,8 @@ Consider adding prompt for image. But as I understand, need a place to store the
                             </div>
 
                             <div class="modal-body text-center">
-                                <button @click="Satisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 40px; border-radius: 50%">😃</button>
-                                <button  @click="notSatisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 40px; border-radius: 50%" >😶</button>
+                                <button @click="Satisfied()" class="m-3 btn btn-primary" style="font-size: 40px; border-radius: 50%">😃</button>
+                                <button  @click="notSatisfied()" class="m-3 btn btn-primary" style="font-size: 40px; border-radius: 50%" >😶</button>
                                 <br>
                                 Select One Emoji
                                 <br/>

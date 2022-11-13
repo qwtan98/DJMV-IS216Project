@@ -35,12 +35,12 @@ import NavigationBar from '../components/NavigationBar.vue';
         data() {
             return {
                 questions: [
-                    { Qn: "A", 
-                    Answers:["Yes", "No"]},
-                    { Qn: "B", 
-                    Answers: ["Yes", "No"]},
-                    { Qn: "C", 
-                    Answers: ["Yes", "No"]},
+                    { Qn: "Is buying a house considered an investment (in most countries)?", 
+                    Answers:["Yes, because house prices double every 10 years.", "No, because you have just spent $100,000 on a house and will not get the money back."]},
+                    { Qn: "What is 'Capital Gains'?", 
+                    Answers: ["When an asset increases in value over time.", "When a country's capital city grows to a larger population."]},
+                    { Qn: "Is there a way to invest without a large capital sum, and without putting in a lot of effort?", 
+                    Answers: ["Yes, it is known as investing in shares.", "No, there is no thing."]},
                 ]
             }
         }

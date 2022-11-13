@@ -44,12 +44,18 @@
               v-for="(menuItem, index) in menuItems"
               :key="index"
             >
-              <li
-                :class="isOpened ? 'nav-open': 'nav-closed'">
+              <li v-if="isOpened == true" :class="isOpened ? 'nav-open': 'nav-closed'">
                 <a :href="menuItem.link">
-                  <i
-                    class="bx"
-                    :class= "isOpened ? 'bx-moving ' + menuItem.icon || 'bx-square-rounded' : 'bx-stationary ' + menuItem.icon || 'bx-square-rounded'"
+                  <i class="bx" :class= "isOpened ? 'bx-moving ' + menuItem.icon || 'bx-square-rounded' : 'bx-stationary ' + menuItem.icon || 'bx-square-rounded'"
+                    @click="isOpened = !isOpened"
+                  />
+                  <span class="links_name">{{ menuItem.name }}</span>
+                </a>
+                <span class="tooltip">{{ menuItem.tooltip || menuItem.name }}</span>
+              </li>
+              <li v-else :class="isOpened ? 'nav-open': 'nav-closed'">
+                <a :role="link">
+                  <i class="bx" :class= "isOpened ? 'bx-moving ' + menuItem.icon || 'bx-square-rounded' : 'bx-stationary ' + menuItem.icon || 'bx-square-rounded'"
                     @click="isOpened = !isOpened"
                   />
                   <span class="links_name">{{ menuItem.name }}</span>
@@ -514,10 +520,7 @@ import { auth } from "../main.js";
       color: var(--bg-color);
     }
 
-    .sidebar li a:hover .bx-stationary.bx-grid-alt,
-    .sidebar li a:hover .bx-stationary.bx-pie-chart-alt-2,
-    .sidebar li a:hover .bx-stationary.bx-cog
-    .sidebar li a:hover .bx-stationary.bx-money {
+    .sidebar li a:hover .bx-stationary {
       transition: all 0.5s ease-in-out;
       transform: rotate(180deg);
       color: var(--bg-color);

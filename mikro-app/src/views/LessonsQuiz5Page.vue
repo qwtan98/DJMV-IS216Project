@@ -35,12 +35,12 @@ import NavigationBar from '../components/NavigationBar.vue';
         data() {
             return {
                 questions: [
-                    { Qn: "A", 
-                    Answers:["Yes", "No"]},
-                    { Qn: "B", 
-                    Answers: ["Yes", "No"]},
-                    { Qn: "C", 
-                    Answers: ["Yes", "No"]},
+                    { Qn: "When is a good time to start investing?", 
+                    Answers:["When I am in my late 80s, and have accumulated a large amount of savings.", "As soon as possible."]},
+                    { Qn: "Should you have an emergency fund?", 
+                    Answers: ["Yes, for a rainy day.", "No, because I have liquid assets."]},
+                    { Qn: "Should I invest money that I might need in the next 3-5 years?", 
+                    Answers: ["Yes, because my investments will definitely pay off.", "No, because the market is volatile and I should make sensible decisions."]},
                 ]
             }
         }

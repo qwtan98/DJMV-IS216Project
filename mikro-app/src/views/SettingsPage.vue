@@ -65,6 +65,8 @@ Consider adding prompt for image. But as I understand, need a place to store the
 
                             <div class="modal-body">
                                 Hotline: +65 9123 4567
+                                <br>
+                                Email: helpdesk@mikro.com
                                 <br><br>
                                 Weekday: 9 a.m. - 6 p.m.
                                 <br>
@@ -120,7 +122,7 @@ Consider adding prompt for image. But as I understand, need a place to store the
                         <div class="modal-content">
 
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="aboutModalLabel">Are you happy with Mikro App?</h1>
+                                <h1 class="modal-title fs-5" id="aboutModalLabel">How did you like Mikro?</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
 
@@ -166,12 +168,12 @@ Consider adding prompt for image. But as I understand, need a place to store the
             },
 
         notSatisfied() {
-            this.message = "Thanks for the input, do let us know what to improve on in the app store 😊!"
+            this.message = "Thanks for the input! Do leave us a review for us to improve! 😊"
             return this.message
         },
 
         Satisfied() {
-            this.message = "Thanks for the input, we will continously work to improve the application 😊"
+            this.message = "Thanks for the input! We will continue working to improve Mikro! 😊"
             return this.message
         }
     }

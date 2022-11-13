@@ -6,14 +6,14 @@ Consider adding prompt for image. But as I understand, need a place to store the
 <template>
     <NavigationBar/>
     
-    <div style="margin-left: 55px;">
+    <div id="bigContainer" style="margin-left: 55px;">
         <div class="container settings-background">
             <div class="settings-subbox">
                 <br/>
-                <h1>Settings</h1>
-                
-                <div class="settingsBackground bg-dark mb-4" style="height: 100px">
+                <h1 style="text-align: left">Settings</h1>
 
+                <div class="settingsBackground mb-4" style="height: 74px;">
+                    Invite your friends to join you on this investment journey today!
                 </div>
                 <h2 style="font-size: 20px" href="#editProfileModal" data-bs-toggle="modal"><img id="setting-icons" src="../assets/ui/user.png" alt="">&nbsp;Edit Profile</h2>                          
                 
@@ -125,12 +125,13 @@ Consider adding prompt for image. But as I understand, need a place to store the
                             </div>
 
                             <div class="modal-body text-center">
-                                <button @click="Satisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 20px; border-radius: 50%">😃</button>
-                                <button  @click="notSatisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 20px; border-radius: 50%" >😶</button>
+                                <button @click="Satisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 40px; border-radius: 50%">😃</button>
+                                <button  @click="notSatisfied()" class="p-3 m-3 btn btn-primary" style="font-size: 40px; border-radius: 50%" >😶</button>
                                 <br><br>
                                 Select One Emoji
                                 <br/>
-                                <p>{{ message }}</p>
+                                <br/>
+                                <p style="background-color: aliceblue">{{ message }}</p>
                             </div>
                            
 
@@ -165,7 +166,7 @@ Consider adding prompt for image. But as I understand, need a place to store the
             },
 
         notSatisfied() {
-            this.message = "Thanks for the input, do let us know what to improve on in the app store!"
+            this.message = "Thanks for the input, do let us know what to improve on in the app store 😊!"
             return this.message
         },
 
@@ -182,6 +183,7 @@ Consider adding prompt for image. But as I understand, need a place to store the
 
 <style scoped>
 
+
 .skiptranslate {
     display: inline;
 }
@@ -189,10 +191,17 @@ h1 {
     text-align: center;
 
 }
-.settings-background {
-    background-color: aliceblue;
 
+
+.settings-background {
+    height: 100vh;
+    background: url("../assets/ui/settingsBg.JPG") no-repeat bottom right;
+    background-color: aliceblue;
+    
 }
+
+
+
 
 .settings-subbox {
     margin-bottom: 28px;

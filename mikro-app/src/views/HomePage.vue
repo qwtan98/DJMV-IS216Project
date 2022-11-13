@@ -18,15 +18,15 @@
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
             <img :src= headlines[0].urlToImage class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block">
-              <h3>{{ headlines[0].content }}</h3>
-              <!-- <p>Some representative placeholder content for the second slide.</p> -->
+            <div class="carousel-caption d-block ">
+              <h4 style="font-size: 15px;"></h4>
+              <p style="margin-top:5px">{{ headlines[0].content }}</p>
             </div>
           </div>
-          <div v-for="headline of headlines.splice(1, 9)" :key=headline.id class="carousel-item" data-bs-interval="6000">
+          <div v-for="headline of headlines.splice(1, 9)" :key=headline.id class="carousel-item" data-bs-interval="5000">
             <img :src= headline.urlToImage class="d-block w-100" alt="...">
             <div class="carousel-caption d-md-block">
-              <h3>{{ headline.content }}</h3>
+              <h4 style="font-size: 15px;">{{ headline.content }}</h4>
               <!-- <p>Some representative placeholder content for the second slide.</p> -->
             </div>
           </div>
@@ -51,7 +51,7 @@
           <img class="card-img-top" src="../assets/ui/crypto_community.jpg" style="height: 50%" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title" style="font-size: 12px">HOW TO INVEST IN ECO FRIENDLY CRYPTO</h5>
-            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;MONDAY, NOVEMBER 14TH</p>
+            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;MONDAY, NOVEMBER 14TH<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;230PM - 330PM SGT</p>
             <router-link to="/CommunityEvent1">
               <a href="" class="btn btn-primary" style="font-size: 13px; color: white;">Find out more</a>
             </router-link>
@@ -63,7 +63,7 @@
           <img class="card-img-top" src="../assets/ui/inflation_community.avif" style="height: 50%" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title" style="font-size: 12px">HOW TO DIVERSIFY DURING HIGH INFLATION</h5>
-            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;MONDAY, NOVEMBER 14TH</p>
+            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;MONDAY, NOVEMBER 14TH<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;530PM - 645PM SGT</p>
             <router-link to="/CommunityEvent2">
             <a href="#" class="btn btn-primary" style="font-size: 13px; color: white;">Find out more</a>
             </router-link>
@@ -75,7 +75,7 @@
           <img class="card-img-top" src="../assets/ui/dividend_community.jpg" style="height: 50%" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title" style="font-size: 12px">YOUR GUIDE TO DIVIDEND STOCKS</h5>
-            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i>&nbsp;WEDNESDAY, NOVEMBER 23RD</p>
+            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;WEDNESDAY, NOVEMBER 23RD<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130PM - 230PM SGT</p>
           <router-link to="/CommunityEvent3">
             <a href="#" class="btn btn-primary" style="font-size: 13px; color: white;">Find out more</a>
           </router-link>
@@ -196,7 +196,9 @@
 
   .card 
   {
-    background-color: rgb(194, 206, 217);
+    box-shadow: rgb(255, 255, 255) 10 10 10 10;
+    border: solid rgb(195, 190, 190) 1px;
+    background-color: rgb(227, 237, 247);
   }
   </style>
   

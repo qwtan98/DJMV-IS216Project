@@ -2,7 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 // import views 
 import Home from "../views/HomePage"
 import Lessons from "../views/LessonsPage"
-import LessonsQuiz from "../views/LessonsQuizPage"
+import LessonsQuiz1 from "../views/LessonsQuiz1Page"
+import LessonsQuiz2 from "../views/LessonsQuiz2Page"
+import LessonsQuiz3 from "../views/LessonsQuiz3Page"
+import LessonsQuiz4 from "../views/LessonsQuiz4Page"
+import LessonsQuiz5 from "../views/LessonsQuiz5Page"
 import Login from "../views/LoginPage"
 import Register from "../views/RegisterPage"
 import Progress from "../views/ProgressPage"
@@ -17,7 +21,11 @@ const routes =
       {path: '/', name: 'Landing', component: Landing },
       {path: '/home', name: 'Home', component: Home },
       {path: '/lessons', name: 'Lessons', component: Lessons },
-      {path: '/lessonsquiz', name: 'LessonsQuiz', component: LessonsQuiz },
+      {path: '/lessonsquiz1', name: 'LessonsQuiz1', component: LessonsQuiz1 },
+      {path: '/lessonsquiz2', name: 'LessonsQuiz2', component: LessonsQuiz2 },
+      {path: '/lessonsquiz3', name: 'LessonsQuiz3', component: LessonsQuiz3 },
+      {path: '/lessonsquiz4', name: 'LessonsQuiz4', component: LessonsQuiz4 },
+      {path: '/lessonsquiz5', name: 'LessonsQuiz5', component: LessonsQuiz5 },
       {path: '/login', name: 'Login', component: Login},
       {path: '/register', name: 'Register', component: Register},
       {path: '/progress', name: 'Progress', component: Progress},

@@ -27,7 +27,7 @@
                             <!-- <router-link to="/home"> -->
                                 <button id="login-btn" class="btn btn-primary w-100 mt-5" @click="changeImage();toggleBigger();changePage()">
                                     <div id="login-btn-container">
-                                            <span id="login-text">Log in</span>
+                                            <span id="login-text" style="font-size: 15px;">Log in</span>
                                             <img id="login-btn-img" src="../assets/ui/enter-icon.png" alt="">
                                             <div id="login-btn-overlay"></div>
                                     </div>
@@ -44,7 +44,7 @@
                             </router-link>
                         </div> -->
 
-                        <div class ="d-flex justify-content-start mt-3" style="font-size:20px;">
+                        <div class ="d-flex justify-content-start mt-3" style="font-size:14px;">
                             <router-link to="/">
                                 Forgot your User ID or Password?
                             </router-link>
@@ -59,7 +59,7 @@
                            </button> -->
                     </div>
 
-                    <span id="card-outline" class="mt-5" style="height:4px"></span>
+                    <span id="card-outline" class="mt-4" style="height:4px"></span>
                 </div>
             </div>
         </transition>
@@ -166,14 +166,12 @@ body {
     background-color: azure;
     overflow:hidden;
     box-shadow: rgba(121, 121, 121, 0.988) 3px 7px 29px 3px;
-    
+    margin-top: 0;
 }
 
 #card-outline {
     width: 100%;
     background-color:#344c64;
-
-
     display: flex;
     justify-content: center;
 }
@@ -268,7 +266,7 @@ body {
 
     font-size:25px; 
 
-    height: 50px;
+    height: 35px;
     padding-left: 35px;
 
     transition: 0.3s;

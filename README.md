@@ -72,6 +72,7 @@ Mikro is a one-stop knowledge investment platform to increase financial inclsuio
  ┃ ┣ 📂 docs
  ┃ ┣ 📂 node-modules
  ┃ ┣ 📂 public
+ ┃ ┣ 📂 img
  ┃ ┃
  ┃ ┣ 📂 src
  ┃ ┃ ┣ 📂 assets
@@ -220,39 +221,39 @@ We chose these devices as the phones are inexpensive and not modern, which are t
 
 When users visit the site for the first time, this is the screen they will see:
 
-<img src='img/Landing.jpeg' alt='...'>
+<img src='mikro-app/img/Landing.jpeg' alt='...'>
 
 Followed by Log In or Register depending on their status as a user:
-<img src='img/Login,jpeg' alt='...'>
+<img src='mikro-app/img/Login,jpeg' alt='...'>
 
-<img src='img/Register.jpeg' alt='...'>
+<img src='mikro-app/img/Register.jpeg' alt='...'>
 
 After successfully logging into through our Firebase Authentication, users will get to the Home Page:
 
-<img src='img/Home.jpeg' alt='...'>
+<img src='mikro-app/img/Home.jpeg' alt='...'>
 
 > Here, they are greeted by the headlines in the financial industry and events in their community
 
 On the left of the Home Page, you can open up our Navigation Bar to access the other features:
 
-<img src='img/Nav.jpeg' alt='...'>
+<img src='mikro-app/img/Nav.jpeg' alt='...'>
 
 Such as our Financial Academy:
 
-<img src='img/Academy.jpeg' alt='...'>
+<img src='mikro-app/img/Academy.jpeg' alt='...'>
 
 User Progress:
 
-<img src='img/Progress.jpeg' alt='...'>
+<img src='mikro-app/img/Progress.jpeg' alt='...'>
 
 Financial Articles:
 
-<img src='img/Articles.jpeg' alt='...'>
+<img src='mikro-app/img/Articles.jpeg' alt='...'>
 
 Live Currency Converter Calculator:
 
-<img src='img/Currency.jpeg' alt='...'>
+<img src='mikro-app/img/Currency.jpeg' alt='...'>
 
 Settings:
 
-<img src='img/Settings.jpeg' alt='...'>
+<img src='mikro-app/img/Settings.jpeg' alt='...'>

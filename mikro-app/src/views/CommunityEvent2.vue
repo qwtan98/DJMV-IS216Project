@@ -4,11 +4,11 @@
             <i class="bx bx-arrow-back"></i>
         </router-link>
 
-        <div class="card" style="font-size: 12px; height: 100vh;">
+        <div class="card" style="font-size: 12px; height: ;">
             <img class="card-img-top" src="../assets/ui/inflation_community.avif" style="width: 100%; height: 50%" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title" style="font-size: 12px">HOW TO DIVERSIFY DURING HIGH INFLATION</h5>
-              <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i>&nbsp; MONDAY, NOVEMBER 14TH</p>
+              <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i>&nbsp; MONDAY, NOVEMBER 14TH<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;530PM - 645PM SGT</p>
                 <button class="btn btn-primary" style="font-size: 13px; color: white;" @click="comfirmRegister()">Register</button>
                 <br/>
                 <br/>

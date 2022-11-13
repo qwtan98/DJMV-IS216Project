@@ -13,11 +13,10 @@
           <hr/>
         </div>
 
-
-
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <a href="headlines[0].url"><img :src= headlines[0].urlToImage class="d-block w-100 p-0" alt="..."></a>
+            <img :src= headlines[0].urlToImage class="d-block w-100 p-0" alt="...">
+            <!-- <a href={{headlines[0].url}}>Click me</a> -->
             <div class="carousel-caption d-block">
               <h4 style="font-size: 15px;"></h4>
               <p class="" style="margin-top:5px">{{ headlines[0].title }}</p>

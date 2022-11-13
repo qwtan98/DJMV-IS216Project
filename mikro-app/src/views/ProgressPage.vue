@@ -1,5 +1,7 @@
 <template>
     <NavigationBar/>
+    <br/>
+    <h3 style="margin-left: 75px" class="">My Progress</h3>
     <div class="modal" id="progressPopup" tabindex="-1" aria-labelledby="progressPopupLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" style="background-color:aliceblue">

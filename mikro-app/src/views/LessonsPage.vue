@@ -3,7 +3,7 @@
     <div id="lesson" style="margin-left: 58px;">
         <br/>
         <div class="container">
-        <h1 class="">Academy</h1>
+        <h3 class="">Academy 🎓</h3>
         <span v-for="(lesson, index) in lessons" :key="lesson.id">
             <div class="row">
                 <div class="col-12">

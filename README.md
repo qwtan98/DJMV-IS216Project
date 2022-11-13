@@ -1,36 +1,17 @@
 
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<img src="https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg" style="zoom:80%;" />![](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)![](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)<img src="https://forthebadge.com/images/badges/uses-git.svg" style="zoom:80%;" />
 
 
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
+
+
+# IS216 - G6T6 Mikro
+
+<div align="center"  style="background-color:white;">
   <a href="https://github.com/qwtan98/DJMV-IS216Project">
     <img src="mikro-app/src/assets/ui/mikro_logo.png" width="300" height="300" title="Mikro logo">
   </a>
@@ -49,213 +30,182 @@
     ·
     <a href="https://github.com/qwtan98/DJMV-IS216Project/issues">Request Feature</a>
   </p>
+
 </div>
+
+## Member Information
+
+| Members               | School Email     | Email                           | LinkedIn                                                     |
+| --------------------- | ---------------- | ------------------------------- | ------------------------------------------------------------ |
+| Jane Lim Enqi         | janelim.2021     | janelim2001@gmail.com           | [@LinkedIn](https://sg.linkedin.com/in/limenqi01)            |
+| Tan Quan Wah          | quanwah.tan.2021 | qwtan98@gmail.com               | [@LinkedIn](https://sg.linkedin.com/in/qwtan98)              |
+| Sim Jia Cheng Malcolm | malcolm.sim.2021 | malcolmsim7@hotmail.com         | [@LinkedIn](https://sg.linkedin.com/in/malcolm-sim-protocrux) |
+| Dexter Ong Qing Yang  | dexter.ong.2021  | dexter.ong.2021@scis.smu.edu.sg | [@LinkedIn](https://sg.linkedin.com/in/dexter-ongqy)         |
 
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+
+[TOC]
+
 
 
 <!-- ABOUT THE PROJECT -->
-## Our Problem Statement
+
+## Project Overview
+
+[Go To Top](#IS216 - G6T6 Mikro)
+
+### Our Problem Statement
+
 Today, the majority of migrant workers don't have easy access to resources for expanding their investment knowledge, which restricts their capacity to grow their wealth. They are faced with the constant challenge to find an essential platform where they can convieniently grow their investment knowledge.
 
-## About the Project
+### About the Project
 Mikro is a one-stop knowledge investment platform to increase financial inclsuion and literacy among migrant workers in Singapore, that helps to kickstart and improve their knowledge on investing. 
 
-<!--Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`-->
+### Project Structure
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-* [![Vue][Vue.js]][Vue-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-* Alpha Vantage API: Provide stock articles news and information (https://www.alphavantage.co/documentation)
-* ExchangeRate API: Provide latest exchange rates (https://app.exchangerate-api.com/dashboard)
-* Google Firebase: Real-time Database
-* vue-google-translate: Translate content corresponding to selected language (https://www.npmjs.com/package/vue-google-translate)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-After visiting 
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-<!--* npm
-  ```sh
-  npm install npm@latest -g
-  ```-->
-  
- ## Project setup
 ```
-npm install
+📦DJMV-IS216Project
+ ┣ 📂 mikro-app
+ ┃ ┣ 📂 dist
+ ┃ ┣ 📂 docs
+ ┃ ┣ 📂 node-modules
+ ┃ ┣ 📂 public
+ ┃ ┃
+ ┃ ┣ 📂 src
+ ┃ ┃ ┣ 📂 assets
+ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┃ ┣ 📜 NavigationBar.vue
+ ┃ ┃ ┃ ┣ 📜 TheFooter.vue
+ ┃ ┃ ┃
+ ┃ ┃ ┣ 📂 router
+ ┃ ┃ ┃ ┣ 📜 router.js
+ ┃ ┃ ┃
+ ┃ ┃ ┣ 📂 views
+ ┃ ┃ ┃ # 11 different pages
+ ┃ ┃ ┃ ┣ 📜 RegisterPage.vue
+ ┃ ┃ ┃ ┣ 📜 ConversionPage.vue
+ ┃ ┃ ┃ ┣ ...
+ ┃ ┃ ┃
+ ┃ ┃ ┣ 📜 App.Vue
+ ┃ ┃ ┣ 📜 main.js
+ ┃ ┃
+ ┃ ┃ # dependencies for the vue app
+ ┃ ┣ 📜 package.json       
+ ┃ ┣ 📜 package-lock.json
+ ┃ ┣ 📜 package-lock.json
+ ┃ ┃
+ ┃ ┃ # js config files
+ ┃ ┣ 📜 vue.config.js
+ ┃ ┣ 📜 babel.config.js
+ ┃ ┃ # gitignore
+ ┃ ┗ 📜.gitignore
+ ┃
+ ┗ 📜 README.md
 ```
 
-### Compiles and hot-reloads for development
+
+
+## Technologies Used
+
+[Go To Top](#IS216 - G6T6 Mikro)
+
+### Front End Development (Core Libraries)
+
+> Front End was developed on Node with VUE-CLI.
+
+| Library   | Description                           | Link                                   |
+| --------- | ------------------------------------- | -------------------------------------- |
+| VUE-CLI   | Framework                             | [Vue CLI](https://cli.vuejs.org/)      |
+| Vuex      | State Management                      | [Vuex](https://next.vuex.vuejs.org/)   |
+| Bootstrap | Tooltips, Toasts, Offcanvas, Carousel | [Bootstrap](https://getbootstrap.com/) |
+| Typora    | README Editing and Formatting         | [Typora](https://typora.io)            |
+
+### Front End Styling
+
+> Bootstrap was the Main Library for styling
+
+| Library / Tool | Description          | Link                                   |
+| -------------- | -------------------- | -------------------------------------- |
+| Bootstrap CSS  | Grid, Flex Utilities | [Bootstrap](https://getbootstrap.com/) |
+
+### Back End (Core Libraries)
+
+> Back End is coded in Javascript with NodeJS.
+
+| Library | Description                                                | Link                             |
+| ------- | ---------------------------------------------------------- | -------------------------------- |
+| NodeJS  | Open-source, cross-platform JavaScript runtime environment | [NodeJS](https://nodejs.org/en/) |
+
+### Version Control
+
+> Back End is coded in Javascript with NodeJS.
+
+| Service | Description                                         | Link                         |
+| ------- | --------------------------------------------------- | ---------------------------- |
+| Github  | Version Control collaborative environment using Git | [Github](https://github.com) |
+
+### External API, Libraries and Extras
+
+| Library / Tool       | Description                                          | Link                                                         |
+| -------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| Alpha Vantage API    | Provide stock articles news and information          | [Alpha Vantage API](https://www.alphavantage.co/documentation) |
+| ExchangeRate API     | Provide latest exchange rates                        | [ExchangeRate API](https://app.exchangerate-api.com/dashboard) |
+| Google Firebase      | Real-time Database and Authentication                | [Google Firebase](https://firebase.google.com)               |
+| vue-google-translate | Translate content corresponding to selected language | [vue-google-translate](https://www.npmjs.com/package/vue-google-translate) |
+| Bootstrap Studio     | Drag and Drop designing of pages                     | [Bootstrap Studio](https://bootstrapstudio.io)               |
+
+## How to Install and Run Our Web Application (for Developers) ##
+
+[Go To Top](#IS216 - G6T6 Mikro)
+
+### Project Setup
+
+##### Tools Required
+
+| Tool   | Download                                           |
+| ------ | -------------------------------------------------- |
+| NodeJS | [Download NodeJS](https://nodejs.org/en/download/) |
+
+### Installing Libraries
+
+##### Front End (Vue)
+
 ```
+# From Project Root Change Directory to the mikro-app folder (The Folder with package.json)
+
+cd mikro-app
+
+# Install Dependencies for npm
+
+npm i
+```
+
+### Running the Development Server
+
+```
+# From Project Root Change Directory to the mikro-app folder (The Folder with package.json)
+
+cd mikro-app
+
+# Start the development server
+
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Open a browser (preferably Google Chrome) and enter http://localhost:8080/ to access Mikro!
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Preferred Devices
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Samsung Galaxy S8/S9
 
+- System: Android
+- Viewport (width x height): 360px x 740px
 
-### Installation
+iPhone 7 and iPhone 8
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- System: IOS
+- Viewport (width x height): 375px x 667px 
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Jane Lim Enqi - [@LinkedIn](https://sg.linkedin.com/in/limenqi01) - janelim2001@gmail.com
-
-Tan Quan Wah - [@LinkedIn](https://sg.linkedin.com/in/qwtan98) - qwtan98@gmail.com
-
-Sim Jia Cheng Malcolm - [@LinkedIn](https://sg.linkedin.com/in/malcolm-sim-protocrux) - malcolmsim7@hotmail.com
-
-Dexter Ong Qing Yang - [@LinkedIn](https://sg.linkedin.com/in/dexter-ongqy) - dexter.ong.2021@scis.smu.edu.sg
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/qwtan98/DJMV-IS216Project/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/qwtan98/DJMV-IS216Project/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/qwtan98/DJMV-IS216Project/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/qwtan98/DJMV-IS216Project/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/qwtan98/DJMV-IS216Project/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: mikro-app/src/assets/ui/mikro_logo.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+We chose these devices as the phones are inexpensive and not modern, which are the conditions common amongst the phones of our target user base of Foreign Domestic Workers (FDW).

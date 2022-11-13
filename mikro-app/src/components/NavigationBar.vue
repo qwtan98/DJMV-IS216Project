@@ -88,6 +88,8 @@
             v-if="isExitButton"
             class="bx bx-log-out"
             style="margin: 0; font-size: 25px;"
+            @click="handleLogout"
+            
             id="log_out"
           />
         </router-link>
@@ -96,8 +98,14 @@
     </div>
   </template>
   
-  <script>
+<script>
+import { signOut } from "firebase/auth";
+import { useRouter } from 'vue-router'
+import { auth } from "../main.js";
+
+
     export default {
+      
       name: 'NavigationBar',
       props: {
         //! Menu settings
@@ -254,12 +262,22 @@
       },
       data() {
         return {
-          isOpened: false
+          isOpened: false,
+          router: useRouter()
         }
       },
+      methods: {
+        handleLogout() {
+            signOut(auth).then(()=> {
+                this.router.push('/login');
+            })
+        }
+      },
+
       mounted() {
         this.isOpened = this.isMenuOpen
       },
+
       computed: {
         cssVars() {
           return {

@@ -3,7 +3,7 @@
         <div class="container align-items-center justify-content-center default" v-bind:class="{ smaller: showButton }" id="animationrow">
             <transition class="transition" name="expand" mode="out-in" >
             <div class="row">
-                <div id="log-in-card" class="card col-sm-12 col-md-6 mx-auto rounded-0" style="margin-" >
+                <div id="log-in-card" class="card col-sm-12 col-md-6 mx-auto rounded-0" style="" >
                     <span id="card-outline" style="height:4px"></span>
 
                     <img class="card-img-top mx-auto" src="../assets/ui/mikro_logo_trim.png" alt="mikro logo" style="max-width:250px; padding:50px"> 
@@ -11,13 +11,13 @@
                     <div class="card-body">
                         <form>
                             <div id="login_inputfields" class="form-group mt-2" style="width: 100%;">
-                                <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="loginInputUID" required="required">
-                                <span id="input-field-label">User ID</span>
+                                <input type="text" class="form-control rounded-0" autofocus="autofocus" maxlength="25" id="loginInputUID" required="required" v-model="loginemail">
+                                <span id="input-field-label">Email</span>
                                 <span id="input-field-underline"></span>
                             </div>
 
                             <div id="login_inputfields" class="form-group mt-5" style="width: 100%;">
-                                <input type="password" class="form-control rounded-0" id="loginInputPW" required="required">
+                                <input type="password" class="form-control rounded-0" id="loginInputPW" required="required" v-model="loginpassword">
                                 <span id="input-field-label">Password</span>
                                 <span id="input-field-underline"></span>
                             </div>
@@ -25,7 +25,7 @@
 
                         <div>
                             <!-- <router-link to="/home"> -->
-                                <button id="login-btn" class="btn btn-primary w-100 mt-5" @click="changeImage();toggleBigger();changePage()">
+                                <button id="login-btn" class="btn btn-primary w-100 mt-5" @click="login">
                                     <div id="login-btn-container">
                                             <span id="login-text" style="font-size: 15px;">Log in</span>
                                             <img id="login-btn-img" src="../assets/ui/enter-icon.png" alt="">
@@ -69,7 +69,11 @@
 </template>
   
 <script>
-    //import NavigationBar from "../components/NavigationBar";
+    import { useRouter } from 'vue-router'
+    // import { ref, child, get, set } from "firebase/database"
+    import { auth } from "../main.js"
+    import { signInWithEmailAndPassword } from "firebase/auth";
+
     export default 
     {
         name: 'LoginRegisterPage',
@@ -87,6 +91,10 @@
         {
             return {
                 showButton: false,
+                loginemail: "",
+                loginpassword: "",
+
+                router: useRouter()
             }
         },
 
@@ -114,7 +122,37 @@
                     
                 }
 
-            }
+            },
+
+            login() {
+                signInWithEmailAndPassword(auth, this.loginemail, this.loginpassword)
+                    .then((data) => {
+                        console.log(data === 0);
+                        console.log("Success!");
+
+                        this.changeImage();
+                        this.toggleBigger();
+                        this.changePage()
+
+                    })
+                    .catch((e) => {
+                        switch(e.code) {
+                            case "auth/invalid-email":
+                                this.errorMsg = "Invalid email";
+                                break;
+                            case "auth/user-not-found":
+                                this.errorMsg = "No account with taht email was found";
+                                break;
+                            case "auth/wrong-password":
+                                this.errorMsg = "Incorrect password";
+                                break;
+                            default:
+                                this.errorMsg = "Email or password was incorrect";
+                                break;
+                        }
+                        alert(this.errorMsg)
+                    });
+                }
         },
         created(){
             
@@ -163,7 +201,7 @@ body {
     border: none;
 
     width:540px;
-    background-color: azure;
+    background-color: aliceblue;
     overflow:hidden;
     box-shadow: rgba(121, 121, 121, 0.988) 3px 7px 29px 3px;
     margin-top: 0;
@@ -191,7 +229,7 @@ body {
 .btn-outline-primary, .btn-outline-primary:hover {
     border-color: #2f4863 !important;
     color:#2f4863 !important;
-    background-color: azure;
+    background-color: aliceblue;
 }
 </style>
 
@@ -211,10 +249,10 @@ body {
     background: transparent;
     border: none;
     outline: none;
-    color: azure;
+    color: aliceblue;
 
     min-height: 50px;
-    font-size: 25px;
+    font-size: 15px;
     letter-spacing: 0.1ch;
     z-index: 20;
     overflow: hidden;

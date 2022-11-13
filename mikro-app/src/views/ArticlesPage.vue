@@ -24,11 +24,11 @@
 
                     <div v-for="article of articles" :key="article.id" class=" col-md-4 p-1 card mb-3" style="font-size:12px">
                         <span v-if="article.banner_image">
-                            <img class="card-img-top w-100" style="height: auto; width: auto;" :src="article.banner_image" />
+                            <img class="card-img-top w-100" style="height: max-height: 300px; width: auto;" :src="article.banner_image" />
                         </span>
 
                         <span v-else>
-                            <img class="card-img-top w-100" style="height: auto; width: 25%;" src=../assets/ui/noArticle.jpg>
+                            <img class="card-img-top w-100" style="height: auto; width: auto;" src=../assets/ui/noArticle.jpg>
                         </span>
                         
                         {{ article.time_published.substring(5,7) + "/" + article.time_published.substring(7,8) + "/" + article.time_published.substring(0,4) + ", " + article.time_published.substring(10,11) + "." + article.time_published.substring(11,13)}}
@@ -41,7 +41,7 @@
                         </span>
                         <h6 class="card-title">{{ article.title }}</h6>
                         <p class="card-text">{{ article.summary }}</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" />
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/ui/article_author.jpg" />
                             <div class="row">
                                 <div class="col-sm-8">
                                     <span v-if="article.authors.length == 0">
@@ -51,7 +51,7 @@
                                         <p class="fw-bold mb-0">{{ article.authors[0] }}</p>
                                     </span>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-sm-4 col-md-6">
                                     <a :href="article.url" target="__blank" style="font-size: 10px" class="btn btn-primary">Read More 🔍</a>
                                 </div>
                     

@@ -4,18 +4,18 @@
         <br/>
         <div class="container">
             <h4 style="width:" class="m-0"></h4>
-            <div class="form-group w-100 text-center card p-2" style="box-shadow: 0 2px 18px 1px rgb(49 53 72 / 10%); ">
+            <div class="form-group w-100 card p-2" style="box-shadow: 0 2px 18px 1px rgb(49 53 72 / 10%); ">
                 <div class="card-header mt-3">
                     <h4 class="text-bold-500 info" id="words">
-                        <i class="bx bx-calculator"></i> Currency conversion calculator
+                        <i class="pt-2 bx bx-calculator"></i>&nbsp;Currency conversion calculator
                     </h4>
                 </div>
                 <div class="card-subtitle p-0 mt-3 mx-2">	                   
-                    <h5 class="" style="font-weight: 400">View current rates now.</h5>
+                    <h5 class="" style="font-weight: 400; font-size: 15px;">View current rates now.</h5>
                 </div>
                 <br/>
                 <div class="input-group-prepend">
-                    <span class="input-group-text" style="border-radius: 0; padding: 5; ">Amount to be converted</span>
+                    <span class="input-group-text" style="border-radius: 0; padding: 5;">Amount to be converted</span>
                 </div>
                 <input type="number" 
                     class="form-control searchBox" 
@@ -198,12 +198,15 @@
     }
 
     .form-group {
-      text-align: center;
       background-color: rgb(246, 250, 255);
     }
     
     .form-control {
 
+    }
+    
+    .input-group-text {
+        background-color: rgb(221, 221, 238)
     }
 
 

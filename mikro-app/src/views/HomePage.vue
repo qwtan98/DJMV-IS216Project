@@ -51,7 +51,7 @@
           <img class="card-img-top" src="../assets/ui/crypto_community.jpg" style="height: 50%" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title" style="font-size: 12px">HOW TO INVEST IN ECO FRIENDLY CRYPTO</h5>
-            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;MONDAY, NOVEMBER 14TH<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;230PM - 330PM SGT</p>
+            <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i> &nbsp;MONDAY, NOVEMBER 14TH<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;230PM - 330PM SGT<br/>📅&nbsp;Online Event</p>
             <router-link to="/CommunityEvent1">
               <a href="" class="btn btn-primary" style="font-size: 13px; color: white;">Find out more</a>
             </router-link>

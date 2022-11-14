@@ -159,7 +159,7 @@ Mikro is a one-stop knowledge investment platform to increase financial inclsuio
 
 ## How to Install and Run Our Web Application (for Developers) ##
 
-[[Go To Top](#is216---g6t6-mikro)](#IS216 - G6T6 Mikro)
+[Go To Top](#is216---g6t6-mikro)
 
 ### Project Setup
 

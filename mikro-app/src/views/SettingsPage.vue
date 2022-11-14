@@ -73,6 +73,8 @@ Consider adding prompt for image. But as I understand, need a place to store the
                                 Weekday: 9 a.m. - 6 p.m.
                                 <br>
                                 Weekend: 10 a.m. - 3 p.m.
+                                <br><br>
+                                <a href="https://github.com/qwtan98/DJMV-IS216Project">Help Document</a>
                             </div>
 
                             <div class="modal-footer">

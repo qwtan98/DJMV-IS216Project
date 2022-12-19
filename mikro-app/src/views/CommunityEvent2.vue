@@ -5,7 +5,7 @@
         </router-link>
 
         <div class="card" style="font-size: 12px; height: ;">
-            <img class="card-img-top" src="../assets/ui/inflation_community.avif" style="width: 100%; height: 50%" alt="Card image cap">
+            <img class="card-img-top" src="../assets/ui/inflation_community.jpg" style="width: 100%; height: 50%" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title" style="font-size: 12px">HOW TO DIVERSIFY DURING HIGH INFLATION</h5>
               <p class="card-text" style="font-size: 10px"><i class="bx bx-time"></i>&nbsp; TUESDAY, NOVEMBER 15TH<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;530PM - 645PM SGT<br/>📅&nbsp;Online Event</p>
